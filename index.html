@@ -34,9 +34,26 @@ header h1 {
 }
 
 header p {
-    margin-top: 15px;
+    margin-top: 10px;
     font-size: 18px;
     color: #94a3b8;
+}
+
+.resume-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
+    background: #38bdf8;
+    color: #0f172a;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.resume-btn:hover {
+    background: #22d3ee;
+    transform: scale(1.05);
 }
 
 section {
@@ -78,6 +95,11 @@ h2 {
     border-radius: 20px;
     font-size: 14px;
     font-weight: 600;
+    transition: 0.3s;
+}
+
+.skills span:hover {
+    background: #22d3ee;
 }
 
 .contact-btn {
@@ -87,7 +109,7 @@ h2 {
     border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .email { background: #22c55e; color: white; }
@@ -121,17 +143,21 @@ footer {
     <p>DevOps & Cloud Engineer (Enthusiast)</p>
     <p>B.Tech Aerospace Engineering | SRM Institute of Science and Technology | Class of 2027</p>
     <p>Chennai, Tamil Nadu, India</p>
+
+    <a href="Sabari_Karthick_Resume.pdf" download class="resume-btn">
+        Download Resume
+    </a>
 </header>
 
 <section>
     <h2>About Me</h2>
     <div class="card">
         <p>
-        I am a highly motivated Aerospace Engineering student with a strong interest in 
-        DevOps and Cloud Computing. I am passionate about building scalable systems, 
-        automating workflows, and continuously learning modern infrastructure technologies. 
-        My goal is to evolve into a skilled DevOps Engineer capable of designing 
-        reliable, efficient, and secure cloud-based solutions.
+        I am a motivated Aerospace Engineering student with a strong interest in 
+        DevOps and Cloud Computing. I focus on automation, CI/CD pipelines, 
+        container orchestration, and scalable cloud infrastructure. 
+        I continuously build hands-on projects to strengthen my expertise 
+        in modern DevOps practices and distributed systems.
         </p>
     </div>
 </section>
@@ -164,7 +190,7 @@ footer {
         <a href="mailto:sabarikarthick.it@gmail.com" class="contact-btn email">Email Me</a>
         <a href="https://linkedin.com/in/sabari-karthick-85326730a" target="_blank" class="contact-btn linkedin">LinkedIn</a>
         <a href="https://github.com/sabarikarthick7" target="_blank" class="contact-btn github">GitHub</a>
-        <a href="tel:7339279254" class="contact-btn phone">Call Me</a>
+        <a href="tel:+917339279254" class="contact-btn phone">Call Me</a>
     </div>
 </section>
 
