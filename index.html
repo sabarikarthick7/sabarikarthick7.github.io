@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>M. Sabari Karthick | DevOps & Cloud Engineer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{
@@ -15,121 +15,111 @@
 }
 
 body{
-    font-family:'Outfit',sans-serif;
-    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-    color:#fff;
+    font-family:'Inter',sans-serif;
+    background:#0d1117;
+    color:#e6edf3;
 }
 
 /* HERO */
 .hero{
-    display:flex;
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
     align-items:center;
-    justify-content:space-between;
-    padding:100px 10%;
+    padding:100px 12%;
     gap:60px;
-    min-height:100vh;
 }
 
-.hero-left{
-    flex:1;
-}
-
-.hero-left h1{
+.hero-text h1{
     font-size:48px;
     margin-bottom:15px;
+    color:#58a6ff;
 }
 
-.hero-left h2{
+.hero-text h2{
     font-weight:400;
-    opacity:0.9;
     margin-bottom:20px;
+    color:#9da7b3;
 }
 
-.hero-left p{
-    margin-bottom:10px;
-    opacity:0.85;
+.hero-text p{
+    margin-bottom:8px;
+    color:#c9d1d9;
 }
 
 .hero-btn{
     display:inline-block;
     margin-top:25px;
-    padding:14px 32px;
-    border-radius:30px;
-    background:rgba(255,255,255,0.2);
-    backdrop-filter:blur(20px);
-    text-decoration:none;
+    padding:14px 30px;
+    border-radius:8px;
+    background:#238636;
     color:white;
+    text-decoration:none;
     font-weight:600;
     transition:0.3s;
 }
 
 .hero-btn:hover{
-    background:white;
-    color:#2c5364;
-    transform:scale(1.05);
+    background:#2ea043;
+    transform:translateY(-3px);
 }
 
-.hero-right{
-    flex:1;
+.hero-image{
     text-align:center;
 }
 
 .profile-img{
     width:260px;
     height:260px;
-    border-radius:50%;
+    border-radius:20px;
     object-fit:cover;
-    border:5px solid rgba(255,255,255,0.3);
-    box-shadow:0 20px 50px rgba(0,0,0,0.5);
-    transition:0.4s;
-}
-
-.profile-img:hover{
-    transform:scale(1.05);
+    box-shadow:0 20px 50px rgba(0,0,0,0.6);
 }
 
 /* SECTION */
 section{
-    padding:100px 10%;
+    padding:80px 12%;
+    border-top:1px solid #21262d;
 }
 
 .section-title{
-    font-size:32px;
-    margin-bottom:40px;
+    font-size:28px;
+    margin-bottom:35px;
+    color:#58a6ff;
 }
 
-.glass-card{
-    background:rgba(255,255,255,0.15);
-    border-radius:25px;
-    padding:40px;
-    backdrop-filter:blur(25px);
-    box-shadow:0 10px 40px rgba(0,0,0,0.3);
-}
-
-/* GRID */
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
+/* CARD */
+.card{
+    background:#161b22;
+    padding:35px;
+    border-radius:12px;
+    border:1px solid #30363d;
 }
 
 /* TAGS */
 .tags{
     display:flex;
     flex-wrap:wrap;
-    gap:15px;
+    gap:12px;
 }
 
 .tags span{
-    padding:10px 20px;
-    border-radius:30px;
-    background:rgba(255,255,255,0.2);
+    padding:8px 18px;
+    background:#21262d;
+    border-radius:20px;
+    border:1px solid #30363d;
+    font-size:14px;
     transition:0.3s;
 }
 
 .tags span:hover{
-    background:white;
-    color:#2c5364;
+    background:#30363d;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
 }
 
 /* CONTACT */
@@ -140,39 +130,42 @@ section{
 }
 
 .contact-btn{
-    padding:14px 26px;
-    border-radius:30px;
+    padding:12px 24px;
+    border-radius:6px;
     text-decoration:none;
     font-weight:600;
-    background:rgba(255,255,255,0.2);
-    color:white;
+    background:#21262d;
+    color:#e6edf3;
+    border:1px solid #30363d;
     transition:0.3s;
 }
 
 .contact-btn:hover{
-    background:white;
-    color:#2c5364;
-    transform:scale(1.1);
+    background:#30363d;
 }
 
 /* FOOTER */
 footer{
     text-align:center;
     padding:40px;
-    opacity:0.8;
+    border-top:1px solid #21262d;
+    color:#8b949e;
 }
 
 /* MOBILE */
 @media(max-width:900px){
 
 .hero{
-    flex-direction:column-reverse;
+    grid-template-columns:1fr;
     text-align:center;
-    padding:80px 20px;
+}
+
+.hero-image{
+    margin-bottom:40px;
 }
 
 section{
-    padding:80px 20px;
+    padding:70px 20px;
 }
 
 .tags{
@@ -190,7 +183,7 @@ section{
 
 <!-- HERO -->
 <div class="hero">
-    <div class="hero-left">
+    <div class="hero-text">
         <h1>M. Sabari Karthick</h1>
         <h2>DevOps & Cloud Engineer (Enthusiast)</h2>
         <p>B.Tech Aerospace Engineering</p>
@@ -202,7 +195,7 @@ section{
         </a>
     </div>
 
-    <div class="hero-right">
+    <div class="hero-image">
         <img src="profile.jpeg" alt="Sabari Karthick" class="profile-img">
     </div>
 </div>
@@ -210,11 +203,11 @@ section{
 <!-- PROFESSIONAL SUMMARY -->
 <section>
     <div class="section-title">Professional Summary</div>
-    <div class="glass-card">
-        DevOps-focused engineering student with hands-on experience in CI/CD automation,
-        cloud deployment, and container orchestration. Skilled in building scalable
-        infrastructure using AWS and modern DevOps tools. Strong foundation in
-        Linux systems, Git workflows, and infrastructure automation practices.
+    <div class="card">
+        DevOps-focused engineering student with hands-on exposure to CI/CD automation,
+        cloud infrastructure deployment, and container orchestration. Experienced in
+        AWS environments, Linux systems, Git workflows, and modern DevOps practices.
+        Passionate about building scalable, secure, and efficient cloud solutions.
     </div>
 </section>
 
@@ -235,22 +228,13 @@ section{
 <!-- EXPERIENCE -->
 <section>
     <div class="section-title">Experience</div>
-    <div class="glass-card">
+    <div class="card">
         <strong>Self-Learning & Hands-On DevOps Practice</strong><br><br>
-        • Built and configured CI/CD pipelines using Jenkins.<br>
-        • Practiced container orchestration concepts using Kubernetes.<br>
-        • Deployed applications on AWS cloud environments.<br>
-        • Managed version control workflows using Git & GitHub.<br>
-        • Gained practical Linux system administration experience through lab environments.
-    </div>
-</section>
-
-<!-- PROJECTS PLACEHOLDER -->
-<section>
-    <div class="section-title">Projects</div>
-    <div class="glass-card">
-        DevOps and Cloud projects will be showcased here including CI/CD automation,
-        AWS deployments, and containerized application workflows.
+        • Configured CI/CD workflows using Jenkins.<br>
+        • Practiced Kubernetes orchestration concepts.<br>
+        • Deployed cloud resources in AWS environments.<br>
+        • Managed repositories and collaboration using Git & GitHub.<br>
+        • Strengthened Linux system administration through lab-based practice.
     </div>
 </section>
 
@@ -258,9 +242,9 @@ section{
 <section>
     <div class="section-title">Certifications</div>
     <div class="grid">
-        <div class="glass-card">Google Gemini Certified University Student</div>
-        <div class="glass-card">Cisco Networking Basics</div>
-        <div class="glass-card">AWS Cloud Practitioner Essentials – Amazon Web Services</div>
+        <div class="card">Google Gemini Certified University Student</div>
+        <div class="card">Cisco Networking Basics</div>
+        <div class="card">AWS Cloud Practitioner Essentials – Amazon Web Services</div>
     </div>
 </section>
 
