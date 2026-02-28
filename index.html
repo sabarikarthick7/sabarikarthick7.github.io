@@ -21,21 +21,6 @@ body{
     color:#1e293b;
 }
 
-/* Smooth fade animation */
-.fade{
-    opacity:0;
-    transform:translateY(30px);
-    animation:fadeUp 1s ease forwards;
-}
-
-@keyframes fadeUp{
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-/* HERO */
 .hero{
     display:flex;
     align-items:center;
@@ -45,9 +30,7 @@ body{
     flex-wrap:wrap;
 }
 
-.hero-text{
-    flex:1;
-}
+.hero-text{ flex:1; }
 
 .hero-text h1{
     font-size:46px;
@@ -82,10 +65,7 @@ body{
     background:#1d4ed8;
 }
 
-.hero-image{
-    flex:1;
-    text-align:center;
-}
+.hero-image{ flex:1; text-align:center; }
 
 .profile-img{
     width:230px;
@@ -95,7 +75,6 @@ body{
     box-shadow:0 15px 40px rgba(0,0,0,0.15);
 }
 
-/* SECTION */
 section{
     padding:80px 12%;
 }
@@ -106,7 +85,6 @@ section{
     color:#1e3a8a;
 }
 
-/* CARD */
 .card{
     background:white;
     padding:30px;
@@ -119,7 +97,6 @@ section{
     transform:translateY(-6px);
 }
 
-/* SKILLS */
 .skills{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -146,17 +123,13 @@ section{
     transform:translateY(-4px);
 }
 
-/* GRID */
 .grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:20px;
 }
 
-/* CONTACT */
-.contact-section{
-    text-align:center;
-}
+.contact-section{ text-align:center; }
 
 .contact-buttons{
     display:flex;
@@ -182,7 +155,6 @@ section{
     background:#334155;
 }
 
-/* FOOTER */
 footer{
     text-align:center;
     padding:30px;
@@ -191,21 +163,14 @@ footer{
     font-size:14px;
 }
 
-/* MOBILE */
 @media(max-width:900px){
 .hero{
     flex-direction:column;
     text-align:center;
 }
-.hero-text{
-    order:2;
-}
-.hero-image{
-    order:1;
-}
-section{
-    padding:60px 20px;
-}
+.hero-text{ order:2; }
+.hero-image{ order:1; }
+section{ padding:60px 20px; }
 }
 </style>
 </head>
@@ -213,7 +178,7 @@ section{
 <body>
 
 <!-- HERO -->
-<div class="hero fade">
+<div class="hero">
     <div class="hero-text">
         <h1>M. Sabari Karthick</h1>
         <h2>DevOps & Cloud Engineer</h2>
@@ -232,18 +197,18 @@ section{
 </div>
 
 <!-- SUMMARY -->
-<section class="fade">
+<section>
     <div class="section-title">Professional Summary</div>
     <div class="card">
         DevOps-focused engineering student with hands-on experience in CI/CD automation,
-        event-driven cloud architecture, and Infrastructure as Code. Skilled in AWS,
-        Terraform, GitHub Actions, Linux and Windows administration, and scalable
-        cloud deployments.
+        event-driven cloud architecture, and Infrastructure as Code (Terraform).
+        Experienced in AWS serverless services, GitHub Actions, Linux and Windows
+        administration, and scalable cloud deployments.
     </div>
 </section>
 
 <!-- FEATURED PROJECT -->
-<section class="fade">
+<section>
     <div class="section-title">Featured Project</div>
     <div class="card">
         <h3 style="margin-bottom:15px;color:#1e3a8a;">
@@ -252,15 +217,16 @@ section{
 
         <p style="margin-bottom:15px;color:#475569;">
             Designed and implemented an event-driven cloud data processing pipeline 
-            using AWS serverless services with Infrastructure as Code and automated CI/CD workflows.
+            using AWS serverless services integrated with Terraform and CI/CD 
+            automation through GitHub Actions.
         </p>
 
         <ul style="margin-left:20px;margin-bottom:20px;color:#475569;">
-            <li>Architected serverless workflow using AWS services</li>
-            <li>Provisioned infrastructure using Terraform</li>
-            <li>Configured CI/CD using GitHub Actions</li>
-            <li>Automated deployment pipelines</li>
-            <li>Built scalable and modular cloud architecture</li>
+            <li>Architected event-driven workflow using AWS services</li>
+            <li>Provisioned infrastructure using Terraform (IaC)</li>
+            <li>Configured CI/CD pipelines using GitHub Actions</li>
+            <li>Automated cloud deployment processes</li>
+            <li>Built scalable and modular serverless architecture</li>
         </ul>
 
         <a href="https://github.com/sabarikarthick7/event-driven-cloud-pipeline"
@@ -271,8 +237,8 @@ section{
     </div>
 </section>
 
-<!-- SKILLS -->
-<section class="fade">
+<!-- TECHNICAL SKILLS -->
+<section>
     <div class="section-title">Technical Skills</div>
     <div class="skills">
         <div class="skill-item"><i class="fab fa-python"></i> Python</div>
@@ -287,8 +253,38 @@ section{
     </div>
 </section>
 
+<!-- CERTIFICATIONS -->
+<section>
+    <div class="section-title">Certifications</div>
+    <div class="grid">
+        <div class="card">Google Gemini Certified University Student</div>
+        <div class="card">Cisco Networking Basics</div>
+        <div class="card">AWS Cloud Practitioner Essentials – Amazon Web Services</div>
+    </div>
+</section>
+
+<!-- SOFT SKILLS -->
+<section>
+    <div class="section-title">Soft Skills</div>
+    <div class="skills">
+        <div class="skill-item"><i class="fas fa-user-tie"></i> Leadership</div>
+        <div class="skill-item"><i class="fas fa-users"></i> Team Collaboration</div>
+        <div class="skill-item"><i class="fas fa-lightbulb"></i> Problem Solving</div>
+        <div class="skill-item"><i class="fas fa-bolt"></i> Quick Learner</div>
+        <div class="skill-item"><i class="fas fa-comments"></i> Communication</div>
+    </div>
+</section>
+
+<!-- LANGUAGES -->
+<section>
+    <div class="section-title">Languages</div>
+    <div class="card">
+        English – Full Professional Proficiency
+    </div>
+</section>
+
 <!-- CONTACT -->
-<section class="contact-section fade">
+<section class="contact-section">
     <div class="section-title">Contact</div>
     <div class="contact-buttons">
         <a href="mailto:sabarikarthick.it@gmail.com" class="contact-btn">
