@@ -6,7 +6,9 @@
 <title>M. Sabari Karthick | DevOps & Cloud Engineer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/4d0d4c1c7b.js" crossorigin="anonymous"></script>
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 *{
@@ -17,21 +19,16 @@
 
 body{
     font-family:'Inter',sans-serif;
-    background:#f8fafc;
+    background:linear-gradient(to right,#f8fafc,#eef2f7);
     color:#1e293b;
-    scroll-behavior:smooth;
 }
 
-/* FADE ANIMATION */
+/* Smooth fade animation */
 .fade{
     opacity:0;
-    transform:translateY(30px);
+    transform:translateY(25px);
     animation:fadeUp 1s ease forwards;
 }
-
-.fade:nth-child(1){animation-delay:0.2s;}
-.fade:nth-child(2){animation-delay:0.4s;}
-.fade:nth-child(3){animation-delay:0.6s;}
 
 @keyframes fadeUp{
     to{
@@ -57,6 +54,7 @@ body{
 .hero-text h1{
     font-size:46px;
     margin-bottom:15px;
+    color:#1e3a8a;
 }
 
 .hero-text h2{
@@ -66,7 +64,7 @@ body{
 }
 
 .hero-text p{
-    margin-bottom:8px;
+    margin-bottom:6px;
     color:#64748b;
 }
 
@@ -96,7 +94,7 @@ body{
     height:230px;
     border-radius:16px;
     object-fit:cover;
-    box-shadow:0 15px 40px rgba(0,0,0,0.1);
+    box-shadow:0 15px 40px rgba(0,0,0,0.12);
 }
 
 /* SECTION */
@@ -107,6 +105,7 @@ section{
 .section-title{
     font-size:26px;
     margin-bottom:30px;
+    color:#1e3a8a;
 }
 
 /* CARD */
@@ -114,7 +113,7 @@ section{
     background:white;
     padding:30px;
     border-radius:12px;
-    box-shadow:0 8px 24px rgba(0,0,0,0.06);
+    box-shadow:0 10px 25px rgba(0,0,0,0.05);
     transition:0.3s;
 }
 
@@ -130,7 +129,8 @@ section{
 }
 
 .skills span{
-    background:#e2e8f0;
+    background:#e0e7ff;
+    color:#1e3a8a;
     padding:8px 16px;
     border-radius:20px;
     font-size:14px;
@@ -209,8 +209,8 @@ section{
 
 <body>
 
-<div class="hero">
-    <div class="hero-text fade">
+<div class="hero fade">
+    <div class="hero-text">
         <h1>M. Sabari Karthick</h1>
         <h2>DevOps & Cloud Engineer (Enthusiast)</h2>
         <p>B.Tech Aerospace Engineering</p>
@@ -222,7 +222,7 @@ section{
         </a>
     </div>
 
-    <div class="hero-image fade">
+    <div class="hero-image">
         <img src="profile.jpeg" alt="Sabari Karthick" class="profile-img">
     </div>
 </div>
