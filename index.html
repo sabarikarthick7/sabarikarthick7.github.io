@@ -1,59 +1,135 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Sabari Karthick Portfolio</title>
-    <style>
-        body {
-            font-family: Arial;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            background-color: #f4f4f4;
-        }
-        header {
-            background: #222;
-            color: white;
-            padding: 40px;
-        }
-        section {
-            padding: 30px;
-        }
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #007acc;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sabari Karthick | Portfolio</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+header {
+    background: #0a192f;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 40px;
+}
+
+header p {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #ccd6f6;
+}
+
+section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #0a192f;
+}
+
+.skills, .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #007acc;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #0a192f;
+    color: white;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <h1>Hi, I'm Sabari Karthick</h1>
-    <p>Aerospace Engineering Student | Aspiring DevOps Engineer</p>
+    <h1>Sabari Karthick</h1>
+    <p>Aerospace Engineering Student | Aspiring DevOps & Cloud Engineer</p>
+    <a href="#" class="btn">Download Resume</a>
 </header>
 
 <section>
     <h2>About Me</h2>
-    <p>I am a B.Tech Aerospace Engineering student passionate about Cloud Computing, DevOps and Python development.</p>
+    <p>
+        I am a B.Tech Aerospace Engineering student passionate about Cloud Computing,
+        DevOps practices, and Python development. I am continuously learning
+        modern technologies to build scalable and efficient systems.
+    </p>
 </section>
 
 <section>
-    <h2>Skills</h2>
-    <p>Python | Git | Linux | AWS (Learning)</p>
+    <h2>Technical Skills</h2>
+    <div class="skills">
+        <div class="card">Python</div>
+        <div class="card">Git & GitHub</div>
+        <div class="card">Linux</div>
+        <div class="card">AWS (Learning)</div>
+        <div class="card">HTML & CSS</div>
+    </div>
 </section>
 
 <section>
     <h2>Projects</h2>
-    <p>Force Measurement of Wing with Hinged Flap and Slotted Flap</p>
+    <div class="projects">
+        <div class="card">
+            <h3>Force Measurement of Wing</h3>
+            <p>Wind tunnel testing and CFD analysis on NACA 2412 wing with hinged and slotted flaps.</p>
+        </div>
+        <div class="card">
+            <h3>Python Automation Scripts</h3>
+            <p>Basic automation scripts for file handling and system tasks.</p>
+        </div>
+        <div class="card">
+            <h3>Linux Practice Lab</h3>
+            <p>Hands-on experience with Linux commands, shell scripting and Git workflows.</p>
+        </div>
+    </div>
 </section>
 
 <section>
     <h2>Contact</h2>
     <p>Email: yourmail@gmail.com</p>
+    <p>GitHub: github.com/sabarikarthick7</p>
 </section>
+
+<footer>
+    © 2026 Sabari Karthick | All Rights Reserved
+</footer>
 
 </body>
 </html>
