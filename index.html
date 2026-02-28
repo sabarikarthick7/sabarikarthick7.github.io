@@ -3,74 +3,113 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sabari Karthick | Portfolio</title>
+<title>M. Sabari Karthick | DevOps & Cloud Engineer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-body {
+* {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f4f6f9;
-    color: #333;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+    scroll-behavior: smooth;
 }
 
 header {
-    background: #0a192f;
-    color: white;
     text-align: center;
-    padding: 60px 20px;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 40px;
+    font-size: 42px;
+    color: #38bdf8;
 }
 
 header p {
+    margin-top: 15px;
     font-size: 18px;
-    margin-top: 10px;
-    color: #ccd6f6;
+    color: #94a3b8;
 }
 
 section {
-    padding: 60px 20px;
-    max-width: 1000px;
+    padding: 70px 20px;
+    max-width: 1100px;
     margin: auto;
 }
 
 h2 {
     text-align: center;
     margin-bottom: 40px;
-    color: #0a192f;
+    color: #38bdf8;
 }
 
-.skills, .projects {
+.grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
 }
 
 .card {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.btn {
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(56,189,248,0.3);
+}
+
+.skills span {
     display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: #007acc;
-    color: white;
+    background: #38bdf8;
+    color: #0f172a;
+    padding: 8px 15px;
+    margin: 8px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.contact-btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 20px;
+    border-radius: 6px;
     text-decoration: none;
-    border-radius: 5px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.email { background: #22c55e; color: white; }
+.linkedin { background: #0a66c2; color: white; }
+.github { background: #6366f1; color: white; }
+.phone { background: #f97316; color: white; }
+
+.contact-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(255,255,255,0.2);
 }
 
 footer {
     text-align: center;
-    padding: 20px;
-    background: #0a192f;
-    color: white;
+    padding: 25px;
+    background: #1e293b;
+    color: #94a3b8;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 </style>
 </head>
@@ -78,57 +117,59 @@ footer {
 <body>
 
 <header>
-    <h1>Sabari Karthick</h1>
-    <p>Aerospace Engineering Student | Aspiring DevOps & Cloud Engineer</p>
-    <a href="#" class="btn">Download Resume</a>
+    <h1>M. Sabari Karthick</h1>
+    <p>DevOps & Cloud Engineer (Enthusiast)</p>
+    <p>B.Tech Aerospace Engineering | SRM Institute of Science and Technology | Class of 2027</p>
+    <p>Chennai, Tamil Nadu, India</p>
 </header>
 
 <section>
     <h2>About Me</h2>
-    <p>
-        I am a B.Tech Aerospace Engineering student passionate about Cloud Computing,
-        DevOps practices, and Python development. I am continuously learning
-        modern technologies to build scalable and efficient systems.
-    </p>
+    <div class="card">
+        <p>
+        I am a highly motivated Aerospace Engineering student with a strong interest in 
+        DevOps and Cloud Computing. I am passionate about building scalable systems, 
+        automating workflows, and continuously learning modern infrastructure technologies. 
+        My goal is to evolve into a skilled DevOps Engineer capable of designing 
+        reliable, efficient, and secure cloud-based solutions.
+        </p>
+    </div>
 </section>
 
 <section>
     <h2>Technical Skills</h2>
     <div class="skills">
-        <div class="card">Python</div>
-        <div class="card">Git & GitHub</div>
-        <div class="card">Linux</div>
-        <div class="card">AWS (Learning)</div>
-        <div class="card">HTML & CSS</div>
+        <span>Python</span>
+        <span>Git & GitHub</span>
+        <span>Linux</span>
+        <span>AWS</span>
+        <span>Jenkins</span>
+        <span>Kubernetes</span>
+        <span>Networking Basics</span>
     </div>
 </section>
 
 <section>
-    <h2>Projects</h2>
-    <div class="projects">
-        <div class="card">
-            <h3>Force Measurement of Wing</h3>
-            <p>Wind tunnel testing and CFD analysis on NACA 2412 wing with hinged and slotted flaps.</p>
-        </div>
-        <div class="card">
-            <h3>Python Automation Scripts</h3>
-            <p>Basic automation scripts for file handling and system tasks.</p>
-        </div>
-        <div class="card">
-            <h3>Linux Practice Lab</h3>
-            <p>Hands-on experience with Linux commands, shell scripting and Git workflows.</p>
-        </div>
+    <h2>Certifications</h2>
+    <div class="grid">
+        <div class="card">Google Gemini Certified University Student</div>
+        <div class="card">Cisco Networking Basics</div>
+        <div class="card">AWS Cloud Practitioner Essentials – Amazon Web Services</div>
     </div>
 </section>
 
 <section>
     <h2>Contact</h2>
-    <p>Email: yourmail@gmail.com</p>
-    <p>GitHub: github.com/sabarikarthick7</p>
+    <div style="text-align:center;">
+        <a href="mailto:sabarikarthick.it@gmail.com" class="contact-btn email">Email Me</a>
+        <a href="https://linkedin.com/in/sabari-karthick-85326730a" target="_blank" class="contact-btn linkedin">LinkedIn</a>
+        <a href="https://github.com/sabarikarthick7" target="_blank" class="contact-btn github">GitHub</a>
+        <a href="tel:7339279254" class="contact-btn phone">Call Me</a>
+    </div>
 </section>
 
 <footer>
-    © 2026 Sabari Karthick | All Rights Reserved
+    © 2026 M. Sabari Karthick | DevOps & Cloud Engineer | All Rights Reserved
 </footer>
 
 </body>
