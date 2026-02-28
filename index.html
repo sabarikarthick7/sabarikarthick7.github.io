@@ -6,8 +6,6 @@
 <title>M. Sabari Karthick | DevOps & Cloud Engineer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<!-- Font Awesome Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -19,22 +17,8 @@
 
 body{
     font-family:'Inter',sans-serif;
-    background:linear-gradient(to right,#f8fafc,#eef2f7);
+    background:linear-gradient(135deg,#e6ecf5,#f2f6fb);
     color:#1e293b;
-}
-
-/* Smooth fade animation */
-.fade{
-    opacity:0;
-    transform:translateY(25px);
-    animation:fadeUp 1s ease forwards;
-}
-
-@keyframes fadeUp{
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
 }
 
 /* HERO */
@@ -94,7 +78,7 @@ body{
     height:230px;
     border-radius:16px;
     object-fit:cover;
-    box-shadow:0 15px 40px rgba(0,0,0,0.12);
+    box-shadow:0 15px 40px rgba(0,0,0,0.15);
 }
 
 /* SECTION */
@@ -114,26 +98,33 @@ section{
     padding:30px;
     border-radius:12px;
     box-shadow:0 10px 25px rgba(0,0,0,0.05);
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
 }
 
 /* SKILLS */
 .skills{
-    display:flex;
-    flex-wrap:wrap;
-    gap:12px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
 }
 
-.skills span{
-    background:#e0e7ff;
-    color:#1e3a8a;
-    padding:8px 16px;
-    border-radius:20px;
-    font-size:14px;
+.skill-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:white;
+    padding:12px 18px;
+    border-radius:8px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+    transition:0.3s;
+}
+
+.skill-item i{
+    font-size:18px;
+    color:#2563eb;
+}
+
+.skill-item:hover{
+    transform:translateY(-4px);
 }
 
 /* GRID */
@@ -144,8 +135,13 @@ section{
 }
 
 /* CONTACT */
+.contact-section{
+    text-align:center;
+}
+
 .contact-buttons{
     display:flex;
+    justify-content:center;
     flex-wrap:wrap;
     gap:20px;
 }
@@ -195,21 +191,13 @@ footer{
 section{
     padding:60px 20px;
 }
-
-.skills{
-    justify-content:center;
-}
-
-.contact-buttons{
-    justify-content:center;
-}
 }
 </style>
 </head>
 
 <body>
 
-<div class="hero fade">
+<div class="hero">
     <div class="hero-text">
         <h1>M. Sabari Karthick</h1>
         <h2>DevOps & Cloud Engineer (Enthusiast)</h2>
@@ -227,32 +215,31 @@ section{
     </div>
 </div>
 
-<section class="fade">
+<section>
     <div class="section-title">Professional Summary</div>
     <div class="card">
         DevOps-focused engineering student with hands-on exposure to CI/CD automation,
         cloud infrastructure deployment, and container orchestration. Experienced in
-        AWS environments, Linux and Windows administration, Git workflows, and modern
-        DevOps practices.
+        AWS environments, Linux and Windows administration, Git workflows, and modern DevOps practices.
     </div>
 </section>
 
-<section class="fade">
+<section>
     <div class="section-title">Technical Skills</div>
     <div class="skills">
-        <span>Python</span>
-        <span>Linux Administration</span>
-        <span>Windows Administration</span>
-        <span>Git & GitHub</span>
-        <span>AWS</span>
-        <span>Jenkins</span>
-        <span>Kubernetes</span>
-        <span>CI/CD</span>
-        <span>Networking Fundamentals</span>
+        <div class="skill-item"><i class="fab fa-python"></i> Python</div>
+        <div class="skill-item"><i class="fab fa-linux"></i> Linux Administration</div>
+        <div class="skill-item"><i class="fab fa-windows"></i> Windows Administration</div>
+        <div class="skill-item"><i class="fab fa-git-alt"></i> Git & GitHub</div>
+        <div class="skill-item"><i class="fab fa-aws"></i> AWS</div>
+        <div class="skill-item"><i class="fas fa-cogs"></i> Jenkins</div>
+        <div class="skill-item"><i class="fas fa-dharmachakra"></i> Kubernetes</div>
+        <div class="skill-item"><i class="fas fa-sync-alt"></i> CI/CD</div>
+        <div class="skill-item"><i class="fas fa-network-wired"></i> Networking Fundamentals</div>
     </div>
 </section>
 
-<section class="fade">
+<section>
     <div class="section-title">Certifications</div>
     <div class="grid">
         <div class="card">Google Gemini Certified University Student</div>
@@ -261,28 +248,21 @@ section{
     </div>
 </section>
 
-<section class="fade">
+<section>
     <div class="section-title">Soft Skills</div>
     <div class="skills">
-        <span>Leadership</span>
-        <span>Team Collaboration</span>
-        <span>Problem Solving</span>
-        <span>Quick Learner</span>
-        <span>Communication</span>
+        <div class="skill-item"><i class="fas fa-user-tie"></i> Leadership</div>
+        <div class="skill-item"><i class="fas fa-users"></i> Team Collaboration</div>
+        <div class="skill-item"><i class="fas fa-lightbulb"></i> Problem Solving</div>
+        <div class="skill-item"><i class="fas fa-bolt"></i> Quick Learner</div>
+        <div class="skill-item"><i class="fas fa-comments"></i> Communication</div>
     </div>
 </section>
 
-<section class="fade">
-    <div class="section-title">Languages</div>
-    <div class="card">
-        English – Full Professional Proficiency
-    </div>
-</section>
-
-<section class="fade">
+<section class="contact-section">
     <div class="section-title">Contact</div>
     <div class="contact-buttons">
-        <a href="mailto:sabarikarthick.it@gmail.com?subject=Portfolio Contact" class="contact-btn">
+        <a href="mailto:sabarikarthick.it@gmail.com" class="contact-btn">
             <i class="fas fa-envelope"></i> Email
         </a>
         <a href="https://linkedin.com/in/sabari-karthick-85326730a" target="_blank" class="contact-btn">
