@@ -16,83 +16,95 @@
 
 body{
     font-family:'Inter',sans-serif;
-    background:#0d1117;
-    color:#e6edf3;
+    background:#f4f6f9;
+    color:#1f2933;
 }
 
 /* HERO */
 .hero{
-    display:grid;
-    grid-template-columns:1.2fr 1fr;
+    display:flex;
     align-items:center;
-    padding:100px 12%;
-    gap:60px;
+    justify-content:space-between;
+    padding:90px 10%;
+    background:#0b3c5d;
+    color:white;
+    flex-wrap:wrap;
+    gap:40px;
+}
+
+.hero-text{
+    flex:1;
 }
 
 .hero-text h1{
-    font-size:48px;
+    font-size:42px;
     margin-bottom:15px;
-    color:#58a6ff;
 }
 
 .hero-text h2{
     font-weight:400;
     margin-bottom:20px;
-    color:#9da7b3;
+    opacity:0.9;
 }
 
 .hero-text p{
-    margin-bottom:8px;
-    color:#c9d1d9;
+    margin-bottom:6px;
+    opacity:0.9;
 }
 
 .hero-btn{
     display:inline-block;
-    margin-top:25px;
-    padding:14px 30px;
-    border-radius:8px;
-    background:#238636;
-    color:white;
+    margin-top:20px;
+    padding:12px 26px;
+    border-radius:6px;
+    background:white;
+    color:#0b3c5d;
     text-decoration:none;
     font-weight:600;
     transition:0.3s;
 }
 
 .hero-btn:hover{
-    background:#2ea043;
-    transform:translateY(-3px);
+    background:#e0e6ed;
 }
 
 .hero-image{
+    flex:1;
     text-align:center;
 }
 
 .profile-img{
-    width:260px;
-    height:260px;
-    border-radius:20px;
+    width:220px;
+    height:220px;
+    border-radius:12px;
     object-fit:cover;
-    box-shadow:0 20px 50px rgba(0,0,0,0.6);
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
 }
 
 /* SECTION */
 section{
-    padding:80px 12%;
-    border-top:1px solid #21262d;
+    padding:70px 10%;
 }
 
 .section-title{
-    font-size:28px;
-    margin-bottom:35px;
-    color:#58a6ff;
+    font-size:26px;
+    margin-bottom:25px;
+    color:#0b3c5d;
 }
 
 /* CARD */
 .card{
-    background:#161b22;
-    padding:35px;
-    border-radius:12px;
-    border:1px solid #30363d;
+    background:white;
+    padding:30px;
+    border-radius:8px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
 }
 
 /* TAGS */
@@ -103,69 +115,60 @@ section{
 }
 
 .tags span{
-    padding:8px 18px;
-    background:#21262d;
+    background:#e3ecf3;
+    padding:8px 16px;
     border-radius:20px;
-    border:1px solid #30363d;
     font-size:14px;
-    transition:0.3s;
-}
-
-.tags span:hover{
-    background:#30363d;
-}
-
-/* GRID */
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
 }
 
 /* CONTACT */
 .contact-buttons{
     display:flex;
     flex-wrap:wrap;
-    gap:20px;
+    gap:15px;
 }
 
 .contact-btn{
-    padding:12px 24px;
+    padding:10px 22px;
     border-radius:6px;
     text-decoration:none;
     font-weight:600;
-    background:#21262d;
-    color:#e6edf3;
-    border:1px solid #30363d;
+    background:#0b3c5d;
+    color:white;
     transition:0.3s;
 }
 
 .contact-btn:hover{
-    background:#30363d;
+    background:#155e8a;
 }
 
 /* FOOTER */
 footer{
     text-align:center;
-    padding:40px;
-    border-top:1px solid #21262d;
-    color:#8b949e;
+    padding:30px;
+    background:#0b3c5d;
+    color:white;
+    font-size:14px;
 }
 
 /* MOBILE */
 @media(max-width:900px){
 
 .hero{
-    grid-template-columns:1fr;
+    flex-direction:column;
     text-align:center;
 }
 
+.hero-text{
+    order:2;
+}
+
 .hero-image{
-    margin-bottom:40px;
+    order:1;
 }
 
 section{
-    padding:70px 20px;
+    padding:60px 20px;
 }
 
 .tags{
@@ -206,17 +209,19 @@ section{
     <div class="card">
         DevOps-focused engineering student with hands-on exposure to CI/CD automation,
         cloud infrastructure deployment, and container orchestration. Experienced in
-        AWS environments, Linux systems, Git workflows, and modern DevOps practices.
-        Passionate about building scalable, secure, and efficient cloud solutions.
+        AWS environments, Linux and Windows system administration, Git workflows,
+        and modern DevOps practices. Passionate about building scalable,
+        secure, and reliable cloud-based solutions.
     </div>
 </section>
 
-<!-- TECH STACK -->
+<!-- TECHNICAL SKILLS -->
 <section>
-    <div class="section-title">Technical Stack</div>
+    <div class="section-title">Technical Skills</div>
     <div class="tags">
         <span>Python</span>
-        <span>Linux</span>
+        <span>Linux Administration</span>
+        <span>Windows Administration</span>
         <span>Git & GitHub</span>
         <span>AWS</span>
         <span>Jenkins</span>
@@ -234,7 +239,7 @@ section{
         • Practiced Kubernetes orchestration concepts.<br>
         • Deployed cloud resources in AWS environments.<br>
         • Managed repositories and collaboration using Git & GitHub.<br>
-        • Strengthened Linux system administration through lab-based practice.
+        • Strengthened Linux and Windows system administration through lab-based practice.
     </div>
 </section>
 
@@ -257,6 +262,14 @@ section{
         <span>Problem Solving</span>
         <span>Quick Learner</span>
         <span>Communication</span>
+    </div>
+</section>
+
+<!-- LANGUAGES -->
+<section>
+    <div class="section-title">Languages</div>
+    <div class="card">
+        English – Full Professional Proficiency
     </div>
 </section>
 
