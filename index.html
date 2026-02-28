@@ -1,285 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>M. Sabari Karthick | DevOps & Cloud Engineer</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    font-family:'Inter',sans-serif;
-    background:linear-gradient(135deg,#e6ecf5,#f2f6fb);
-    color:#1e293b;
-}
-
-/* HERO */
-.hero{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:100px 12%;
-    gap:60px;
-    flex-wrap:wrap;
-}
-
-.hero-text{
-    flex:1;
-}
-
-.hero-text h1{
-    font-size:46px;
-    margin-bottom:15px;
-    color:#1e3a8a;
-}
-
-.hero-text h2{
-    font-weight:400;
-    color:#475569;
-    margin-bottom:20px;
-}
-
-.hero-text p{
-    margin-bottom:6px;
-    color:#64748b;
-}
-
-.hero-btn{
-    display:inline-block;
-    margin-top:25px;
-    padding:12px 26px;
-    border-radius:8px;
-    background:#2563eb;
-    color:white;
-    text-decoration:none;
-    font-weight:600;
-    transition:0.3s;
-}
-
-.hero-btn:hover{
-    background:#1d4ed8;
-}
-
-.hero-image{
-    flex:1;
-    text-align:center;
-}
-
-.profile-img{
-    width:230px;
-    height:230px;
-    border-radius:16px;
-    object-fit:cover;
-    box-shadow:0 15px 40px rgba(0,0,0,0.15);
-}
-
-/* SECTION */
-section{
-    padding:80px 12%;
-}
-
-.section-title{
-    font-size:26px;
-    margin-bottom:30px;
-    color:#1e3a8a;
-}
-
-/* CARD */
-.card{
-    background:white;
-    padding:30px;
-    border-radius:12px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.05);
-}
-
-/* SKILLS */
-.skills{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:15px;
-}
-
-.skill-item{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    background:white;
-    padding:12px 18px;
-    border-radius:8px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.05);
-    transition:0.3s;
-}
-
-.skill-item i{
-    font-size:18px;
-    color:#2563eb;
-}
-
-.skill-item:hover{
-    transform:translateY(-4px);
-}
-
-/* GRID */
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
-/* CONTACT */
-.contact-section{
-    text-align:center;
-}
-
-.contact-buttons{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:20px;
-}
-
-.contact-btn{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    padding:10px 18px;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:600;
-    background:#1e293b;
-    color:white;
-    transition:0.3s;
-}
-
-.contact-btn:hover{
-    background:#334155;
-}
-
-/* FOOTER */
-footer{
-    text-align:center;
-    padding:30px;
-    background:#1e293b;
-    color:white;
-    font-size:14px;
-}
-
-/* MOBILE */
-@media(max-width:900px){
-
-.hero{
-    flex-direction:column;
-    text-align:center;
-}
-
-.hero-text{
-    order:2;
-}
-
-.hero-image{
-    order:1;
-}
-
-section{
-    padding:60px 20px;
-}
-}
-</style>
-</head>
-
-<body>
-
-<div class="hero">
-    <div class="hero-text">
-        <h1>M. Sabari Karthick</h1>
-        <h2>DevOps & Cloud Engineer (Enthusiast)</h2>
-        <p>B.Tech Aerospace Engineering</p>
-        <p>SRM Institute of Science and Technology | 2027</p>
-        <p>Chennai, Tamil Nadu, India</p>
-
-        <a href="Sabari_Karthick_Resume.pdf" target="_blank" class="hero-btn">
-            View Resume
-        </a>
-    </div>
-
-    <div class="hero-image">
-        <img src="profile.jpeg" alt="Sabari Karthick" class="profile-img">
-    </div>
-</div>
-
 <section>
-    <div class="section-title">Professional Summary</div>
-    <div class="card">
-        DevOps-focused engineering student with hands-on exposure to CI/CD automation,
-        cloud infrastructure deployment, and container orchestration. Experienced in
-        AWS environments, Linux and Windows administration, Git workflows, and modern DevOps practices.
-    </div>
-</section>
+    <div class="section-title">Featured Project</div>
 
-<section>
-    <div class="section-title">Technical Skills</div>
-    <div class="skills">
-        <div class="skill-item"><i class="fab fa-python"></i> Python</div>
-        <div class="skill-item"><i class="fab fa-linux"></i> Linux Administration</div>
-        <div class="skill-item"><i class="fab fa-windows"></i> Windows Administration</div>
-        <div class="skill-item"><i class="fab fa-git-alt"></i> Git & GitHub</div>
-        <div class="skill-item"><i class="fab fa-aws"></i> AWS</div>
-        <div class="skill-item"><i class="fas fa-cogs"></i> Jenkins</div>
-        <div class="skill-item"><i class="fas fa-dharmachakra"></i> Kubernetes</div>
-        <div class="skill-item"><i class="fas fa-sync-alt"></i> CI/CD</div>
-        <div class="skill-item"><i class="fas fa-network-wired"></i> Networking Fundamentals</div>
-    </div>
-</section>
+    <div class="card" style="margin-bottom:20px;">
+        <h3 style="margin-bottom:15px; color:#1e3a8a;">
+            Event-Driven Cloud Data Processing Pipeline
+        </h3>
 
-<section>
-    <div class="section-title">Certifications</div>
-    <div class="grid">
-        <div class="card">Google Gemini Certified University Student</div>
-        <div class="card">Cisco Networking Basics</div>
-        <div class="card">AWS Cloud Practitioner Essentials – Amazon Web Services</div>
-    </div>
-</section>
+        <p style="margin-bottom:15px; color:#475569;">
+            Designed and implemented an event-driven cloud data processing pipeline 
+            using AWS serverless services. The project demonstrates infrastructure 
+            automation, CI/CD integration, and scalable cloud architecture deployment 
+            using Infrastructure as Code principles.
+        </p>
 
-<section>
-    <div class="section-title">Soft Skills</div>
-    <div class="skills">
-        <div class="skill-item"><i class="fas fa-user-tie"></i> Leadership</div>
-        <div class="skill-item"><i class="fas fa-users"></i> Team Collaboration</div>
-        <div class="skill-item"><i class="fas fa-lightbulb"></i> Problem Solving</div>
-        <div class="skill-item"><i class="fas fa-bolt"></i> Quick Learner</div>
-        <div class="skill-item"><i class="fas fa-comments"></i> Communication</div>
-    </div>
-</section>
+        <ul style="margin-left:20px; margin-bottom:20px; color:#475569;">
+            <li>Architected event-driven workflow using AWS serverless services</li>
+            <li>Provisioned infrastructure using Terraform (Infrastructure as Code)</li>
+            <li>Configured CI/CD pipelines using GitHub Actions</li>
+            <li>Automated deployment and infrastructure provisioning</li>
+            <li>Implemented scalable and modular cloud architecture</li>
+        </ul>
 
-<section class="contact-section">
-    <div class="section-title">Contact</div>
-    <div class="contact-buttons">
-        <a href="mailto:sabarikarthick.it@gmail.com" class="contact-btn">
-            <i class="fas fa-envelope"></i> Email
-        </a>
-        <a href="https://linkedin.com/in/sabari-karthick-85326730a" target="_blank" class="contact-btn">
-            <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
-        <a href="https://github.com/sabarikarthick7" target="_blank" class="contact-btn">
-            <i class="fab fa-github"></i> GitHub
-        </a>
-        <a href="https://wa.me/917339279254" target="_blank" class="contact-btn">
-            <i class="fab fa-whatsapp"></i> WhatsApp
+        <a href="https://github.com/sabarikarthick7/event-driven-cloud-pipeline"
+           target="_blank"
+           style="
+           display:inline-block;
+           padding:10px 20px;
+           background:#2563eb;
+           color:white;
+           border-radius:6px;
+           text-decoration:none;
+           font-weight:600;">
+           View Project on GitHub
         </a>
     </div>
 </section>
-
-<footer>
-    © 2026 M. Sabari Karthick | DevOps & Cloud Engineer
-</footer>
-
-</body>
-</html>
