@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>M. Sabari Karthick | DevOps & Cloud Engineer</title>
+<title>M. Sabari Karthick | DevOps Engineer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -13,172 +13,173 @@
 html{scroll-behavior:smooth;}
 
 body{
-    font-family:'Inter',sans-serif;
-    background:linear-gradient(135deg,#0a0f2c,#111c44,#0a0f2c);
-    background-size:400% 400%;
-    animation:gradientMove 18s ease infinite;
-    color:#e5e7eb;
+font-family:'Inter',sans-serif;
+background:linear-gradient(135deg,#000000,#0f172a,#052e16);
+background-size:400% 400%;
+animation:bgMove 16s ease infinite;
+color:#e5e7eb;
 }
 
-@keyframes gradientMove{
-    0%{background-position:0% 50%;}
-    50%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
 }
 
 /* Glow */
 body::before{
-    content:"";
-    position:fixed;
-    width:600px;height:600px;
-    border-radius:50%;
-    background:radial-gradient(circle,rgba(59,130,246,0.25),transparent 70%);
-    top:-200px;right:-200px;
-    z-index:-1;
+content:"";
+position:fixed;
+width:600px;height:600px;
+background:radial-gradient(circle,rgba(34,197,94,0.25),transparent 70%);
+top:-200px;right:-200px;
+z-index:-1;
 }
 
 /* Layout */
 section{
-    padding:110px 12%;
-    opacity:0;
-    transform:translateY(40px);
-    transition:0.8s ease;
+padding:110px 12%;
+opacity:0;
+transform:translateY(40px);
+transition:0.8s ease;
 }
 section.show{
-    opacity:1;
-    transform:translateY(0);
+opacity:1;
+transform:translateY(0);
 }
 
 .section-title{
-    font-size:32px;
-    margin-bottom:50px;
-    color:#60a5fa;
-    font-weight:600;
+font-size:32px;
+margin-bottom:50px;
+color:#22c55e;
+font-weight:600;
 }
 
 /* HERO */
 .hero{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:140px 12%;
-    flex-wrap:wrap;
-    gap:60px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:140px 12%;
+flex-wrap:wrap;
+gap:60px;
 }
 
 .hero-text{flex:1;min-width:280px;}
 
 .hero-text h1{
-    font-size:52px;
-    color:white;
-    margin-bottom:20px;
+font-size:52px;
+color:white;
+margin-bottom:20px;
 }
 
 .hero-text h2{
-    color:#93c5fd;
-    margin-bottom:20px;
+color:#22c55e;
+margin-bottom:20px;
 }
 
 .hero-text p{
-    color:#cbd5e1;
+color:#cbd5e1;
 }
 
 .hero-btn{
-    display:inline-block;
-    margin-top:30px;
-    padding:15px 32px;
-    border-radius:12px;
-    background:linear-gradient(90deg,#3b82f6,#2563eb);
-    color:white;
-    text-decoration:none;
-    font-weight:600;
-    transition:0.3s;
+display:inline-block;
+margin-top:30px;
+padding:15px 32px;
+border-radius:12px;
+background:linear-gradient(90deg,#22c55e,#2563eb);
+color:white;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
 }
 .hero-btn:hover{
-    transform:translateY(-5px);
-    box-shadow:0 15px 35px rgba(37,99,235,0.6);
+transform:translateY(-5px);
+box-shadow:0 15px 35px rgba(34,197,94,0.5);
 }
 
 .hero-image{text-align:center;flex:1;}
 .profile-img{
-    width:260px;height:260px;
-    border-radius:20px;
-    object-fit:cover;
-    box-shadow:0 30px 70px rgba(0,0,0,0.6);
+width:260px;height:260px;
+border-radius:20px;
+object-fit:cover;
+box-shadow:0 30px 70px rgba(0,0,0,0.7);
 }
 
 /* Cards */
 .card{
-    background:rgba(17,24,39,0.85);
-    padding:40px;
-    border-radius:20px;
-    margin-bottom:35px;
-    border:1px solid rgba(255,255,255,0.05);
-    box-shadow:0 15px 60px rgba(0,0,0,0.5);
-    transition:0.3s;
+background:rgba(15,23,42,0.85);
+padding:40px;
+border-radius:20px;
+margin-bottom:35px;
+border:1px solid rgba(255,255,255,0.05);
+box-shadow:0 15px 60px rgba(0,0,0,0.6);
+transition:0.3s;
 }
 .card:hover{
-    transform:translateY(-6px);
+transform:translateY(-6px);
+border-color:#22c55e;
 }
 
 /* Skills */
 .skills{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:22px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:22px;
 }
 .skill-item{
-    background:rgba(30,41,59,0.9);
-    padding:18px 22px;
-    border-radius:14px;
-    display:flex;
-    align-items:center;
-    gap:12px;
-    transition:0.3s;
+background:rgba(2,6,23,0.9);
+padding:18px 22px;
+border-radius:14px;
+display:flex;
+align-items:center;
+gap:12px;
+transition:0.3s;
 }
-.skill-item i{color:#3b82f6;}
+.skill-item i{color:#22c55e;}
 .skill-item:hover{
-    background:#1d4ed8;
+background:#0f172a;
+border:1px solid #22c55e;
 }
 
 /* Grid */
 .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:30px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
 }
 
 /* Contact */
 .contact-section{text-align:center;}
 .contact-buttons{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:25px;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:25px;
 }
 .contact-btn{
-    padding:14px 28px;
-    border-radius:12px;
-    background:linear-gradient(90deg,#3b82f6,#2563eb);
-    color:white;
-    text-decoration:none;
-    font-weight:600;
-    display:flex;
-    align-items:center;
-    gap:8px;
-    transition:0.3s;
+padding:14px 28px;
+border-radius:12px;
+background:linear-gradient(90deg,#22c55e,#2563eb);
+color:white;
+text-decoration:none;
+font-weight:600;
+display:flex;
+align-items:center;
+gap:8px;
+transition:0.3s;
 }
 .contact-btn:hover{
-    transform:translateY(-4px);
-    box-shadow:0 10px 30px rgba(59,130,246,0.6);
+transform:translateY(-4px);
+box-shadow:0 10px 30px rgba(34,197,94,0.5);
 }
 
 /* Footer */
 footer{
-    text-align:center;
-    padding:45px;
-    background:#0b1126;
-    color:#94a3b8;
+text-align:center;
+padding:45px;
+background:#000000;
+color:#94a3b8;
 }
 
 /* Responsive */
@@ -208,25 +209,45 @@ section{padding:80px 20px;}
 </div>
 </div>
 
+<!-- ABOUT -->
+<section>
+<div class="section-title">About Me</div>
+<div class="card">
+Transitioned from Aerospace Engineering into DevOps with a strong interest in automation and scalable cloud systems.
+Passionate about CI/CD pipelines, containerization, and distributed infrastructure.
+Focused on building production-ready systems for product-based companies.
+</div>
+</section>
+
+<!-- PROFESSIONAL SUMMARY -->
+<section>
+<div class="section-title">Professional Summary</div>
+<div class="card">
+DevOps-focused engineering student specializing in CI/CD automation, containerization, and cloud-native systems.
+Hands-on experience with AWS, Docker, Jenkins, Kubernetes, and Infrastructure as Code.
+Committed to building reliable and scalable deployment pipelines.
+</div>
+</section>
+
 <!-- PROJECTS -->
 <section>
 <div class="section-title">Featured Projects</div>
 
 <div class="card">
 <h3>Event-Driven Cloud Data Pipeline</h3>
-<p>AWS serverless architecture with Terraform & CI/CD automation.</p>
+<p>AWS serverless architecture using Terraform and GitHub Actions CI/CD.</p>
 <a href="https://github.com/sabarikarthick7/event-driven-cloud-pipeline" target="_blank" class="hero-btn">View Project</a>
 </div>
 
 <div class="card">
-<h3>Jenkins Remoting – Master Agent Architecture</h3>
-<p>Distributed Jenkins build system using Docker agents and secure remoting.</p>
+<h3>Jenkins Remoting – Master-Agent Architecture</h3>
+<p>Distributed Jenkins build system using Docker-based remote agents.</p>
 <a href="https://github.com/sabarikarthick7/CodeAlpha_Jenkins_Remoting" target="_blank" class="hero-btn">View Project</a>
 </div>
 
 <div class="card">
 <h3>Docker Web Server – NGINX Deployment</h3>
-<p>Containerized NGINX web server deployed using Docker. Accessible via localhost with port mapping.</p>
+<p>Containerized NGINX web server deployed using Docker and accessible via localhost.</p>
 <a href="https://github.com/sabarikarthick7/CodeAlpha_Docker_WebServer" target="_blank" class="hero-btn">View Project</a>
 </div>
 
@@ -247,6 +268,36 @@ section{padding:80px 20px;}
 </div>
 </section>
 
+<!-- CERTIFICATIONS -->
+<section>
+<div class="section-title">Certifications</div>
+<div class="grid">
+<div class="card">Google Gemini Certified University Student</div>
+<div class="card">Cisco Networking Basics</div>
+<div class="card">AWS Cloud Practitioner Essentials</div>
+</div>
+</section>
+
+<!-- SOFT SKILLS -->
+<section>
+<div class="section-title">Soft Skills</div>
+<div class="skills">
+<div class="skill-item"><i class="fas fa-comments"></i> Communication</div>
+<div class="skill-item"><i class="fas fa-user-tie"></i> Leadership</div>
+<div class="skill-item"><i class="fas fa-users"></i> Team Collaboration</div>
+<div class="skill-item"><i class="fas fa-lightbulb"></i> Problem Solving</div>
+<div class="skill-item"><i class="fas fa-bolt"></i> Quick Learner</div>
+</div>
+</section>
+
+<!-- LANGUAGES -->
+<section>
+<div class="section-title">Languages</div>
+<div class="card">
+English – Full Professional Proficiency
+</div>
+</section>
+
 <!-- CONTACT -->
 <section class="contact-section">
 <div class="section-title">Contact</div>
@@ -258,7 +309,7 @@ section{padding:80px 20px;}
 </section>
 
 <footer>
-© 2026 M. Sabari Karthick | DevOps & Cloud Engineer
+© 2026 M. Sabari Karthick | DevOps Engineer
 </footer>
 
 <script>
