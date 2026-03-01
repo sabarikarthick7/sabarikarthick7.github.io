@@ -20,22 +20,21 @@ line-height:1.6;
 overflow-x:hidden;
 }
 
-/* Glow Background */
+/* Glow */
 body::before{
 content:"";
 position:fixed;
-top:40%;
-left:60%;
-width:600px;
-height:600px;
+top:45%;
+left:65%;
+width:650px;
+height:650px;
 background:radial-gradient(circle,rgba(37,99,235,0.25),transparent 70%);
 transform:translate(-50%,-50%);
 z-index:-1;
 }
 
-/* Layout Container */
+/* Container */
 .container{
-width:100%;
 max-width:1200px;
 margin:auto;
 padding:0 40px;
@@ -69,18 +68,14 @@ gap:60px;
 padding:120px 0 80px 0;
 }
 
-.hero-text{
-flex:1;
-}
+.hero-text{flex:1;}
 
 .hero-text h1{
 font-size:48px;
 margin-bottom:15px;
 }
 
-.hero-text span{
-color:#3b82f6;
-}
+.hero-text span{color:#3b82f6;}
 
 .hero-text p{
 color:#9ca3af;
@@ -105,10 +100,7 @@ transform:translateY(-3px);
 box-shadow:0 10px 30px rgba(37,99,235,0.5);
 }
 
-.hero-image{
-flex:1;
-text-align:right;
-}
+.hero-image{flex:1;text-align:right;}
 
 .profile-img{
 width:260px;
@@ -118,14 +110,14 @@ object-fit:cover;
 border:2px solid #3b82f6;
 }
 
-/* Card */
+/* Cards */
 .card{
 background:#0f172a;
 padding:25px 30px;
 border-radius:12px;
 border:1px solid #1e293b;
-transition:0.3s;
 margin-bottom:25px;
+transition:0.3s;
 }
 
 .card:hover{
@@ -152,9 +144,7 @@ gap:10px;
 transition:0.3s;
 }
 
-.skill-item i{
-color:#3b82f6;
-}
+.skill-item i{color:#3b82f6;}
 
 .skill-item:hover{
 border-color:#3b82f6;
@@ -182,10 +172,16 @@ transform:translateX(6px);
 }
 
 /* Contact */
+.contact-section{
+text-align:center;
+}
+
 .contact-buttons{
 display:flex;
+justify-content:center;
 gap:20px;
 flex-wrap:wrap;
+margin-top:20px;
 }
 
 .contact-btn{
@@ -221,21 +217,13 @@ margin-top:60px;
 flex-direction:column;
 text-align:center;
 }
-.hero-image{
-text-align:center;
-}
-.profile-img{
-margin-top:20px;
-}
+.hero-image{text-align:center;}
+.profile-img{margin-top:20px;}
 }
 
 @media(max-width:600px){
-.container{
-padding:0 20px;
-}
-.hero-text h1{
-font-size:32px;
-}
+.container{padding:0 20px;}
+.hero-text h1{font-size:32px;}
 }
 </style>
 </head>
@@ -263,8 +251,8 @@ font-size:32px;
 <div class="container">
 <h2 class="section-title">About Me</h2>
 <div class="card">
-Engineering student transitioning into DevOps with strong interest in automation, distributed systems, and cloud-native architecture.
-Passionate about building production-ready CI/CD pipelines and scalable infrastructure.
+Engineering student transitioning into DevOps with strong interest in automation and cloud-native systems.
+Focused on building scalable CI/CD pipelines and containerized applications.
 </div>
 </div>
 </section>
@@ -275,7 +263,7 @@ Passionate about building production-ready CI/CD pipelines and scalable infrastr
 <h2 class="section-title">Professional Summary</h2>
 <div class="card">
 Hands-on experience with Jenkins Master–Agent architecture, Docker, Kubernetes, AWS, and Infrastructure as Code.
-Skilled in building automated deployment pipelines and containerized applications.
+Skilled in automation, remote build execution, and container orchestration.
 </div>
 </div>
 </section>
@@ -284,22 +272,9 @@ Skilled in building automated deployment pipelines and containerized application
 <section>
 <div class="container">
 <h2 class="section-title">Projects</h2>
-
-<div class="card">
-<h3>Event-Driven Cloud Pipeline</h3>
-<p>AWS serverless architecture with Terraform and CI/CD automation.</p>
-</div>
-
-<div class="card">
-<h3>Jenkins Remoting – Master Agent</h3>
-<p>Distributed Jenkins build system using Docker-based remote agents.</p>
-</div>
-
-<div class="card">
-<h3>Docker Web Server – NGINX</h3>
-<p>Containerized NGINX web server deployed using Docker and exposed via localhost.</p>
-</div>
-
+<div class="card"><h3>Event-Driven Cloud Pipeline</h3><p>AWS serverless architecture with Terraform & CI/CD automation.</p></div>
+<div class="card"><h3>Jenkins Remoting – Master Agent</h3><p>Distributed Jenkins system using Docker agents.</p></div>
+<div class="card"><h3>Docker Web Server – NGINX</h3><p>Containerized NGINX deployment via Docker.</p></div>
 </div>
 </section>
 
@@ -320,29 +295,52 @@ Skilled in building automated deployment pipelines and containerized application
 </div>
 </section>
 
+<!-- SOFT SKILLS -->
+<section>
+<div class="container">
+<h2 class="section-title">Soft Skills</h2>
+<div class="grid">
+<div class="skill-item"><i class="fas fa-comments"></i> Communication</div>
+<div class="skill-item"><i class="fas fa-user-tie"></i> Leadership</div>
+<div class="skill-item"><i class="fas fa-users"></i> Team Collaboration</div>
+<div class="skill-item"><i class="fas fa-lightbulb"></i> Problem Solving</div>
+<div class="skill-item"><i class="fas fa-bolt"></i> Quick Learner</div>
+</div>
+</div>
+</section>
+
+<!-- LANGUAGES -->
+<section>
+<div class="container">
+<h2 class="section-title">Languages</h2>
+<div class="card">English – Full Professional Proficiency</div>
+</div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section>
+<div class="container">
+<h2 class="section-title">Certifications</h2>
+<div class="card">Google Gemini Certified University Student</div>
+<div class="card">Cisco Networking Basics</div>
+<div class="card">AWS Cloud Practitioner Essentials</div>
+</div>
+</section>
+
 <!-- EDUCATION -->
 <section>
 <div class="container">
 <h2 class="section-title">Education</h2>
 <div class="timeline">
-<div class="timeline-item">
-<h3>1st Standard</h3>
-<p>Shrine Nursery & Primary School – Madurai</p>
-</div>
-<div class="timeline-item">
-<h3>2nd – 12th Standard</h3>
-<p>Sairam Matric Higher Secondary School – Madurai</p>
-</div>
-<div class="timeline-item">
-<h3>B.Tech – Aerospace Engineering</h3>
-<p>SRM Institute of Science and Technology – Chennai</p>
-</div>
+<div class="timeline-item"><h3>1st Standard</h3><p>Shrine Nursery & Primary School – Madurai</p></div>
+<div class="timeline-item"><h3>2nd – 12th Standard</h3><p>Sairam Matric Higher Secondary School – Madurai</p></div>
+<div class="timeline-item"><h3>B.Tech – Aerospace Engineering</h3><p>SRM Institute of Science and Technology – Chennai</p></div>
 </div>
 </div>
 </section>
 
 <!-- CONTACT -->
-<section>
+<section class="contact-section">
 <div class="container">
 <h2 class="section-title">Contact</h2>
 <div class="contact-buttons">
