@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>M. Sabari Karthick | DevOps Engineer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -14,45 +14,29 @@ html{scroll-behavior:smooth;}
 
 body{
 font-family:'Inter',sans-serif;
-background:linear-gradient(135deg,#000000,#0f172a,#052e16);
-background-size:400% 400%;
-animation:bgMove 16s ease infinite;
+background:linear-gradient(135deg,#000000,#0b1f3a,#041c12);
+background-attachment:fixed;
 color:#e5e7eb;
-}
-
-@keyframes bgMove{
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
-}
-
-/* Glow */
-body::before{
-content:"";
-position:fixed;
-width:600px;height:600px;
-background:radial-gradient(circle,rgba(34,197,94,0.25),transparent 70%);
-top:-200px;right:-200px;
-z-index:-1;
+line-height:1.6;
 }
 
 /* Layout */
 section{
-padding:110px 12%;
-opacity:0;
-transform:translateY(40px);
-transition:0.8s ease;
-}
-section.show{
-opacity:1;
-transform:translateY(0);
+padding:100px 12%;
 }
 
+.container{
+max-width:1200px;
+margin:auto;
+}
+
+/* Titles */
 .section-title{
-font-size:32px;
-margin-bottom:50px;
+font-size:28px;
+margin-bottom:40px;
 color:#22c55e;
 font-weight:600;
+letter-spacing:0.5px;
 }
 
 /* HERO */
@@ -60,108 +44,152 @@ font-weight:600;
 display:flex;
 align-items:center;
 justify-content:space-between;
-padding:140px 12%;
-flex-wrap:wrap;
 gap:60px;
+flex-wrap:wrap;
+padding:120px 12%;
 }
 
-.hero-text{flex:1;min-width:280px;}
+.hero-text{
+flex:1;
+min-width:280px;
+}
 
 .hero-text h1{
-font-size:52px;
-color:white;
-margin-bottom:20px;
+font-size:48px;
+font-weight:700;
+margin-bottom:15px;
+color:#ffffff;
 }
 
 .hero-text h2{
 color:#22c55e;
 margin-bottom:20px;
+font-weight:500;
 }
 
 .hero-text p{
 color:#cbd5e1;
+margin-bottom:6px;
 }
 
 .hero-btn{
 display:inline-block;
-margin-top:30px;
-padding:15px 32px;
-border-radius:12px;
-background:linear-gradient(90deg,#22c55e,#2563eb);
-color:white;
-text-decoration:none;
+margin-top:25px;
+padding:14px 28px;
+border-radius:8px;
+background:#22c55e;
+color:#000;
 font-weight:600;
+text-decoration:none;
 transition:0.3s;
 }
+
 .hero-btn:hover{
-transform:translateY(-5px);
-box-shadow:0 15px 35px rgba(34,197,94,0.5);
+background:#16a34a;
+transform:translateY(-3px);
 }
 
-.hero-image{text-align:center;flex:1;}
+.hero-image{
+flex:1;
+text-align:center;
+min-width:280px;
+}
+
 .profile-img{
-width:260px;height:260px;
-border-radius:20px;
+width:230px;
+height:230px;
+border-radius:16px;
 object-fit:cover;
-box-shadow:0 30px 70px rgba(0,0,0,0.7);
+border:2px solid #22c55e;
 }
 
 /* Cards */
 .card{
-background:rgba(15,23,42,0.85);
-padding:40px;
-border-radius:20px;
-margin-bottom:35px;
-border:1px solid rgba(255,255,255,0.05);
-box-shadow:0 15px 60px rgba(0,0,0,0.6);
+background:#0f172a;
+padding:30px;
+border-radius:14px;
+border:1px solid #1e293b;
+margin-bottom:25px;
 transition:0.3s;
 }
+
 .card:hover{
-transform:translateY(-6px);
 border-color:#22c55e;
 }
 
-/* Skills */
-.skills{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:22px;
-}
-.skill-item{
-background:rgba(2,6,23,0.9);
-padding:18px 22px;
-border-radius:14px;
-display:flex;
-align-items:center;
-gap:12px;
-transition:0.3s;
-}
-.skill-item i{color:#22c55e;}
-.skill-item:hover{
-background:#0f172a;
-border:1px solid #22c55e;
+/* Projects */
+.project-title{
+font-size:20px;
+margin-bottom:10px;
+color:#ffffff;
 }
 
-/* Grid */
-.grid{
+.project-desc{
+color:#cbd5e1;
+margin-bottom:15px;
+}
+
+.project-btn{
+display:inline-block;
+padding:8px 18px;
+border-radius:6px;
+background:#1e293b;
+color:#22c55e;
+text-decoration:none;
+font-weight:500;
+border:1px solid #22c55e;
+transition:0.3s;
+}
+
+.project-btn:hover{
+background:#22c55e;
+color:#000;
+}
+
+/* Skills */
+.skills-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:18px;
+}
+
+.skill-item{
+background:#0b1220;
+padding:14px 18px;
+border-radius:8px;
+display:flex;
+align-items:center;
+gap:10px;
+border:1px solid #1e293b;
+transition:0.3s;
+}
+
+.skill-item i{
+color:#22c55e;
+}
+
+.skill-item:hover{
+border-color:#22c55e;
 }
 
 /* Contact */
-.contact-section{text-align:center;}
+.contact-section{
+text-align:center;
+}
+
 .contact-buttons{
 display:flex;
 justify-content:center;
+gap:20px;
 flex-wrap:wrap;
-gap:25px;
+margin-top:20px;
 }
+
 .contact-btn{
-padding:14px 28px;
-border-radius:12px;
-background:linear-gradient(90deg,#22c55e,#2563eb);
-color:white;
+padding:12px 22px;
+border-radius:6px;
+background:#22c55e;
+color:#000;
 text-decoration:none;
 font-weight:600;
 display:flex;
@@ -169,25 +197,36 @@ align-items:center;
 gap:8px;
 transition:0.3s;
 }
+
 .contact-btn:hover{
-transform:translateY(-4px);
-box-shadow:0 10px 30px rgba(34,197,94,0.5);
+background:#16a34a;
 }
 
 /* Footer */
 footer{
 text-align:center;
-padding:45px;
-background:#000000;
+padding:30px;
+background:#000;
 color:#94a3b8;
+margin-top:60px;
 }
 
 /* Responsive */
 @media(max-width:900px){
-.hero{flex-direction:column;text-align:center;}
-section{padding:80px 20px;}
-.hero-text h1{font-size:38px;}
-.profile-img{width:210px;height:210px;}
+.hero{
+flex-direction:column;
+text-align:center;
+}
+section{
+padding:70px 20px;
+}
+.hero-text h1{
+font-size:34px;
+}
+.profile-img{
+width:190px;
+height:190px;
+}
 }
 </style>
 </head>
@@ -211,67 +250,79 @@ section{padding:80px 20px;}
 
 <!-- ABOUT -->
 <section>
+<div class="container">
 <div class="section-title">About Me</div>
 <div class="card">
-Transitioned from Aerospace Engineering into DevOps with a strong interest in automation and scalable cloud systems.
+Transitioned from Aerospace Engineering into DevOps with strong interest in automation and cloud-native systems.
 Passionate about CI/CD pipelines, containerization, and distributed infrastructure.
-Focused on building production-ready systems for product-based companies.
+Focused on building scalable and production-ready DevOps solutions.
+</div>
 </div>
 </section>
 
 <!-- PROFESSIONAL SUMMARY -->
 <section>
+<div class="container">
 <div class="section-title">Professional Summary</div>
 <div class="card">
-DevOps-focused engineering student specializing in CI/CD automation, containerization, and cloud-native systems.
-Hands-on experience with AWS, Docker, Jenkins, Kubernetes, and Infrastructure as Code.
+DevOps-focused engineering student specializing in CI/CD automation, Docker-based deployments, and cloud infrastructure.
+Hands-on experience with AWS, Jenkins, Kubernetes, GitHub, and Infrastructure as Code.
 Committed to building reliable and scalable deployment pipelines.
+</div>
 </div>
 </section>
 
 <!-- PROJECTS -->
 <section>
+<div class="container">
 <div class="section-title">Featured Projects</div>
 
 <div class="card">
-<h3>Event-Driven Cloud Data Pipeline</h3>
-<p>AWS serverless architecture using Terraform and GitHub Actions CI/CD.</p>
-<a href="https://github.com/sabarikarthick7/event-driven-cloud-pipeline" target="_blank" class="hero-btn">View Project</a>
+<div class="project-title">Event-Driven Cloud Data Pipeline</div>
+<div class="project-desc">AWS serverless architecture with Terraform & CI/CD automation.</div>
+<a href="https://github.com/sabarikarthick7/event-driven-cloud-pipeline" target="_blank" class="project-btn">View Repository</a>
 </div>
 
 <div class="card">
-<h3>Jenkins Remoting – Master-Agent Architecture</h3>
-<p>Distributed Jenkins build system using Docker-based remote agents.</p>
-<a href="https://github.com/sabarikarthick7/CodeAlpha_Jenkins_Remoting" target="_blank" class="hero-btn">View Project</a>
+<div class="project-title">Jenkins Remoting – Master Agent Architecture</div>
+<div class="project-desc">Distributed Jenkins build system using Docker-based agents and secure remoting.</div>
+<a href="https://github.com/sabarikarthick7/CodeAlpha_Jenkins_Remoting" target="_blank" class="project-btn">View Repository</a>
 </div>
 
 <div class="card">
-<h3>Docker Web Server – NGINX Deployment</h3>
-<p>Containerized NGINX web server deployed using Docker and accessible via localhost.</p>
-<a href="https://github.com/sabarikarthick7/CodeAlpha_Docker_WebServer" target="_blank" class="hero-btn">View Project</a>
+<div class="project-title">Docker Web Server – NGINX Deployment</div>
+<div class="project-desc">Containerized NGINX web server deployed using Docker and accessible via localhost.</div>
+<a href="https://github.com/sabarikarthick7/CodeAlpha_Docker_WebServer" target="_blank" class="project-btn">View Repository</a>
 </div>
 
+</div>
 </section>
 
-<!-- SKILLS -->
+<!-- TECHNICAL SKILLS -->
 <section>
+<div class="container">
 <div class="section-title">Technical Skills</div>
-<div class="skills">
+<div class="skills-grid">
+
 <div class="skill-item"><i class="fab fa-python"></i> Python</div>
 <div class="skill-item"><i class="fab fa-docker"></i> Docker</div>
-<div class="skill-item"><i class="fab fa-linux"></i> Linux</div>
+<div class="skill-item"><i class="fab fa-linux"></i> Linux Administration</div>
+<div class="skill-item"><i class="fab fa-windows"></i> Windows Administration</div>
 <div class="skill-item"><i class="fab fa-aws"></i> AWS</div>
 <div class="skill-item"><i class="fas fa-cogs"></i> Jenkins</div>
 <div class="skill-item"><i class="fas fa-dharmachakra"></i> Kubernetes</div>
 <div class="skill-item"><i class="fas fa-sync-alt"></i> CI/CD</div>
-<div class="skill-item"><i class="fab fa-git-alt"></i> Git</div>
+<div class="skill-item"><i class="fab fa-git-alt"></i> Git & GitHub</div>
+<div class="skill-item"><i class="fas fa-network-wired"></i> Networking Fundamentals</div>
+
+</div>
 </div>
 </section>
 
 <!-- CERTIFICATIONS -->
 <section>
+<div class="container">
 <div class="section-title">Certifications</div>
-<div class="grid">
 <div class="card">Google Gemini Certified University Student</div>
 <div class="card">Cisco Networking Basics</div>
 <div class="card">AWS Cloud Practitioner Essentials</div>
@@ -280,49 +331,41 @@ Committed to building reliable and scalable deployment pipelines.
 
 <!-- SOFT SKILLS -->
 <section>
+<div class="container">
 <div class="section-title">Soft Skills</div>
-<div class="skills">
+<div class="skills-grid">
 <div class="skill-item"><i class="fas fa-comments"></i> Communication</div>
 <div class="skill-item"><i class="fas fa-user-tie"></i> Leadership</div>
 <div class="skill-item"><i class="fas fa-users"></i> Team Collaboration</div>
 <div class="skill-item"><i class="fas fa-lightbulb"></i> Problem Solving</div>
 <div class="skill-item"><i class="fas fa-bolt"></i> Quick Learner</div>
 </div>
+</div>
 </section>
 
 <!-- LANGUAGES -->
 <section>
+<div class="container">
 <div class="section-title">Languages</div>
-<div class="card">
-English – Full Professional Proficiency
+<div class="card">English – Full Professional Proficiency</div>
 </div>
 </section>
 
 <!-- CONTACT -->
 <section class="contact-section">
+<div class="container">
 <div class="section-title">Contact</div>
 <div class="contact-buttons">
 <a href="mailto:sabarikarthick.it@gmail.com" class="contact-btn"><i class="fas fa-envelope"></i>Email</a>
 <a href="https://linkedin.com/in/sabari-karthick-85326730a" target="_blank" class="contact-btn"><i class="fab fa-linkedin"></i>LinkedIn</a>
 <a href="https://github.com/sabarikarthick7" target="_blank" class="contact-btn"><i class="fab fa-github"></i>GitHub</a>
 </div>
+</div>
 </section>
 
 <footer>
 © 2026 M. Sabari Karthick | DevOps Engineer
 </footer>
-
-<script>
-const sections=document.querySelectorAll("section");
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("show");
-}
-});
-},{threshold:0.15});
-sections.forEach(section=>observer.observe(section));
-</script>
 
 </body>
 </html>
