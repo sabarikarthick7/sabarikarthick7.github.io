@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>M. Sabari Karthick | DevOps Engineer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -14,24 +14,26 @@ html{scroll-behavior:smooth;}
 
 body{
 font-family:'Inter',sans-serif;
-background:linear-gradient(135deg,#0d1117,#0f172a,#111827);
-color:#e6edf3;
+background:linear-gradient(135deg,#050816,#0a1128,#0f172a);
+color:#e2e8f0;
 overflow-x:hidden;
+position:relative;
 }
 
-/* Subtle Glow */
+/* CENTER GLOW */
 body::before{
 content:"";
 position:fixed;
-width:500px;
-height:500px;
-background:radial-gradient(circle,rgba(59,130,246,0.15),transparent 70%);
-top:-150px;
-right:-150px;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:700px;
+height:700px;
+background:radial-gradient(circle,rgba(59,130,246,0.25),transparent 70%);
 z-index:-1;
 }
 
-/* Section Animation */
+/* SECTION */
 section{
 padding:100px 12%;
 opacity:0;
@@ -44,10 +46,11 @@ transform:translateY(0);
 }
 
 .section-title{
-font-size:28px;
-margin-bottom:40px;
+font-size:32px;
+margin-bottom:50px;
 color:#3b82f6;
-font-weight:600;
+font-weight:700;
+text-align:center;
 }
 
 /* HERO */
@@ -55,45 +58,37 @@ font-weight:600;
 display:flex;
 align-items:center;
 justify-content:space-between;
-gap:60px;
+padding:140px 12%;
 flex-wrap:wrap;
-padding:120px 12%;
+gap:60px;
 }
 
 .hero-text{
 flex:1;
 min-width:280px;
-animation:fadeLeft 1s ease forwards;
-}
-
-@keyframes fadeLeft{
-from{opacity:0;transform:translateX(-40px);}
-to{opacity:1;transform:translateX(0);}
 }
 
 .hero-text h1{
-font-size:48px;
+font-size:52px;
 font-weight:700;
-margin-bottom:15px;
-color:#ffffff;
-}
-
-.hero-text h2{
-color:#3b82f6;
 margin-bottom:20px;
 }
 
+.hero-text span{
+color:#3b82f6;
+}
+
 .hero-text p{
-color:#9ca3af;
-margin-bottom:6px;
+color:#94a3b8;
+margin-bottom:20px;
+font-size:18px;
 }
 
 .hero-btn{
 display:inline-block;
-margin-top:25px;
-padding:14px 28px;
+padding:14px 30px;
 border-radius:8px;
-background:linear-gradient(90deg,#3b82f6,#06b6d4);
+background:linear-gradient(90deg,#2563eb,#3b82f6);
 color:white;
 font-weight:600;
 text-decoration:none;
@@ -102,152 +97,83 @@ transition:0.3s;
 
 .hero-btn:hover{
 transform:translateY(-4px);
-box-shadow:0 10px 30px rgba(59,130,246,0.5);
+box-shadow:0 10px 30px rgba(59,130,246,0.6);
 }
 
 .hero-image{
 flex:1;
 text-align:center;
-animation:fadeRight 1s ease forwards;
-}
-
-@keyframes fadeRight{
-from{opacity:0;transform:translateX(40px);}
-to{opacity:1;transform:translateX(0);}
 }
 
 .profile-img{
-width:240px;
-height:240px;
-border-radius:16px;
+width:260px;
+height:260px;
+border-radius:20px;
 object-fit:cover;
 border:2px solid #3b82f6;
 }
 
-/* Cards */
+/* CARD */
 .card{
-background:#161b22;
-padding:28px;
-border-radius:12px;
-border:1px solid #1f2937;
-margin-bottom:25px;
+background:#0f172a;
+padding:30px;
+border-radius:14px;
+border:1px solid #1e293b;
 transition:0.3s;
+margin-bottom:30px;
 }
 
 .card:hover{
 border-color:#3b82f6;
-transform:translateY(-5px);
+transform:translateY(-6px);
 }
 
-/* Projects */
-.project-title{
-font-size:20px;
-margin-bottom:10px;
-color:#ffffff;
+/* EDUCATION TIMELINE */
+.timeline{
+display:flex;
+flex-direction:column;
+gap:30px;
+max-width:900px;
+margin:auto;
 }
 
-.project-desc{
-color:#9ca3af;
-margin-bottom:15px;
-}
-
-.project-btn{
-display:inline-block;
-padding:8px 18px;
-border-radius:6px;
-border:1px solid #3b82f6;
-color:#3b82f6;
-text-decoration:none;
-transition:0.3s;
-}
-
-.project-btn:hover{
-background:#3b82f6;
-color:white;
-}
-
-/* Skills */
-.skills-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:18px;
-}
-
-.skill-item{
-background:#111827;
-padding:14px 18px;
+.timeline-item{
+background:#0f172a;
+padding:25px;
+border-left:4px solid #3b82f6;
 border-radius:8px;
-display:flex;
-align-items:center;
-gap:10px;
-border:1px solid #1f2937;
 transition:0.3s;
 }
 
-.skill-item i{
-color:#06b6d4;
+.timeline-item:hover{
+background:#111c36;
+transform:translateX(8px);
 }
 
-.skill-item:hover{
-border-color:#06b6d4;
-transform:translateY(-3px);
+.timeline-item h3{
+color:#ffffff;
+margin-bottom:8px;
 }
 
-/* Contact */
-.contact-section{
-text-align:center;
+.timeline-item p{
+color:#94a3b8;
 }
 
-.contact-buttons{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-margin-top:20px;
-}
-
-.contact-btn{
-padding:12px 22px;
-border-radius:6px;
-background:#3b82f6;
-color:white;
-text-decoration:none;
-font-weight:600;
-display:flex;
-align-items:center;
-gap:8px;
-transition:0.3s;
-}
-
-.contact-btn:hover{
-background:#2563eb;
-transform:translateY(-3px);
-}
-
-/* Footer */
-footer{
-text-align:center;
-padding:30px;
-background:#0d1117;
-color:#6b7280;
-margin-top:60px;
-}
-
-/* Responsive */
+/* RESPONSIVE */
 @media(max-width:900px){
 .hero{
 flex-direction:column;
 text-align:center;
 }
+.hero-text h1{
+font-size:36px;
+}
 section{
 padding:70px 20px;
 }
-.hero-text h1{
-font-size:34px;
-}
 .profile-img{
-width:190px;
-height:190px;
+width:200px;
+height:200px;
 }
 }
 </style>
@@ -258,118 +184,38 @@ height:190px;
 <!-- HERO -->
 <div class="hero">
 <div class="hero-text">
-<h1>M. Sabari Karthick</h1>
-<h2>DevOps & Cloud Engineer</h2>
-<p>B.Tech Aerospace Engineering</p>
-<p>SRM Institute of Science and Technology | 2027</p>
-<p>Chennai, Tamil Nadu, India</p>
-<a href="Sabari_Karthick_Resume.pdf" target="_blank" class="hero-btn">View Resume</a>
+<h1>Hello, I'm <span>Sabari Karthick</span></h1>
+<p>DevOps & Cloud Engineer passionate about automation, CI/CD pipelines and scalable cloud infrastructure.</p>
+<a href="#" class="hero-btn">View Resume</a>
 </div>
 <div class="hero-image">
 <img src="profile.jpeg" class="profile-img">
 </div>
 </div>
 
-<!-- ABOUT -->
+<!-- EDUCATION -->
 <section>
-<div class="section-title">About Me</div>
-<div class="card">
-Transitioned from Aerospace Engineering into DevOps with strong interest in automation and scalable cloud systems.
-Passionate about CI/CD pipelines, containerization, and distributed infrastructure.
-Focused on building production-ready DevOps solutions.
-</div>
-</section>
+<div class="section-title">My Education Journey</div>
 
-<!-- PROFESSIONAL SUMMARY -->
-<section>
-<div class="section-title">Professional Summary</div>
-<div class="card">
-DevOps-focused engineering student specializing in CI/CD automation, Docker-based deployments, and cloud infrastructure.
-Hands-on experience with AWS, Jenkins, Kubernetes, GitHub, and Infrastructure as Code.
-Committed to building reliable and scalable deployment pipelines.
-</div>
-</section>
+<div class="timeline">
 
-<!-- PROJECTS -->
-<section>
-<div class="section-title">Featured Projects</div>
-
-<div class="card">
-<div class="project-title">Event-Driven Cloud Data Pipeline</div>
-<div class="project-desc">AWS serverless architecture with Terraform & CI/CD automation.</div>
-<a href="https://github.com/sabarikarthick7/event-driven-cloud-pipeline" target="_blank" class="project-btn">View Repository</a>
+<div class="timeline-item">
+<h3>1st Standard</h3>
+<p>Shrine Nursery & Primary School – Madurai</p>
 </div>
 
-<div class="card">
-<div class="project-title">Jenkins Remoting – Master Agent Architecture</div>
-<div class="project-desc">Distributed Jenkins build system using Docker-based agents.</div>
-<a href="https://github.com/sabarikarthick7/CodeAlpha_Jenkins_Remoting" target="_blank" class="project-btn">View Repository</a>
+<div class="timeline-item">
+<h3>2nd – 12th Standard</h3>
+<p>Sairam Matric Higher Secondary School – Madurai</p>
 </div>
 
-<div class="card">
-<div class="project-title">Docker Web Server – NGINX Deployment</div>
-<div class="project-desc">Containerized NGINX web server deployed using Docker and accessible via localhost.</div>
-<a href="https://github.com/sabarikarthick7/CodeAlpha_Docker_WebServer" target="_blank" class="project-btn">View Repository</a>
+<div class="timeline-item">
+<h3>Bachelor Degree</h3>
+<p>B.Tech – SRM Institute of Science and Technology – Chennai</p>
 </div>
 
-</section>
-
-<!-- TECHNICAL SKILLS -->
-<section>
-<div class="section-title">Technical Skills</div>
-<div class="skills-grid">
-<div class="skill-item"><i class="fab fa-python"></i> Python</div>
-<div class="skill-item"><i class="fab fa-docker"></i> Docker</div>
-<div class="skill-item"><i class="fab fa-linux"></i> Linux Administration</div>
-<div class="skill-item"><i class="fab fa-windows"></i> Windows Administration</div>
-<div class="skill-item"><i class="fab fa-aws"></i> AWS</div>
-<div class="skill-item"><i class="fas fa-cogs"></i> Jenkins</div>
-<div class="skill-item"><i class="fas fa-dharmachakra"></i> Kubernetes</div>
-<div class="skill-item"><i class="fas fa-sync-alt"></i> CI/CD</div>
-<div class="skill-item"><i class="fab fa-git-alt"></i> Git & GitHub</div>
-<div class="skill-item"><i class="fas fa-network-wired"></i> Networking Fundamentals</div>
 </div>
 </section>
-
-<!-- CERTIFICATIONS -->
-<section>
-<div class="section-title">Certifications</div>
-<div class="card">Google Gemini Certified University Student</div>
-<div class="card">Cisco Networking Basics</div>
-<div class="card">AWS Cloud Practitioner Essentials</div>
-</section>
-
-<!-- SOFT SKILLS -->
-<section>
-<div class="section-title">Soft Skills</div>
-<div class="skills-grid">
-<div class="skill-item"><i class="fas fa-comments"></i> Communication</div>
-<div class="skill-item"><i class="fas fa-user-tie"></i> Leadership</div>
-<div class="skill-item"><i class="fas fa-users"></i> Team Collaboration</div>
-<div class="skill-item"><i class="fas fa-lightbulb"></i> Problem Solving</div>
-<div class="skill-item"><i class="fas fa-bolt"></i> Quick Learner</div>
-</div>
-</section>
-
-<!-- LANGUAGES -->
-<section>
-<div class="section-title">Languages</div>
-<div class="card">English – Full Professional Proficiency</div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact-section">
-<div class="section-title">Contact</div>
-<div class="contact-buttons">
-<a href="mailto:sabarikarthick.it@gmail.com" class="contact-btn"><i class="fas fa-envelope"></i>Email</a>
-<a href="https://linkedin.com/in/sabari-karthick-85326730a" target="_blank" class="contact-btn"><i class="fab fa-linkedin"></i>LinkedIn</a>
-<a href="https://github.com/sabarikarthick7" target="_blank" class="contact-btn"><i class="fab fa-github"></i>GitHub</a>
-</div>
-</section>
-
-<footer>
-© 2026 M. Sabari Karthick | DevOps Engineer
-</footer>
 
 <script>
 const sections=document.querySelectorAll("section");
@@ -379,7 +225,7 @@ if(entry.isIntersecting){
 entry.target.classList.add("show");
 }
 });
-},{threshold:0.15});
+},{threshold:0.2});
 sections.forEach(section=>observer.observe(section));
 </script>
 
