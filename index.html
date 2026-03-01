@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>M. Sabari Karthick | DevOps Engineer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -14,34 +14,39 @@ html{scroll-behavior:smooth;}
 
 body{
 font-family:'Inter',sans-serif;
-background:linear-gradient(135deg,#050816,#0a1128,#0f172a);
-color:#e2e8f0;
-overflow-x:hidden;
-position:relative;
+background:linear-gradient(135deg,#040816,#081225,#0f1e3a);
+color:#e5e7eb;
 line-height:1.6;
+overflow-x:hidden;
 }
 
-/* Center Glow */
+/* Glow Background */
 body::before{
 content:"";
 position:fixed;
-top:50%;
-left:50%;
+top:40%;
+left:60%;
+width:600px;
+height:600px;
+background:radial-gradient(circle,rgba(37,99,235,0.25),transparent 70%);
 transform:translate(-50%,-50%);
-width:650px;
-height:650px;
-background:radial-gradient(circle,rgba(59,130,246,0.20),transparent 70%);
 z-index:-1;
 }
 
-/* Section spacing FIXED */
+/* Layout Container */
+.container{
+width:100%;
+max-width:1200px;
+margin:auto;
+padding:0 40px;
+}
+
+/* Section */
 section{
-padding:70px 12%;
+padding:90px 0;
 opacity:0;
 transform:translateY(40px);
 transition:all 0.8s ease;
-max-width:1200px;
-margin:auto;
 }
 section.show{
 opacity:1;
@@ -49,33 +54,28 @@ transform:translateY(0);
 }
 
 .section-title{
-font-size:28px;
-margin-bottom:35px;
-color:#3b82f6;
+font-size:30px;
 font-weight:700;
-text-align:center;
+color:#3b82f6;
+margin-bottom:40px;
 }
 
-/* HERO FIXED HEIGHT */
+/* HERO */
 .hero{
 display:flex;
 align-items:center;
 justify-content:space-between;
-padding:110px 12% 80px 12%;
-flex-wrap:wrap;
-gap:50px;
-max-width:1200px;
-margin:auto;
+gap:60px;
+padding:120px 0 80px 0;
 }
 
 .hero-text{
 flex:1;
-min-width:280px;
 }
 
 .hero-text h1{
-font-size:44px;
-margin-bottom:18px;
+font-size:48px;
+margin-bottom:15px;
 }
 
 .hero-text span{
@@ -83,17 +83,17 @@ color:#3b82f6;
 }
 
 .hero-text p{
-color:#94a3b8;
-margin-bottom:20px;
-font-size:17px;
+color:#9ca3af;
 max-width:520px;
+margin-bottom:25px;
+font-size:17px;
 }
 
 .hero-btn{
 display:inline-block;
-padding:12px 26px;
-border-radius:8px;
+padding:13px 28px;
 background:linear-gradient(90deg,#2563eb,#3b82f6);
+border-radius:8px;
 color:white;
 font-weight:600;
 text-decoration:none;
@@ -102,54 +102,58 @@ transition:0.3s;
 
 .hero-btn:hover{
 transform:translateY(-3px);
-box-shadow:0 8px 25px rgba(59,130,246,0.5);
+box-shadow:0 10px 30px rgba(37,99,235,0.5);
 }
 
 .hero-image{
 flex:1;
-text-align:center;
+text-align:right;
 }
 
 .profile-img{
-width:230px;
-height:230px;
+width:260px;
+height:260px;
 border-radius:18px;
 object-fit:cover;
 border:2px solid #3b82f6;
 }
 
-/* CARD SPACING FIX */
+/* Card */
 .card{
 background:#0f172a;
-padding:22px 26px;
+padding:25px 30px;
 border-radius:12px;
 border:1px solid #1e293b;
 transition:0.3s;
-margin-bottom:20px;
+margin-bottom:25px;
 }
 
 .card:hover{
 border-color:#3b82f6;
-transform:translateY(-4px);
+transform:translateY(-5px);
 }
 
-/* Skills Grid spacing */
-.skills-grid{
+/* Grid */
+.grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:16px;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
 }
 
+/* Skill */
 .skill-item{
 background:#0f172a;
-padding:14px;
+padding:15px;
 border-radius:8px;
 border:1px solid #1e293b;
 display:flex;
 align-items:center;
 gap:10px;
 transition:0.3s;
-font-size:15px;
+}
+
+.skill-item i{
+color:#3b82f6;
 }
 
 .skill-item:hover{
@@ -157,35 +161,19 @@ border-color:#3b82f6;
 transform:translateY(-3px);
 }
 
-.skill-item i{
-color:#3b82f6;
-}
-
-/* Timeline spacing FIX */
+/* Timeline */
 .timeline{
-max-width:850px;
-margin:auto;
 display:flex;
 flex-direction:column;
-gap:18px;
+gap:20px;
 }
 
 .timeline-item{
 background:#0f172a;
-padding:20px 24px;
+padding:20px;
 border-left:4px solid #3b82f6;
 border-radius:8px;
 transition:0.3s;
-}
-
-.timeline-item h3{
-margin-bottom:6px;
-font-size:17px;
-}
-
-.timeline-item p{
-color:#94a3b8;
-font-size:14px;
 }
 
 .timeline-item:hover{
@@ -193,26 +181,23 @@ background:#111c36;
 transform:translateX(6px);
 }
 
-/* Contact spacing */
+/* Contact */
 .contact-buttons{
 display:flex;
-justify-content:center;
-gap:16px;
+gap:20px;
 flex-wrap:wrap;
-margin-top:15px;
 }
 
 .contact-btn{
-padding:10px 18px;
-border-radius:6px;
+padding:10px 20px;
 background:#2563eb;
+border-radius:6px;
 color:white;
 text-decoration:none;
 font-weight:600;
 display:flex;
 align-items:center;
 gap:8px;
-font-size:14px;
 transition:0.3s;
 }
 
@@ -221,22 +206,35 @@ background:#1d4ed8;
 transform:translateY(-3px);
 }
 
-/* RESPONSIVE FIX */
-@media(max-width:900px){
+/* Footer */
+footer{
+text-align:center;
+padding:40px 0;
+color:#9ca3af;
+border-top:1px solid #1e293b;
+margin-top:60px;
+}
+
+/* Responsive */
+@media(max-width:992px){
 .hero{
 flex-direction:column;
 text-align:center;
-padding:90px 20px 50px 20px;
 }
-section{
-padding:55px 20px;
-}
-.hero-text h1{
-font-size:30px;
+.hero-image{
+text-align:center;
 }
 .profile-img{
-width:180px;
-height:180px;
+margin-top:20px;
+}
+}
+
+@media(max-width:600px){
+.container{
+padding:0 20px;
+}
+.hero-text h1{
+font-size:32px;
 }
 }
 </style>
@@ -244,11 +242,13 @@ height:180px;
 
 <body>
 
+<div class="container">
+
 <!-- HERO -->
 <div class="hero">
 <div class="hero-text">
 <h1>Hello, I'm <span>Sabari Karthick</span></h1>
-<p>DevOps & Cloud Engineer passionate about automation, CI/CD pipelines, Docker, Kubernetes and scalable cloud infrastructure.</p>
+<p>DevOps & Cloud Engineer specializing in CI/CD automation, containerized deployments, and scalable cloud infrastructure.</p>
 <a href="#" class="hero-btn">View Resume</a>
 </div>
 <div class="hero-image">
@@ -256,47 +256,58 @@ height:180px;
 </div>
 </div>
 
+</div>
+
 <!-- ABOUT -->
 <section>
-<div class="section-title">About Me</div>
+<div class="container">
+<h2 class="section-title">About Me</h2>
 <div class="card">
-Engineering student transitioning into DevOps with strong interest in cloud automation and distributed systems.
-Passionate about building CI/CD pipelines, containerized applications, and scalable infrastructure.
-Focused on production-ready DevOps practices.
+Engineering student transitioning into DevOps with strong interest in automation, distributed systems, and cloud-native architecture.
+Passionate about building production-ready CI/CD pipelines and scalable infrastructure.
+</div>
 </div>
 </section>
 
 <!-- PROFESSIONAL SUMMARY -->
 <section>
-<div class="section-title">Professional Summary</div>
+<div class="container">
+<h2 class="section-title">Professional Summary</h2>
 <div class="card">
-DevOps-focused engineering student with hands-on experience in Jenkins, Docker, Kubernetes and AWS.
-Experienced in Master–Agent architecture, containerized deployments and Infrastructure as Code.
-Committed to building scalable and reliable cloud-based systems.
+Hands-on experience with Jenkins Master–Agent architecture, Docker, Kubernetes, AWS, and Infrastructure as Code.
+Skilled in building automated deployment pipelines and containerized applications.
+</div>
 </div>
 </section>
 
 <!-- PROJECTS -->
 <section>
-<div class="section-title">Projects</div>
+<div class="container">
+<h2 class="section-title">Projects</h2>
+
 <div class="card">
 <h3>Event-Driven Cloud Pipeline</h3>
-<p>AWS serverless architecture using Terraform and CI/CD automation.</p>
+<p>AWS serverless architecture with Terraform and CI/CD automation.</p>
 </div>
+
 <div class="card">
 <h3>Jenkins Remoting – Master Agent</h3>
-<p>Distributed Jenkins architecture using Docker-based remote agents.</p>
+<p>Distributed Jenkins build system using Docker-based remote agents.</p>
 </div>
+
 <div class="card">
 <h3>Docker Web Server – NGINX</h3>
 <p>Containerized NGINX web server deployed using Docker and exposed via localhost.</p>
+</div>
+
 </div>
 </section>
 
 <!-- TECHNICAL SKILLS -->
 <section>
-<div class="section-title">Technical Skills</div>
-<div class="skills-grid">
+<div class="container">
+<h2 class="section-title">Technical Skills</h2>
+<div class="grid">
 <div class="skill-item"><i class="fab fa-python"></i> Python</div>
 <div class="skill-item"><i class="fab fa-docker"></i> Docker</div>
 <div class="skill-item"><i class="fab fa-linux"></i> Linux</div>
@@ -306,11 +317,13 @@ Committed to building scalable and reliable cloud-based systems.
 <div class="skill-item"><i class="fas fa-sync-alt"></i> CI/CD</div>
 <div class="skill-item"><i class="fab fa-git-alt"></i> Git</div>
 </div>
+</div>
 </section>
 
 <!-- EDUCATION -->
 <section>
-<div class="section-title">Education</div>
+<div class="container">
+<h2 class="section-title">Education</h2>
 <div class="timeline">
 <div class="timeline-item">
 <h3>1st Standard</h3>
@@ -325,17 +338,24 @@ Committed to building scalable and reliable cloud-based systems.
 <p>SRM Institute of Science and Technology – Chennai</p>
 </div>
 </div>
+</div>
 </section>
 
 <!-- CONTACT -->
 <section>
-<div class="section-title">Contact</div>
+<div class="container">
+<h2 class="section-title">Contact</h2>
 <div class="contact-buttons">
-<a href="#" class="contact-btn"><i class="fas fa-envelope"></i>Email</a>
-<a href="#" class="contact-btn"><i class="fab fa-github"></i>GitHub</a>
+<a href="mailto:sabarikarthick.it@gmail.com" class="contact-btn"><i class="fas fa-envelope"></i>Email</a>
+<a href="https://github.com/sabarikarthick7" class="contact-btn"><i class="fab fa-github"></i>GitHub</a>
 <a href="#" class="contact-btn"><i class="fab fa-linkedin"></i>LinkedIn</a>
 </div>
+</div>
 </section>
+
+<footer>
+© 2026 M. Sabari Karthick | DevOps Engineer
+</footer>
 
 <script>
 const sections=document.querySelectorAll("section");
