@@ -9,24 +9,53 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
 
 body{
     font-family:'Inter',sans-serif;
-    background:#0f172a;
+    background:radial-gradient(circle at top left,#1e293b,#0f172a 60%);
     color:#e2e8f0;
+    line-height:1.6;
 }
 
-/* Layout */
-section{padding:80px 12%;}
+/* Section spacing */
+section{
+    padding:100px 12%;
+    animation:fadeUp 0.8s ease forwards;
+    opacity:0;
+}
+
+section:nth-child(even){
+    animation-delay:0.2s;
+}
+
+@keyframes fadeUp{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+}
+
 .section-title{
-    font-size:28px;
+    font-size:30px;
     margin-bottom:40px;
-    color:#3b82f6;
+    color:#60a5fa;
     font-weight:600;
 }
 
-/* Hero */
+/* HERO */
 .hero{
     display:flex;
     align-items:center;
@@ -34,13 +63,14 @@ section{padding:80px 12%;}
     padding:120px 12%;
     gap:60px;
     flex-wrap:wrap;
-    background:linear-gradient(135deg,#0f172a,#1e293b);
 }
 
-.hero-text{flex:1;}
+.hero-text{
+    flex:1;
+}
 
 .hero-text h1{
-    font-size:48px;
+    font-size:50px;
     margin-bottom:20px;
     color:white;
 }
@@ -53,15 +83,14 @@ section{padding:80px 12%;}
 
 .hero-text p{
     color:#94a3b8;
-    margin-bottom:6px;
 }
 
 .hero-btn{
     display:inline-block;
-    margin-top:25px;
-    padding:12px 28px;
+    margin-top:30px;
+    padding:14px 30px;
     border-radius:8px;
-    background:#3b82f6;
+    background:#2563eb;
     color:white;
     text-decoration:none;
     font-weight:600;
@@ -69,27 +98,37 @@ section{padding:80px 12%;}
 }
 
 .hero-btn:hover{
-    background:#2563eb;
-    transform:translateY(-3px);
+    background:#1d4ed8;
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px rgba(37,99,235,0.4);
 }
 
-.hero-image{flex:1;text-align:center;}
+.hero-image{
+    flex:1;
+    text-align:center;
+}
 
 .profile-img{
-    width:240px;
-    height:240px;
+    width:260px;
+    height:260px;
     border-radius:20px;
     object-fit:cover;
     box-shadow:0 25px 60px rgba(0,0,0,0.6);
+    transition:0.4s;
+}
+
+.profile-img:hover{
+    transform:scale(1.05);
 }
 
 /* Cards */
 .card{
-    background:#1e293b;
-    padding:30px;
-    border-radius:14px;
+    background:rgba(30,41,59,0.85);
+    backdrop-filter:blur(10px);
+    padding:35px;
+    border-radius:16px;
     margin-bottom:30px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+    box-shadow:0 10px 40px rgba(0,0,0,0.4);
     transition:0.3s;
 }
 
@@ -101,38 +140,39 @@ section{padding:80px 12%;}
 .skills{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:18px;
+    gap:20px;
 }
 
 .skill-item{
     display:flex;
     align-items:center;
     gap:12px;
-    background:#1e293b;
-    padding:14px 18px;
-    border-radius:10px;
+    background:rgba(30,41,59,0.9);
+    padding:15px 20px;
+    border-radius:12px;
     transition:0.3s;
 }
 
 .skill-item i{
-    font-size:18px;
-    color:#3b82f6;
+    color:#60a5fa;
 }
 
 .skill-item:hover{
     background:#334155;
-    transform:translateY(-4px);
+    transform:translateY(-5px);
 }
 
 /* Grid */
 .grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+    gap:25px;
 }
 
 /* Contact */
-.contact-section{text-align:center;}
+.contact-section{
+    text-align:center;
+}
 
 .contact-buttons{
     display:flex;
@@ -142,21 +182,21 @@ section{padding:80px 12%;}
 }
 
 .contact-btn{
+    padding:14px 24px;
+    border-radius:8px;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    font-weight:600;
     display:flex;
     align-items:center;
     gap:8px;
-    padding:12px 20px;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:600;
-    background:#3b82f6;
-    color:white;
     transition:0.3s;
 }
 
 .contact-btn:hover{
-    background:#2563eb;
-    transform:translateY(-3px);
+    background:#1d4ed8;
+    transform:translateY(-4px);
 }
 
 /* Footer */
@@ -169,10 +209,13 @@ footer{
 
 /* Responsive */
 @media(max-width:900px){
-.hero{flex-direction:column;text-align:center;}
-.hero-text{order:2;}
-.hero-image{order:1;}
-section{padding:60px 20px;}
+.hero{
+    flex-direction:column;
+    text-align:center;
+}
+section{
+    padding:80px 20px;
+}
 }
 </style>
 </head>
@@ -187,9 +230,8 @@ section{padding:60px 20px;}
 <p>B.Tech Aerospace Engineering</p>
 <p>SRM Institute of Science and Technology | 2027</p>
 <p>Chennai, Tamil Nadu, India</p>
-<a href="Sabari_Karthick_Resume.pdf" target="_blank" class="hero-btn">
-View Resume
-</a>
+
+<a href="Sabari_Karthick_Resume.pdf" target="_blank" class="hero-btn">View Resume</a>
 </div>
 
 <div class="hero-image">
@@ -201,8 +243,8 @@ View Resume
 <section>
 <div class="section-title">About Me</div>
 <div class="card">
-I transitioned from Aerospace Engineering into DevOps after developing a strong interest in automation, cloud infrastructure, and scalable system design. 
-I am passionate about building CI/CD pipelines, distributed build systems, and cloud-native architectures that improve reliability and deployment efficiency. 
+I transitioned from Aerospace Engineering into DevOps after developing a strong interest in automation, cloud infrastructure, and scalable system design.
+I am passionate about building CI/CD pipelines, distributed build systems, and cloud-native architectures that improve reliability and deployment efficiency.
 My goal is to grow as a DevOps Engineer and contribute to product-based teams working on real-world scalable systems.
 </div>
 </section>
@@ -211,8 +253,8 @@ My goal is to grow as a DevOps Engineer and contribute to product-based teams wo
 <section>
 <div class="section-title">Professional Summary</div>
 <div class="card">
-DevOps-focused engineering student specializing in CI/CD automation, cloud-native architectures, and distributed systems. 
-Experienced with AWS, Docker, Jenkins, Terraform, and Kubernetes. 
+DevOps-focused engineering student specializing in CI/CD automation, cloud-native architectures, and distributed systems.
+Experienced with AWS, Docker, Jenkins, Terraform, and Kubernetes.
 Committed to building reliable, secure, and production-ready infrastructure solutions.
 </div>
 </section>
