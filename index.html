@@ -14,14 +14,13 @@ html{scroll-behavior:smooth;}
 
 body{
 font-family:'Inter',sans-serif;
-background:linear-gradient(135deg,#000000 0%,#060b1f 40%,#0a0f2c 70%,#0d1b4d 100%);
+background:linear-gradient(135deg,#000000 0%, #050816 40%, #0a0f2c 70%, #0d1b4d 100%);
 color:#e5e7eb;
-line-height:1.7;
+line-height:1.6;
 overflow-x:hidden;
-padding-top:90px;
 }
 
-/* Glow */
+/* Blue glow */
 body::before{
 content:"";
 position:fixed;
@@ -40,7 +39,216 @@ margin:auto;
 padding:0 40px;
 }
 
-/* ================= NAVBAR ================= */
+section{
+padding:120px 0;
+}
+
+section.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.section-title{
+font-size:32px;
+font-weight:700;
+color:#3b82f6;
+margin-bottom:40px;
+}
+
+/* HERO */
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:60px;
+padding:140px 0 100px 0;
+}
+
+.hero-text{flex:1;}
+
+.hero-text h1{
+font-size:48px;
+margin-bottom:15px;
+}
+
+.hero-text span{color:#3b82f6;}
+
+.hero-text p{
+color:#9ca3af;
+max-width:520px;
+margin-bottom:25px;
+font-size:18px;
+}
+
+.hero-btn{
+display:inline-block;
+padding:14px 32px;
+background:linear-gradient(90deg,#2563eb,#3b82f6);
+border-radius:10px;
+color:white;
+font-weight:600;
+text-decoration:none;
+transition:0.3s;
+margin-top:10px;   /* Adds clean gap above button */
+}
+     
+.hero-btn:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 30px rgba(37,99,235,0.6);
+}
+
+.hero-image{text-align:right;}
+
+.profile-img{
+width:260px;
+height:260px;
+border-radius:18px;
+object-fit:cover;
+border:2px solid #3b82f6;
+}
+
+/* Card */
+.card{
+background:linear-gradient(145deg,#0f172a,#111c36);
+padding:40px 45px;
+border-radius:16px;
+border:1px solid #1e293b;
+margin-bottom:50px;   /* Increased spacing between cards */
+transition:0.4s ease;
+}
+
+.card h3{
+margin-bottom:18px;
+font-size:24px;
+}
+
+.card p{
+margin-bottom:28px;
+color:#9ca3af;
+font-size:17px;
+line-height:1.7;
+}
+
+.card:hover{
+border-color:#3b82f6;
+transform:translateY(-5px);
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+/* Skills */
+.skill-item{
+background:#0f172a;
+padding:15px;
+border-radius:8px;
+border:1px solid #1e293b;
+display:flex;
+align-items:center;
+gap:10px;
+transition:0.3s;
+}
+
+.skill-item i{color:#3b82f6;}
+
+.skill-item:hover{
+border-color:#3b82f6;
+transform:translateY(-3px);
+}
+
+/* Certification cards */
+.cert-card{
+background:white;
+color:#111827;
+text-align:center;
+padding:30px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.5);
+transition:0.3s;
+}
+
+.cert-card:hover{
+transform:translateY(-6px);
+}
+
+.cert-img{
+height:50px;
+margin-bottom:15px;
+object-fit:contain;
+}
+
+/* Timeline */
+.timeline{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.timeline-item{
+background:#0f172a;
+padding:20px;
+border-left:4px solid #3b82f6;
+border-radius:8px;
+transition:0.3s;
+}
+
+.timeline-item:hover{
+background:#111c36;
+transform:translateX(6px);
+}
+
+/* Contact */
+.contact-section{text-align:center;}
+
+.contact-buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.contact-btn{
+padding:12px 22px;
+background:#2563eb;
+border-radius:6px;
+color:white;
+text-decoration:none;
+font-weight:600;
+display:flex;
+align-items:center;
+gap:8px;
+transition:0.3s;
+}
+
+.contact-btn:hover{
+background:#1d4ed8;
+transform:translateY(-3px);
+}
+
+footer{
+background:#000000;
+color:#ffffff;
+text-align:center;
+padding:50px 0;
+margin-top:60px;
+}
+
+/* Responsive */
+@media(max-width:992px){
+.hero{flex-direction:column;text-align:center;}
+.hero-image{text-align:center;}
+.profile-img{margin-top:20px;}
+}
+@media(max-width:600px){
+.container{padding:0 20px;}
+.hero-text h1{font-size:32px;}
+}
+
+  /* ================= NAVBAR ================= */
 
 .navbar{
 position:fixed;
@@ -48,7 +256,7 @@ top:0;
 left:0;
 width:100%;
 background:rgba(0,0,0,0.6);
-backdrop-filter:blur(12px);
+backdrop-filter:blur(10px);
 border-bottom:1px solid #1e293b;
 z-index:1000;
 transition:0.3s ease;
@@ -56,7 +264,7 @@ transition:0.3s ease;
 
 .navbar.scrolled{
 background:#000;
-box-shadow:0 6px 25px rgba(0,0,0,0.7);
+box-shadow:0 5px 20px rgba(0,0,0,0.6);
 }
 
 .nav-container{
@@ -117,11 +325,17 @@ color:#fff;
 cursor:pointer;
 }
 
+/* Mobile menu */
 .mobile-menu{
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:#000;
 display:none;
 flex-direction:column;
-background:#000;
-padding:20px;
+padding:20px 40px;
+animation:slideDown 0.4s ease;
 }
 
 .mobile-menu a{
@@ -135,191 +349,30 @@ border-bottom:1px solid #1e293b;
 color:#3b82f6;
 }
 
-/* ================= SECTIONS ================= */
-
-section{
-padding:140px 0 120px 0;
-opacity:0;
-transform:translateY(40px);
-transition:0.8s ease;
+@keyframes slideDown{
+from{opacity:0;transform:translateY(-20px);}
+to{opacity:1;transform:translateY(0);}
 }
 
-section.show{
-opacity:1;
-transform:translateY(0);
+/* Push content below navbar */
+body{
+padding-top:90px;
 }
 
-.section-title{
-font-size:32px;
-font-weight:700;
-color:#3b82f6;
-margin-bottom:50px;
-}
-
-/* HERO */
-.hero{
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:60px;
-padding:140px 0 100px 0;
-}
-
-.hero-text{flex:1;}
-
-.hero-text h1{
-font-size:48px;
-margin-bottom:15px;
-}
-
-.hero-text span{color:#3b82f6;}
-
-.hero-text p{
-color:#9ca3af;
-max-width:520px;
-margin-bottom:25px;
-font-size:18px;
-}
-
-.hero-btn{
-display:inline-block;
-padding:14px 32px;
-background:linear-gradient(90deg,#2563eb,#3b82f6);
-border-radius:10px;
-color:white;
-font-weight:600;
-text-decoration:none;
-transition:0.3s;
-margin-top:15px;
-}
-
-.hero-btn:hover{
-transform:translateY(-3px);
-box-shadow:0 10px 30px rgba(37,99,235,0.6);
-}
-
-.profile-img{
-width:260px;
-height:260px;
-border-radius:18px;
-object-fit:cover;
-border:2px solid #3b82f6;
-}
-
-/* CARD */
-.card{
-background:linear-gradient(145deg,#0f172a,#111c36);
-padding:35px;
-border-radius:16px;
-border:1px solid #1e293b;
-margin-bottom:35px;
-transition:0.3s;
-}
-
-.card:hover{
-border-color:#3b82f6;
-transform:translateY(-5px);
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:35px;
-}
-
-/* SKILLS */
-.skill-item{
-background:#0f172a;
-padding:15px;
-border-radius:8px;
-border:1px solid #1e293b;
-display:flex;
-align-items:center;
-gap:10px;
-transition:0.3s;
-}
-
-.skill-item i{color:#3b82f6;}
-
-.skill-item:hover{
-border-color:#3b82f6;
-transform:translateY(-3px);
-}
-
-/* TIMELINE */
-.timeline{display:flex;flex-direction:column;gap:25px;}
-
-.timeline-item{
-background:#0f172a;
-padding:25px;
-border-left:4px solid #3b82f6;
-border-radius:8px;
-transition:0.3s;
-}
-
-.timeline-item:hover{
-background:#111c36;
-transform:translateX(6px);
-}
-
-/* CONTACT */
-.contact-section{text-align:center;}
-
-.contact-buttons{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-margin-top:20px;
-}
-
-.contact-btn{
-padding:12px 22px;
-background:#2563eb;
-border-radius:6px;
-color:white;
-text-decoration:none;
-font-weight:600;
-display:flex;
-align-items:center;
-gap:8px;
-transition:0.3s;
-}
-
-.contact-btn:hover{
-background:#1d4ed8;
-transform:translateY(-3px);
-}
-
-footer{
-background:#000;
-text-align:center;
-padding:50px 0;
-margin-top:60px;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:992px){
-.hero{flex-direction:column;text-align:center;}
-.profile-img{margin-top:20px;}
-}
-
+/* Mobile */
 @media(max-width:768px){
 .nav-links{display:none;}
 .hamburger{display:block;}
-.container{padding:0 20px;}
-.hero-text h1{font-size:32px;}
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+ <!-- NAVBAR -->
 <div class="navbar">
 <div class="nav-container">
+
 <a href="#" class="nav-logo">Sabari Karthick</a>
 
 <div class="nav-links">
@@ -349,21 +402,21 @@ margin-top:60px;
 <a href="#volunteering">Volunteering</a>
 <a href="#contact">Contact</a>
 </div>
-
-</div>
+</div> 
+<div class="container">
 
 <!-- HERO -->
-<div class="container">
 <div class="hero">
 <div class="hero-text">
 <h1>Hello, I'm <span>Sabari Karthick</span></h1>
 <p>DevOps & Cloud Engineer focused on CI/CD automation, scalable infrastructure, and containerized deployments.</p>
 <a href="Sabari_Karthick_Resume.pdf" target="_blank" class="hero-btn">View Resume</a>
 </div>
-<div>
+<div class="hero-image">
 <img src="profile.jpeg" class="profile-img">
 </div>
 </div>
+
 </div>
 
 <!-- ABOUT -->
@@ -371,14 +424,14 @@ margin-top:60px;
 <div class="container">
 <h2 class="section-title">About Me</h2>
 <div class="card">
-Aspiring DevOps Engineer passionate about automation, cloud-native systems, and scalable infrastructure.
-Experienced in building CI/CD pipelines using Jenkins and Docker-based deployments.
-Strong foundation in Linux, Git, and scripting while continuously learning AWS and modern DevOps tools.
+I’m a DevOps-focused engineering student with a passion for cloud computing, automation, and scalable infrastructure. I’ve built hands-on experience working with Docker containerization, Jenkins CI/CD pipelines, and Linux environments. Skilled in Git version control and automation scripting, I’m constantly learning modern DevOps tools and cloud platforms like AWS, AZURE, GCP. I love building efficient, reliable workflows that bridge development and operations.
+
+Currently seeking opportunities to contribute to real-world DevOps and cloud engineering projects.
 </div>
 </div>
 </section>
 
-<!-- SUMMARY -->
+<!-- PROFESSIONAL SUMMARY -->
 <section id="summary">
 <div class="container">
 <h2 class="section-title">Professional Summary</h2>
@@ -394,8 +447,6 @@ Strong foundation in Linux & Windows administration and networking fundamentals.
 <section id="projects">
 <div class="container">
 <h2 class="section-title">Projects</h2>
-
-<div class="grid">
 
 <div class="card">
 <h3>Event-Driven Cloud Data Processing Pipeline</h3>
@@ -416,10 +467,9 @@ Strong foundation in Linux & Windows administration and networking fundamentals.
 </div>
 
 </div>
-</div>
 </section>
 
-<!-- SKILLS -->
+<!-- TECHNICAL SKILLS -->
 <section id="skills">
 <div class="container">
 <h2 class="section-title">Technical Skills</h2>
@@ -433,6 +483,75 @@ Strong foundation in Linux & Windows administration and networking fundamentals.
 <div class="skill-item"><i class="fas fa-dharmachakra"></i> Kubernetes</div>
 <div class="skill-item"><i class="fas fa-sync-alt"></i> CI/CD</div>
 <div class="skill-item"><i class="fab fa-git-alt"></i> Git & GitHub</div>
+</div>
+</div>
+</section>
+
+<!-- SOFT SKILLS -->
+<section>
+<div class="container">
+<h2 class="section-title">Soft Skills</h2>
+<div class="grid">
+<div class="skill-item"><i class="fas fa-comments"></i> Communication</div>
+<div class="skill-item"><i class="fas fa-user-tie"></i> Leadership</div>
+<div class="skill-item"><i class="fas fa-users"></i> Team Collaboration</div>
+<div class="skill-item"><i class="fas fa-lightbulb"></i> Problem Solving</div>
+<div class="skill-item"><i class="fas fa-bolt"></i> Quick Learner</div>
+</div>
+</div>
+</section>
+
+<!-- LANGUAGES -->
+<section>
+<div class="container">
+<h2 class="section-title">Languages</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>English</h3>
+<p>Full Professional Proficiency</p>
+</div>
+
+<div class="card">
+<h3>Tamil</h3>
+<p>Native Proficiency</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+<div class="container">
+<h2 class="section-title">Certifications</h2>
+<div class="grid">
+
+<div class="cert-card">
+<a href="https://edu.google.accredible.com/d91bb352-8824-47ca-97fa-ea668494bddf#acc.ohJ1jM7v" target="_blank" style="text-decoration:none;color:inherit;">
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" class="cert-img">
+<h3>Google Gemini Certified</h3>
+</a>
+</div>
+
+<div class="cert-card">
+<a href="https://www.credly.com/badges/81cdc8c7-11f7-4f41-b542-e768323b4735/public_url" target="_blank" style="text-decoration:none;color:inherit;">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Cisco_logo.svg" class="cert-img">
+<h3>Cisco Networking Basics</h3>
+</a>
+</div>
+
+<div class="cert-card">
+<a href="aws_cloud_practitioner.png" target="_blank" style="text-decoration:none;color:inherit;">
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
+     class="cert-img"
+     style="height:45px;">
+<h3>AWS Cloud Practitioner Essentials</h3>
+</a>
+</div>
+
 </div>
 </div>
 </section>
@@ -458,6 +577,55 @@ Strong foundation in Linux & Windows administration and networking fundamentals.
 </div>
 </section>
 
+<!-- VOLUNTEERING -->
+<section id="volunteering">
+<div class="container">
+<h2 class="section-title">Volunteering</h2>
+
+<div class="card">
+
+<div style="display:flex; gap:25px; align-items:flex-start; flex-wrap:wrap;">
+
+<!-- Left Content -->
+<div style="flex:1; min-width:250px;">
+
+<h3 style="margin-bottom:8px;">Community Service Volunteer</h3>
+
+<p style="color:#3b82f6; font-weight:500; margin-bottom:6px;">
+Yogam Public Health & Voluntary Social Service Trust, Madurai
+</p>
+
+<p style="color:#9ca3af; margin-bottom:20px;">
+June 2025 · 1 Month
+</p>
+
+<p style="color:#cbd5e1; line-height:1.7;">
+Volunteered for 20 days with Yogam Public Health & Voluntary Social Service Trust, Madurai.
+Actively participated in community service initiatives and social welfare activities,
+supporting public outreach and grassroots engagement programs.
+</p>
+
+</div>
+
+<!-- Certificate Preview -->
+<div style="min-width:200px; text-align:center;">
+
+<a href="volunteering_certificate.png" target="_blank">
+<img src="volunteering_certificate.png"
+     style="width:200px; border-radius:10px; margin-bottom:12px; border:1px solid #1e293b; transition:0.3s;">
+</a>
+
+<p style="font-size:14px; color:#9ca3af;">View Certificate</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+</section>     
+     
+
 <!-- CONTACT -->
 <section id="contact" class="contact-section">
 <div class="container">
@@ -475,15 +643,7 @@ Strong foundation in Linux & Windows administration and networking fundamentals.
 </footer>
 
 <script>
-function toggleMenu(){
-const menu=document.getElementById("mobileMenu");
-menu.style.display = menu.style.display === "flex" ? "none" : "flex";
-}
-
 const sections=document.querySelectorAll("section");
-const navLinks=document.querySelectorAll(".nav-links a");
-const navbar=document.querySelector(".navbar");
-
 const observer=new IntersectionObserver(entries=>{
 entries.forEach(entry=>{
 if(entry.isIntersecting){
@@ -492,10 +652,19 @@ entry.target.classList.add("show");
 });
 },{threshold:0.2});
 sections.forEach(section=>observer.observe(section));
+/* Mobile toggle */
+function toggleMenu(){
+const menu=document.getElementById("mobileMenu");
+menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+}
+
+/* Navbar active highlight */
+const navLinks=document.querySelectorAll(".nav-links a");
+const navbar=document.querySelector(".navbar");
 
 window.addEventListener("scroll",()=>{
 let current="";
-sections.forEach(section=>{
+document.querySelectorAll("section").forEach(section=>{
 const sectionTop=section.offsetTop-150;
 if(pageYOffset>=sectionTop){
 current=section.getAttribute("id");
@@ -507,12 +676,13 @@ if(link.getAttribute("href")==="#"+current){
 link.classList.add("active");
 }
 });
+
 if(window.scrollY>50){
 navbar.classList.add("scrolled");
 }else{
 navbar.classList.remove("scrolled");
 }
-});
+});  
 </script>
 
 </body>
