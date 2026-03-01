@@ -20,7 +20,7 @@ line-height:1.6;
 overflow-x:hidden;
 }
 
-/* Stronger Blue Glow */
+/* Blue glow */
 body::before{
 content:"";
 position:fixed;
@@ -39,13 +39,13 @@ margin:auto;
 padding:0 40px;
 }
 
-/* Sections */
 section{
 padding:100px 0;
 opacity:0;
 transform:translateY(40px);
 transition:all 0.8s ease;
 }
+
 section.show{
 opacity:1;
 transform:translateY(0);
@@ -68,7 +68,12 @@ padding:140px 0 100px 0;
 }
 
 .hero-text{flex:1;}
-.hero-text h1{font-size:48px;margin-bottom:15px;}
+
+.hero-text h1{
+font-size:48px;
+margin-bottom:15px;
+}
+
 .hero-text span{color:#3b82f6;}
 
 .hero-text p{
@@ -88,12 +93,14 @@ font-weight:600;
 text-decoration:none;
 transition:0.3s;
 }
+
 .hero-btn:hover{
 transform:translateY(-3px);
 box-shadow:0 10px 30px rgba(37,99,235,0.6);
 }
 
-.hero-image{flex:1;text-align:right;}
+.hero-image{text-align:right;}
+
 .profile-img{
 width:260px;
 height:260px;
@@ -102,7 +109,7 @@ object-fit:cover;
 border:2px solid #3b82f6;
 }
 
-/* Cards */
+/* Card */
 .card{
 background:#0f172a;
 padding:30px;
@@ -111,19 +118,19 @@ border:1px solid #1e293b;
 margin-bottom:25px;
 transition:0.3s;
 }
+
 .card:hover{
 border-color:#3b82f6;
 transform:translateY(-5px);
 }
 
-/* Grid */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:25px;
 }
 
-/* Skill */
+/* Skills */
 .skill-item{
 background:#0f172a;
 padding:15px;
@@ -134,13 +141,15 @@ align-items:center;
 gap:10px;
 transition:0.3s;
 }
+
 .skill-item i{color:#3b82f6;}
+
 .skill-item:hover{
 border-color:#3b82f6;
 transform:translateY(-3px);
 }
 
-/* Certifications */
+/* Certification cards */
 .cert-card{
 background:white;
 color:#111827;
@@ -150,10 +159,15 @@ border-radius:12px;
 box-shadow:0 10px 30px rgba(0,0,0,0.5);
 transition:0.3s;
 }
-.cert-card:hover{transform:translateY(-6px);}
+
+.cert-card:hover{
+transform:translateY(-6px);
+}
+
 .cert-img{
-height:45px;
+height:50px;
 margin-bottom:15px;
+object-fit:contain;
 }
 
 /* Timeline */
@@ -162,6 +176,7 @@ display:flex;
 flex-direction:column;
 gap:20px;
 }
+
 .timeline-item{
 background:#0f172a;
 padding:20px;
@@ -169,6 +184,7 @@ border-left:4px solid #3b82f6;
 border-radius:8px;
 transition:0.3s;
 }
+
 .timeline-item:hover{
 background:#111c36;
 transform:translateX(6px);
@@ -176,6 +192,7 @@ transform:translateX(6px);
 
 /* Contact */
 .contact-section{text-align:center;}
+
 .contact-buttons{
 display:flex;
 justify-content:center;
@@ -183,6 +200,7 @@ gap:20px;
 flex-wrap:wrap;
 margin-top:20px;
 }
+
 .contact-btn{
 padding:12px 22px;
 background:#2563eb;
@@ -195,18 +213,17 @@ align-items:center;
 gap:8px;
 transition:0.3s;
 }
+
 .contact-btn:hover{
 background:#1d4ed8;
 transform:translateY(-3px);
 }
 
-/* Footer */
 footer{
 background:#000000;
 color:#ffffff;
 text-align:center;
 padding:50px 0;
-font-size:16px;
 margin-top:60px;
 }
 
@@ -231,10 +248,8 @@ margin-top:60px;
 <div class="hero">
 <div class="hero-text">
 <h1>Hello, I'm <span>Sabari Karthick</span></h1>
-<p>DevOps & Cloud Engineer passionate about CI/CD automation, scalable infrastructure, and containerized deployments.</p>
-<a href="Sabari_Karthick_Resume.pdf" target="_blank" class="hero-btn">
-    View Resume
-</a>
+<p>DevOps & Cloud Engineer focused on CI/CD automation, scalable infrastructure, and containerized deployments.</p>
+<a href="Sabari_Karthick_Resume.pdf" target="_blank" class="hero-btn">View Resume</a>
 </div>
 <div class="hero-image">
 <img src="profile.jpeg" class="profile-img">
@@ -248,9 +263,9 @@ margin-top:60px;
 <div class="container">
 <h2 class="section-title">About Me</h2>
 <div class="card">
-DevOps-focused engineering student with strong interest in automation and cloud-native systems.
-Hands-on experience building CI/CD pipelines and distributed Jenkins architectures.
-Passionate about scalable infrastructure and modern DevOps practices.
+DevOps-focused engineering student passionate about automation and cloud-native systems.
+Hands-on experience in distributed Jenkins architecture and Docker-based deployments.
+Strong interest in scalable infrastructure and modern DevOps practices.
 </div>
 </div>
 </section>
@@ -261,7 +276,7 @@ Passionate about scalable infrastructure and modern DevOps practices.
 <h2 class="section-title">Professional Summary</h2>
 <div class="card">
 Experienced in Jenkins Master–Agent architecture, Docker containerization, and Kubernetes orchestration.
-Skilled in AWS cloud services, Infrastructure as Code (Terraform), and GitHub Actions automation.
+Skilled in AWS cloud services, Infrastructure as Code, and CI/CD automation pipelines.
 Strong foundation in Linux & Windows administration and networking fundamentals.
 </div>
 </div>
@@ -274,39 +289,24 @@ Strong foundation in Linux & Windows administration and networking fundamentals.
 
 <div class="card">
 <h3>Event-Driven Cloud Data Processing Pipeline</h3>
-<p>AWS serverless architecture using Terraform and CI/CD automation with GitHub Actions.</p>
-
-<a href="https://github.com/sabarikarthick7/event-driven-cloud-pipeline"
-   target="_blank"
-   class="hero-btn"
-   style="margin-top:15px; display:inline-block;">
-   View Project
-</a>
+<p>AWS serverless architecture using Terraform and CI/CD automation.</p>
+<a href="https://github.com/sabarikarthick7/event-driven-cloud-pipeline" target="_blank" class="hero-btn">View Project</a>
 </div>
 
 <div class="card">
 <h3>Jenkins Remoting – Master Agent Architecture</h3>
-<p>Distributed Jenkins setup using Docker agents with secure remoting and labeled builds.</p>
-
-<a href="https://github.com/sabarikarthick7/jenkins-remoting-project"
-   target="_blank"
-   class="hero-btn"
-   style="margin-top:15px; display:inline-block;">
-   View Project
-</a>
+<p>Distributed Jenkins setup using Docker-based remote agents.</p>
+<a href="https://github.com/sabarikarthick7/jenkins-remoting-project" target="_blank" class="hero-btn">View Project</a>
 </div>
 
 <div class="card">
 <h3>Docker Web Server – CodeAlpha DevOps Task</h3>
-<p>Containerized NGINX web server deployed using Docker and accessible via localhost.</p>
-
-<a href="https://github.com/sabarikarthick7/codealpha-docker-webserver"
-   target="_blank"
-   class="hero-btn"
-   style="margin-top:15px; display:inline-block;">
-   View Project
-</a>
+<p>Containerized NGINX web server deployed using Docker.</p>
+<a href="https://github.com/sabarikarthick7/codealpha-docker-webserver" target="_blank" class="hero-btn">View Project</a>
 </div>
+
+</div>
+</section>
 
 <!-- TECHNICAL SKILLS -->
 <section>
@@ -353,27 +353,31 @@ Strong foundation in Linux & Windows administration and networking fundamentals.
 <div class="container">
 <h2 class="section-title">Certifications</h2>
 <div class="grid">
+
 <div class="cert-card">
-<a href=https://edu.google.accredible.com/d91bb352-8824-47ca-97fa-ea668494bddf#acc.ohJ1jM7v target="_blank" style="text-decoration:none; color:inherit;">
+<a href="https://edu.google.accredible.com/d91bb352-8824-47ca-97fa-ea668494bddf#acc.ohJ1jM7v" target="_blank" style="text-decoration:none;color:inherit;">
 <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" class="cert-img">
 <h3>Google Gemini Certified</h3>
-<p style="font-size:14px;color:#6b7280;">View Verified Badge</p>
 </a>
 </div>
+
 <div class="cert-card">
-<a href=https://www.credly.com/badges/81cdc8c7-11f7-4f41-b542-e768323b4735/public_url target="_blank" style="text-decoration:none; color:inherit;">
+<a href="https://www.credly.com/badges/81cdc8c7-11f7-4f41-b542-e768323b4735/public_url" target="_blank" style="text-decoration:none;color:inherit;">
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Cisco_logo.svg" class="cert-img">
 <h3>Cisco Networking Basics</h3>
-<p style="font-size:14px;color:#6b7280;">View Verified Badge</p>
 </a>
 </div>
+
 <div class="cert-card">
-<a href="aws_cloud_practitioner.pdf" target="_blank" style="text-decoration:none; color:inherit;">
-<img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" class="cert-img">
-<h3>AWS Cloud Practitioner</h3>
-<p style="font-size:14px;color:#6b7280;">View Certificate</p>
+<a href="aws_certificate.png" target="_blank" style="text-decoration:none;color:inherit;">
+<img src="aws_certificate.png" class="cert-img">
+<h3>AWS Cloud Practitioner Essentials</h3>
 </a>
 </div>
+
+</div>
+</div>
+</section>
 
 <!-- EDUCATION -->
 <section>
@@ -402,14 +406,14 @@ Strong foundation in Linux & Windows administration and networking fundamentals.
 <h2 class="section-title">Contact</h2>
 <div class="contact-buttons">
 <a href="mailto:sabarikarthick.it@gmail.com" class="contact-btn"><i class="fas fa-envelope"></i>Email</a>
-<a href="https://github.com/sabarikarthick7" class="contact-btn"><i class="fab fa-github"></i>GitHub</a>
-<a href="https://linkedin.com/in/sabari-karthick-85326730a" class="contact-btn"><i class="fab fa-linkedin"></i>LinkedIn</a>
+<a href="https://github.com/sabarikarthick7" target="_blank" class="contact-btn"><i class="fab fa-github"></i>GitHub</a>
+<a href="https://linkedin.com/in/sabari-karthick-85326730a" target="_blank" class="contact-btn"><i class="fab fa-linkedin"></i>LinkedIn</a>
 </div>
 </div>
 </section>
 
 <footer>
-© 2026 M. Sabari Karthick | All Rights Reserved
+© 2026 M. Sabari Karthick | DevOps Engineer
 </footer>
 
 <script>
