@@ -20,7 +20,7 @@ overflow-x:hidden;
 position:relative;
 }
 
-/* CENTER GLOW */
+/* Center Glow */
 body::before{
 content:"";
 position:fixed;
@@ -33,7 +33,7 @@ background:radial-gradient(circle,rgba(59,130,246,0.25),transparent 70%);
 z-index:-1;
 }
 
-/* SECTION */
+/* Sections */
 section{
 padding:100px 12%;
 opacity:0;
@@ -70,7 +70,6 @@ min-width:280px;
 
 .hero-text h1{
 font-size:52px;
-font-weight:700;
 margin-bottom:20px;
 }
 
@@ -128,13 +127,40 @@ border-color:#3b82f6;
 transform:translateY(-6px);
 }
 
-/* EDUCATION TIMELINE */
-.timeline{
+/* Skills */
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.skill-item{
+background:#0f172a;
+padding:15px;
+border-radius:8px;
+border:1px solid #1e293b;
 display:flex;
-flex-direction:column;
-gap:30px;
+align-items:center;
+gap:10px;
+transition:0.3s;
+}
+
+.skill-item:hover{
+border-color:#3b82f6;
+transform:translateY(-4px);
+}
+
+.skill-item i{
+color:#3b82f6;
+}
+
+/* Timeline */
+.timeline{
 max-width:900px;
 margin:auto;
+display:flex;
+flex-direction:column;
+gap:25px;
 }
 
 .timeline-item{
@@ -150,16 +176,34 @@ background:#111c36;
 transform:translateX(8px);
 }
 
-.timeline-item h3{
-color:#ffffff;
-margin-bottom:8px;
+/* Contact */
+.contact-buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:20px;
 }
 
-.timeline-item p{
-color:#94a3b8;
+.contact-btn{
+padding:12px 22px;
+border-radius:6px;
+background:#2563eb;
+color:white;
+text-decoration:none;
+font-weight:600;
+display:flex;
+align-items:center;
+gap:8px;
+transition:0.3s;
 }
 
-/* RESPONSIVE */
+.contact-btn:hover{
+background:#1d4ed8;
+transform:translateY(-3px);
+}
+
+/* Responsive */
 @media(max-width:900px){
 .hero{
 flex-direction:column;
@@ -185,7 +229,7 @@ height:200px;
 <div class="hero">
 <div class="hero-text">
 <h1>Hello, I'm <span>Sabari Karthick</span></h1>
-<p>DevOps & Cloud Engineer passionate about automation, CI/CD pipelines and scalable cloud infrastructure.</p>
+<p>DevOps & Cloud Engineer passionate about automation, CI/CD pipelines, Docker, Kubernetes and scalable cloud infrastructure.</p>
 <a href="#" class="hero-btn">View Resume</a>
 </div>
 <div class="hero-image">
@@ -193,12 +237,87 @@ height:200px;
 </div>
 </div>
 
+<!-- ABOUT -->
+<section>
+<div class="section-title">About Me</div>
+<div class="card">
+Engineering student transitioning into DevOps with strong interest in cloud automation and distributed systems.
+Passionate about building CI/CD pipelines, containerized applications, and scalable infrastructure.
+Focused on production-ready DevOps practices.
+</div>
+</section>
+
+<!-- PROFESSIONAL SUMMARY -->
+<section>
+<div class="section-title">Professional Summary</div>
+<div class="card">
+DevOps-focused engineering student with hands-on experience in Jenkins, Docker, Kubernetes and AWS.
+Experienced in Master–Agent architecture, containerized deployments and Infrastructure as Code.
+Committed to building scalable and reliable cloud-based systems.
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section>
+<div class="section-title">Projects</div>
+
+<div class="card">
+<h3>Event-Driven Cloud Pipeline</h3>
+<p>AWS serverless architecture using Terraform and CI/CD automation.</p>
+</div>
+
+<div class="card">
+<h3>Jenkins Remoting – Master Agent</h3>
+<p>Distributed Jenkins architecture using Docker-based remote agents.</p>
+</div>
+
+<div class="card">
+<h3>Docker Web Server – NGINX</h3>
+<p>Containerized NGINX web server deployed using Docker and exposed via localhost.</p>
+</div>
+
+</section>
+
+<!-- TECHNICAL SKILLS -->
+<section>
+<div class="section-title">Technical Skills</div>
+<div class="skills-grid">
+<div class="skill-item"><i class="fab fa-python"></i> Python</div>
+<div class="skill-item"><i class="fab fa-docker"></i> Docker</div>
+<div class="skill-item"><i class="fab fa-linux"></i> Linux</div>
+<div class="skill-item"><i class="fab fa-aws"></i> AWS</div>
+<div class="skill-item"><i class="fas fa-cogs"></i> Jenkins</div>
+<div class="skill-item"><i class="fas fa-dharmachakra"></i> Kubernetes</div>
+<div class="skill-item"><i class="fas fa-sync-alt"></i> CI/CD</div>
+<div class="skill-item"><i class="fab fa-git-alt"></i> Git</div>
+</div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section>
+<div class="section-title">Certifications</div>
+<div class="card">Google Gemini Certified University Student</div>
+<div class="card">Cisco Networking Basics</div>
+<div class="card">AWS Cloud Practitioner Essentials</div>
+</section>
+
+<!-- SOFT SKILLS -->
+<section>
+<div class="section-title">Soft Skills</div>
+<div class="skills-grid">
+<div class="skill-item"><i class="fas fa-comments"></i> Communication</div>
+<div class="skill-item"><i class="fas fa-user-tie"></i> Leadership</div>
+<div class="skill-item"><i class="fas fa-users"></i> Team Collaboration</div>
+<div class="skill-item"><i class="fas fa-lightbulb"></i> Problem Solving</div>
+<div class="skill-item"><i class="fas fa-bolt"></i> Quick Learner</div>
+</div>
+</section>
+
 <!-- EDUCATION -->
 <section>
-<div class="section-title">My Education Journey</div>
+<div class="section-title">Education</div>
 
 <div class="timeline">
-
 <div class="timeline-item">
 <h3>1st Standard</h3>
 <p>Shrine Nursery & Primary School – Madurai</p>
@@ -210,10 +329,26 @@ height:200px;
 </div>
 
 <div class="timeline-item">
-<h3>Bachelor Degree</h3>
-<p>B.Tech – SRM Institute of Science and Technology – Chennai</p>
+<h3>B.Tech – Aerospace Engineering</h3>
+<p>SRM Institute of Science and Technology – Chennai</p>
+</div>
 </div>
 
+</section>
+
+<!-- LANGUAGES -->
+<section>
+<div class="section-title">Languages</div>
+<div class="card">English – Full Professional Proficiency</div>
+</section>
+
+<!-- CONTACT -->
+<section>
+<div class="section-title">Contact</div>
+<div class="contact-buttons">
+<a href="mailto:sabarikarthick.it@gmail.com" class="contact-btn"><i class="fas fa-envelope"></i>Email</a>
+<a href="https://github.com/sabarikarthick7" target="_blank" class="contact-btn"><i class="fab fa-github"></i>GitHub</a>
+<a href="https://linkedin.com" target="_blank" class="contact-btn"><i class="fab fa-linkedin"></i>LinkedIn</a>
 </div>
 </section>
 
