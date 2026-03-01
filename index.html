@@ -658,6 +658,15 @@ const menu=document.getElementById("mobileMenu");
 menu.style.display = menu.style.display === "flex" ? "none" : "flex";
 }
 
+/* Auto close mobile menu when clicking a link */
+const mobileLinks = document.querySelectorAll("#mobileMenu a");
+
+mobileLinks.forEach(link=>{
+link.addEventListener("click", ()=>{
+document.getElementById("mobileMenu").style.display = "none";
+});
+});
+
 /* Navbar active highlight */
 const navLinks=document.querySelectorAll(".nav-links a");
 const navbar=document.querySelector(".navbar");
