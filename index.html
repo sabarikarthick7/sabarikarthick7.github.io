@@ -10,7 +10,6 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-
 html{scroll-behavior:smooth;}
 
 body{
@@ -22,7 +21,6 @@ body{
     overflow-x:hidden;
 }
 
-/* Smooth Gradient Animation */
 @keyframes gradientMove{
     0%{background-position:0% 50%;}
     50%{background-position:100% 50%;}
@@ -30,18 +28,15 @@ body{
 }
 
 /* Floating Glow */
-body::before,
-body::after{
+body::before, body::after{
     content:"";
     position:fixed;
-    width:500px;
-    height:500px;
+    width:500px;height:500px;
     border-radius:50%;
     background:radial-gradient(circle,rgba(59,130,246,0.25),transparent 70%);
     animation:floatGlow 12s infinite alternate ease-in-out;
     z-index:-1;
 }
-
 body::before{top:-120px;left:-120px;}
 body::after{bottom:-120px;right:-120px;animation-delay:6s;}
 
@@ -57,7 +52,6 @@ section{
     transform:translateY(40px);
     transition:all 0.8s ease;
 }
-
 section.show{
     opacity:1;
     transform:translateY(0);
@@ -79,23 +73,10 @@ section.show{
     gap:60px;
     flex-wrap:wrap;
 }
-
 .hero-text{flex:1;min-width:280px;}
-
-.hero-text h1{
-    font-size:48px;
-    margin-bottom:20px;
-    color:#ffffff;
-}
-
-.hero-text h2{
-    color:#cbd5e1;
-    margin-bottom:20px;
-}
-
-.hero-text p{
-    color:#94a3b8;
-}
+.hero-text h1{font-size:48px;margin-bottom:20px;color:white;}
+.hero-text h2{color:#cbd5e1;margin-bottom:20px;}
+.hero-text p{color:#94a3b8;}
 
 .hero-btn{
     display:inline-block;
@@ -108,30 +89,20 @@ section.show{
     font-weight:600;
     transition:0.3s;
 }
-
 .hero-btn:hover{
     transform:translateY(-4px);
     box-shadow:0 15px 35px rgba(59,130,246,0.5);
 }
 
-.hero-image{
-    flex:1;
-    text-align:center;
-    min-width:280px;
-}
-
+.hero-image{flex:1;text-align:center;min-width:280px;}
 .profile-img{
-    width:250px;
-    height:250px;
+    width:250px;height:250px;
     border-radius:20px;
     object-fit:cover;
     box-shadow:0 30px 60px rgba(0,0,0,0.6);
     transition:0.4s;
 }
-
-.profile-img:hover{
-    transform:scale(1.05);
-}
+.profile-img:hover{transform:scale(1.05);}
 
 /* Cards */
 .card{
@@ -144,10 +115,7 @@ section.show{
     box-shadow:0 10px 50px rgba(0,0,0,0.5);
     transition:0.3s;
 }
-
-.card:hover{
-    transform:translateY(-6px);
-}
+.card:hover{transform:translateY(-6px);}
 
 /* Skills */
 .skills{
@@ -155,7 +123,6 @@ section.show{
     grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
     gap:20px;
 }
-
 .skill-item{
     display:flex;
     align-items:center;
@@ -166,11 +133,7 @@ section.show{
     border:1px solid rgba(255,255,255,0.05);
     transition:0.3s;
 }
-
-.skill-item i{
-    color:#60a5fa;
-}
-
+.skill-item i{color:#60a5fa;}
 .skill-item:hover{
     background:#1e40af;
     transform:translateY(-5px);
@@ -185,14 +148,12 @@ section.show{
 
 /* Contact */
 .contact-section{text-align:center;}
-
 .contact-buttons{
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
     gap:20px;
 }
-
 .contact-btn{
     padding:14px 26px;
     border-radius:10px;
@@ -205,7 +166,6 @@ section.show{
     gap:8px;
     transition:0.3s;
 }
-
 .contact-btn:hover{
     transform:translateY(-4px);
     box-shadow:0 10px 30px rgba(59,130,246,0.5);
@@ -221,31 +181,14 @@ footer{
 
 /* Responsive */
 @media(max-width:1024px){
-.hero{
-    flex-direction:column;
-    text-align:center;
+.hero{flex-direction:column;text-align:center;}
 }
-.hero-text, .hero-image{
-    width:100%;
-}
-}
-
 @media(max-width:768px){
-section{
-    padding:70px 20px;
+section{padding:70px 20px;}
+.hero-text h1{font-size:36px;}
+.profile-img{width:200px;height:200px;}
+.section-title{font-size:24px;}
 }
-.hero-text h1{
-    font-size:36px;
-}
-.profile-img{
-    width:200px;
-    height:200px;
-}
-.section-title{
-    font-size:24px;
-}
-}
-
 </style>
 </head>
 
@@ -266,22 +209,113 @@ section{
 </div>
 </div>
 
-<!-- ALL YOUR OTHER SECTIONS REMAIN EXACTLY SAME BELOW -->
+<!-- ABOUT -->
+<section>
+<div class="section-title">About Me</div>
+<div class="card">
+I transitioned from Aerospace Engineering into DevOps after developing a strong interest in automation, cloud infrastructure, and scalable system design.
+I am passionate about building CI/CD pipelines, distributed build systems, and cloud-native architectures that improve reliability and deployment efficiency.
+My goal is to grow as a DevOps Engineer and contribute to product-based teams working on real-world scalable systems.
+</div>
+</section>
 
-<!-- Keep your existing About, Summary, Projects, Skills, Certifications, Soft Skills, Languages, Contact, Footer exactly as before -->
+<!-- PROFESSIONAL SUMMARY -->
+<section>
+<div class="section-title">Professional Summary</div>
+<div class="card">
+DevOps-focused engineering student specializing in CI/CD automation, cloud-native architectures, and distributed systems.
+Experienced with AWS, Docker, Jenkins, Terraform, and Kubernetes.
+Committed to building reliable, secure, and production-ready infrastructure solutions.
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section>
+<div class="section-title">Featured Projects</div>
+
+<div class="card">
+<h3>Event-Driven Cloud Data Processing Pipeline</h3>
+<p>Built using AWS serverless services, Terraform, and GitHub Actions for automated cloud deployment.</p>
+<a href="https://github.com/sabarikarthick7/event-driven-cloud-pipeline" target="_blank" class="hero-btn">View Project</a>
+</div>
+
+<div class="card">
+<h3>Jenkins Remoting – Master-Agent Architecture</h3>
+<p>Implemented distributed Jenkins build system using Docker-based agents and Pipeline-as-Code integration.</p>
+<a href="https://github.com/sabarikarthick7/CodeAlpha_Jenkins_Remoting" target="_blank" class="hero-btn">View Project</a>
+</div>
+</section>
+
+<!-- TECHNICAL SKILLS -->
+<section>
+<div class="section-title">Technical Skills</div>
+<div class="skills">
+<div class="skill-item"><i class="fab fa-python"></i> Python</div>
+<div class="skill-item"><i class="fab fa-docker"></i> Docker</div>
+<div class="skill-item"><i class="fab fa-linux"></i> Linux Administration</div>
+<div class="skill-item"><i class="fab fa-windows"></i> Windows Administration</div>
+<div class="skill-item"><i class="fab fa-git-alt"></i> Git & GitHub</div>
+<div class="skill-item"><i class="fab fa-aws"></i> AWS</div>
+<div class="skill-item"><i class="fas fa-cogs"></i> Jenkins</div>
+<div class="skill-item"><i class="fas fa-dharmachakra"></i> Kubernetes</div>
+<div class="skill-item"><i class="fas fa-sync-alt"></i> CI/CD</div>
+</div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section>
+<div class="section-title">Certifications</div>
+<div class="grid">
+<div class="card">Google Gemini Certified University Student</div>
+<div class="card">Cisco Networking Basics</div>
+<div class="card">AWS Cloud Practitioner Essentials</div>
+</div>
+</section>
+
+<!-- SOFT SKILLS -->
+<section>
+<div class="section-title">Soft Skills</div>
+<div class="skills">
+<div class="skill-item"><i class="fas fa-comments"></i> Communication</div>
+<div class="skill-item"><i class="fas fa-user-tie"></i> Leadership</div>
+<div class="skill-item"><i class="fas fa-users"></i> Team Collaboration</div>
+<div class="skill-item"><i class="fas fa-lightbulb"></i> Problem Solving</div>
+<div class="skill-item"><i class="fas fa-bolt"></i> Quick Learner</div>
+</div>
+</section>
+
+<!-- LANGUAGES -->
+<section>
+<div class="section-title">Languages</div>
+<div class="card">
+English – Full Professional Proficiency
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section">
+<div class="section-title">Contact</div>
+<div class="contact-buttons">
+<a href="mailto:sabarikarthick.it@gmail.com" class="contact-btn"><i class="fas fa-envelope"></i> Email</a>
+<a href="https://linkedin.com/in/sabari-karthick-85326730a" target="_blank" class="contact-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+<a href="https://github.com/sabarikarthick7" target="_blank" class="contact-btn"><i class="fab fa-github"></i> GitHub</a>
+</div>
+</section>
+
+<footer>
+© 2026 M. Sabari Karthick | DevOps & Cloud Engineer
+</footer>
 
 <script>
-const sections = document.querySelectorAll("section");
-const observer = new IntersectionObserver(entries=>{
-    entries.forEach(entry=>{
-        if(entry.isIntersecting){
-            entry.target.classList.add("show");
-        }
-    });
-},{threshold:0.15});
-sections.forEach(section=>{
-    observer.observe(section);
+const sections=document.querySelectorAll("section");
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
 });
+},{threshold:0.15});
+sections.forEach(section=>observer.observe(section));
 </script>
 
 </body>
