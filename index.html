@@ -14,9 +14,9 @@ html{scroll-behavior:smooth;}
 
 body{
 font-family:'Inter',sans-serif;
-background:linear-gradient(135deg,#000000 0%, #050816 40%, #0a0f2c 70%, #0d1b4d 100%);
+background:linear-gradient(135deg,#000000 0%,#060b1f 40%,#0a0f2c 70%,#0d1b4d 100%);
 color:#e5e7eb;
-line-height:1.6;
+line-height:1.7;
 overflow-x:hidden;
 padding-top:90px;
 }
@@ -40,22 +40,23 @@ margin:auto;
 padding:0 40px;
 }
 
-/* NAVBAR */
+/* ================= NAVBAR ================= */
+
 .navbar{
 position:fixed;
 top:0;
 left:0;
 width:100%;
 background:rgba(0,0,0,0.6);
-backdrop-filter:blur(10px);
+backdrop-filter:blur(12px);
 border-bottom:1px solid #1e293b;
 z-index:1000;
 transition:0.3s ease;
 }
 
 .navbar.scrolled{
-background:#000000;
-box-shadow:0 5px 20px rgba(0,0,0,0.6);
+background:#000;
+box-shadow:0 6px 25px rgba(0,0,0,0.7);
 }
 
 .nav-container{
@@ -68,7 +69,7 @@ align-items:center;
 }
 
 .nav-logo{
-color:#ffffff;
+color:#fff;
 font-weight:700;
 font-size:18px;
 text-decoration:none;
@@ -87,7 +88,10 @@ position:relative;
 transition:0.3s;
 }
 
-.nav-links a:hover{color:#3b82f6;}
+.nav-links a:hover,
+.nav-links a.active{
+color:#3b82f6;
+}
 
 .nav-links a::after{
 content:"";
@@ -100,15 +104,41 @@ background:#3b82f6;
 transition:0.3s;
 }
 
-.nav-links a.active,
-.nav-links a:hover{color:#3b82f6;}
+.nav-links a:hover::after,
+.nav-links a.active::after{
+width:100%;
+}
 
-.nav-links a.active::after,
-.nav-links a:hover::after{width:100%;}
+/* Hamburger */
+.hamburger{
+display:none;
+font-size:24px;
+color:#fff;
+cursor:pointer;
+}
 
-/* SECTIONS */
+.mobile-menu{
+display:none;
+flex-direction:column;
+background:#000;
+padding:20px;
+}
+
+.mobile-menu a{
+color:#fff;
+padding:12px 0;
+text-decoration:none;
+border-bottom:1px solid #1e293b;
+}
+
+.mobile-menu a:hover{
+color:#3b82f6;
+}
+
+/* ================= SECTIONS ================= */
+
 section{
-padding:120px 0;
+padding:140px 0 120px 0;
 opacity:0;
 transform:translateY(40px);
 transition:0.8s ease;
@@ -123,7 +153,7 @@ transform:translateY(0);
 font-size:32px;
 font-weight:700;
 color:#3b82f6;
-margin-bottom:40px;
+margin-bottom:50px;
 }
 
 /* HERO */
@@ -160,6 +190,7 @@ color:white;
 font-weight:600;
 text-decoration:none;
 transition:0.3s;
+margin-top:15px;
 }
 
 .hero-btn:hover{
@@ -178,10 +209,10 @@ border:2px solid #3b82f6;
 /* CARD */
 .card{
 background:linear-gradient(145deg,#0f172a,#111c36);
-padding:40px;
+padding:35px;
 border-radius:16px;
 border:1px solid #1e293b;
-margin-bottom:40px;
+margin-bottom:35px;
 transition:0.3s;
 }
 
@@ -192,10 +223,11 @@ transform:translateY(-5px);
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:35px;
 }
 
+/* SKILLS */
 .skill-item{
 background:#0f172a;
 padding:15px;
@@ -214,31 +246,12 @@ border-color:#3b82f6;
 transform:translateY(-3px);
 }
 
-/* CERT */
-.cert-card{
-background:white;
-color:#111827;
-text-align:center;
-padding:30px;
-border-radius:12px;
-box-shadow:0 10px 30px rgba(0,0,0,0.5);
-transition:0.3s;
-}
-
-.cert-card:hover{transform:translateY(-6px);}
-
-.cert-img{
-height:50px;
-margin-bottom:15px;
-object-fit:contain;
-}
-
 /* TIMELINE */
-.timeline{display:flex;flex-direction:column;gap:20px;}
+.timeline{display:flex;flex-direction:column;gap:25px;}
 
 .timeline-item{
 background:#0f172a;
-padding:20px;
+padding:25px;
 border-left:4px solid #3b82f6;
 border-radius:8px;
 transition:0.3s;
@@ -285,18 +298,20 @@ padding:50px 0;
 margin-top:60px;
 }
 
-/* Responsive */
+/* RESPONSIVE */
+
 @media(max-width:992px){
 .hero{flex-direction:column;text-align:center;}
 .profile-img{margin-top:20px;}
 }
+
 @media(max-width:768px){
 .nav-links{display:none;}
-}
-@media(max-width:600px){
+.hamburger{display:block;}
 .container{padding:0 20px;}
 .hero-text h1{font-size:32px;}
 }
+
 </style>
 </head>
 
@@ -306,6 +321,7 @@ margin-top:60px;
 <div class="navbar">
 <div class="nav-container">
 <a href="#" class="nav-logo">Sabari Karthick</a>
+
 <div class="nav-links">
 <a href="#about">About</a>
 <a href="#summary">Summary</a>
@@ -316,7 +332,24 @@ margin-top:60px;
 <a href="#volunteering">Volunteering</a>
 <a href="#contact">Contact</a>
 </div>
+
+<div class="hamburger" onclick="toggleMenu()">
+<i class="fas fa-bars"></i>
 </div>
+
+</div>
+
+<div class="mobile-menu" id="mobileMenu">
+<a href="#about">About</a>
+<a href="#summary">Summary</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#certifications">Certifications</a>
+<a href="#education">Education</a>
+<a href="#volunteering">Volunteering</a>
+<a href="#contact">Contact</a>
+</div>
+
 </div>
 
 <!-- HERO -->
@@ -345,7 +378,7 @@ Strong foundation in Linux, Git, and scripting while continuously learning AWS a
 </div>
 </section>
 
-<!-- PROFESSIONAL SUMMARY -->
+<!-- SUMMARY -->
 <section id="summary">
 <div class="container">
 <h2 class="section-title">Professional Summary</h2>
@@ -361,6 +394,8 @@ Strong foundation in Linux & Windows administration and networking fundamentals.
 <section id="projects">
 <div class="container">
 <h2 class="section-title">Projects</h2>
+
+<div class="grid">
 
 <div class="card">
 <h3>Event-Driven Cloud Data Processing Pipeline</h3>
@@ -381,9 +416,10 @@ Strong foundation in Linux & Windows administration and networking fundamentals.
 </div>
 
 </div>
+</div>
 </section>
 
-<!-- TECHNICAL SKILLS -->
+<!-- SKILLS -->
 <section id="skills">
 <div class="container">
 <h2 class="section-title">Technical Skills</h2>
@@ -397,37 +433,6 @@ Strong foundation in Linux & Windows administration and networking fundamentals.
 <div class="skill-item"><i class="fas fa-dharmachakra"></i> Kubernetes</div>
 <div class="skill-item"><i class="fas fa-sync-alt"></i> CI/CD</div>
 <div class="skill-item"><i class="fab fa-git-alt"></i> Git & GitHub</div>
-</div>
-</div>
-</section>
-
-<!-- CERTIFICATIONS -->
-<section id="certifications">
-<div class="container">
-<h2 class="section-title">Certifications</h2>
-<div class="grid">
-
-<div class="cert-card">
-<a href="https://edu.google.accredible.com/d91bb352-8824-47ca-97fa-ea668494bddf#acc.ohJ1jM7v" target="_blank">
-<img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" class="cert-img">
-<h3>Google Gemini Certified</h3>
-</a>
-</div>
-
-<div class="cert-card">
-<a href="https://www.credly.com/badges/81cdc8c7-11f7-4f41-b542-e768323b4735/public_url" target="_blank">
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Cisco_logo.svg" class="cert-img">
-<h3>Cisco Networking Basics</h3>
-</a>
-</div>
-
-<div class="cert-card">
-<a href="aws_cloud_practitioner.png" target="_blank">
-<img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" class="cert-img">
-<h3>AWS Cloud Practitioner Essentials</h3>
-</a>
-</div>
-
 </div>
 </div>
 </section>
@@ -470,6 +475,11 @@ Strong foundation in Linux & Windows administration and networking fundamentals.
 </footer>
 
 <script>
+function toggleMenu(){
+const menu=document.getElementById("mobileMenu");
+menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+}
+
 const sections=document.querySelectorAll("section");
 const navLinks=document.querySelectorAll(".nav-links a");
 const navbar=document.querySelector(".navbar");
