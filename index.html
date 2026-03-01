@@ -14,21 +14,21 @@ html{scroll-behavior:smooth;}
 
 body{
 font-family:'Inter',sans-serif;
-background:linear-gradient(135deg,#040816,#081225,#0f1e3a);
+background:linear-gradient(135deg,#020617 0%, #0b1120 50%, #0f172a 100%);
 color:#e5e7eb;
 line-height:1.6;
 overflow-x:hidden;
 }
 
-/* Glow */
+/* Blue Glow */
 body::before{
 content:"";
 position:fixed;
-top:45%;
-left:65%;
-width:650px;
-height:650px;
-background:radial-gradient(circle,rgba(37,99,235,0.25),transparent 70%);
+top:50%;
+left:70%;
+width:700px;
+height:700px;
+background:radial-gradient(circle,rgba(37,99,235,0.18),transparent 70%);
 transform:translate(-50%,-50%);
 z-index:-1;
 }
@@ -40,9 +40,9 @@ margin:auto;
 padding:0 40px;
 }
 
-/* Section */
+/* Sections */
 section{
-padding:90px 0;
+padding:100px 0;
 opacity:0;
 transform:translateY(40px);
 transition:all 0.8s ease;
@@ -53,7 +53,7 @@ transform:translateY(0);
 }
 
 .section-title{
-font-size:30px;
+font-size:32px;
 font-weight:700;
 color:#3b82f6;
 margin-bottom:40px;
@@ -65,28 +65,23 @@ display:flex;
 align-items:center;
 justify-content:space-between;
 gap:60px;
-padding:120px 0 80px 0;
+padding:140px 0 100px 0;
 }
 
 .hero-text{flex:1;}
-
-.hero-text h1{
-font-size:48px;
-margin-bottom:15px;
-}
-
+.hero-text h1{font-size:50px;margin-bottom:15px;}
 .hero-text span{color:#3b82f6;}
 
 .hero-text p{
 color:#9ca3af;
 max-width:520px;
 margin-bottom:25px;
-font-size:17px;
+font-size:18px;
 }
 
 .hero-btn{
 display:inline-block;
-padding:13px 28px;
+padding:14px 30px;
 background:linear-gradient(90deg,#2563eb,#3b82f6);
 border-radius:8px;
 color:white;
@@ -94,17 +89,15 @@ font-weight:600;
 text-decoration:none;
 transition:0.3s;
 }
-
 .hero-btn:hover{
 transform:translateY(-3px);
 box-shadow:0 10px 30px rgba(37,99,235,0.5);
 }
 
 .hero-image{flex:1;text-align:right;}
-
 .profile-img{
-width:260px;
-height:260px;
+width:270px;
+height:270px;
 border-radius:18px;
 object-fit:cover;
 border:2px solid #3b82f6;
@@ -113,13 +106,12 @@ border:2px solid #3b82f6;
 /* Cards */
 .card{
 background:#0f172a;
-padding:25px 30px;
+padding:30px;
 border-radius:12px;
 border:1px solid #1e293b;
 margin-bottom:25px;
 transition:0.3s;
 }
-
 .card:hover{
 border-color:#3b82f6;
 transform:translateY(-5px);
@@ -129,7 +121,7 @@ transform:translateY(-5px);
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:20px;
+gap:25px;
 }
 
 /* Skill */
@@ -143,23 +135,28 @@ align-items:center;
 gap:10px;
 transition:0.3s;
 }
-
 .skill-item i{color:#3b82f6;}
-
 .skill-item:hover{
 border-color:#3b82f6;
 transform:translateY(-3px);
 }
 
-/* Certification Cards */
+/* Certifications */
 .cert-card{
+background:white;
+color:#111827;
 text-align:center;
+padding:30px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+transition:0.3s;
 }
-
+.cert-card:hover{transform:translateY(-6px);}
 .cert-img{
-width:60px;
-height:60px;
+height:50px;
+width:auto;
 margin-bottom:15px;
+object-fit:contain;
 }
 
 /* Timeline */
@@ -168,7 +165,6 @@ display:flex;
 flex-direction:column;
 gap:20px;
 }
-
 .timeline-item{
 background:#0f172a;
 padding:20px;
@@ -176,17 +172,13 @@ border-left:4px solid #3b82f6;
 border-radius:8px;
 transition:0.3s;
 }
-
 .timeline-item:hover{
 background:#111c36;
 transform:translateX(6px);
 }
 
 /* Contact */
-.contact-section{
-text-align:center;
-}
-
+.contact-section{text-align:center;}
 .contact-buttons{
 display:flex;
 justify-content:center;
@@ -194,9 +186,8 @@ gap:20px;
 flex-wrap:wrap;
 margin-top:20px;
 }
-
 .contact-btn{
-padding:10px 20px;
+padding:12px 22px;
 background:#2563eb;
 border-radius:6px;
 color:white;
@@ -207,7 +198,6 @@ align-items:center;
 gap:8px;
 transition:0.3s;
 }
-
 .contact-btn:hover{
 background:#1d4ed8;
 transform:translateY(-3px);
@@ -216,7 +206,7 @@ transform:translateY(-3px);
 /* Footer */
 footer{
 text-align:center;
-padding:40px 0;
+padding:50px 0;
 color:#9ca3af;
 border-top:1px solid #1e293b;
 margin-top:60px;
@@ -224,17 +214,13 @@ margin-top:60px;
 
 /* Responsive */
 @media(max-width:992px){
-.hero{
-flex-direction:column;
-text-align:center;
-}
+.hero{flex-direction:column;text-align:center;}
 .hero-image{text-align:center;}
 .profile-img{margin-top:20px;}
 }
-
 @media(max-width:600px){
 .container{padding:0 20px;}
-.hero-text h1{font-size:32px;}
+.hero-text h1{font-size:34px;}
 }
 </style>
 </head>
@@ -247,7 +233,7 @@ text-align:center;
 <div class="hero">
 <div class="hero-text">
 <h1>Hello, I'm <span>Sabari Karthick</span></h1>
-<p>DevOps & Cloud Engineer specializing in CI/CD automation, containerized deployments, and scalable cloud infrastructure.</p>
+<p>DevOps & Cloud Engineer passionate about CI/CD automation, scalable infrastructure, and containerized deployments.</p>
 <a href="#" class="hero-btn">View Resume</a>
 </div>
 <div class="hero-image">
@@ -262,8 +248,9 @@ text-align:center;
 <div class="container">
 <h2 class="section-title">About Me</h2>
 <div class="card">
-Engineering student transitioning into DevOps with strong interest in automation and cloud-native systems.
-Focused on building scalable CI/CD pipelines and containerized applications.
+DevOps-focused engineering student with strong interest in automation and cloud-native systems.  
+Hands-on experience building CI/CD pipelines and distributed Jenkins architectures.  
+Passionate about scalable infrastructure and modern DevOps practices.
 </div>
 </div>
 </section>
@@ -273,8 +260,9 @@ Focused on building scalable CI/CD pipelines and containerized applications.
 <div class="container">
 <h2 class="section-title">Professional Summary</h2>
 <div class="card">
-Hands-on experience with Jenkins Master–Agent architecture, Docker, Kubernetes, AWS, and Infrastructure as Code.
-Skilled in automation, remote build execution, and container orchestration.
+Experienced in Jenkins Master–Agent architecture, Docker containerization, and Kubernetes orchestration.  
+Skilled in AWS cloud services, Infrastructure as Code (Terraform), and GitHub Actions automation.  
+Strong foundation in Linux & Windows administration and networking fundamentals.
 </div>
 </div>
 </section>
@@ -283,9 +271,22 @@ Skilled in automation, remote build execution, and container orchestration.
 <section>
 <div class="container">
 <h2 class="section-title">Projects</h2>
-<div class="card"><h3>Event-Driven Cloud Pipeline</h3><p>AWS serverless architecture with Terraform & CI/CD automation.</p></div>
-<div class="card"><h3>Jenkins Remoting – Master Agent</h3><p>Distributed Jenkins system using Docker agents.</p></div>
-<div class="card"><h3>Docker Web Server – NGINX</h3><p>Containerized NGINX deployment via Docker.</p></div>
+
+<div class="card">
+<h3>Event-Driven Cloud Data Processing Pipeline</h3>
+<p>AWS serverless architecture using Terraform and CI/CD automation with GitHub Actions.</p>
+</div>
+
+<div class="card">
+<h3>Jenkins Remoting – Master Agent Architecture</h3>
+<p>Distributed Jenkins setup using Docker agents with secure remoting and labeled builds.</p>
+</div>
+
+<div class="card">
+<h3>Docker Web Server – CodeAlpha DevOps Task</h3>
+<p>Containerized NGINX web server deployed using Docker and accessible via localhost.</p>
+</div>
+
 </div>
 </section>
 
@@ -336,26 +337,22 @@ Skilled in automation, remote build execution, and container orchestration.
 
 <div class="grid">
 
-<div class="card cert-card">
+<div class="cert-card">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" class="cert-img">
 <h3>Google Gemini Certified</h3>
-<p>University Student Program</p>
 </div>
 
-<div class="card cert-card">
+<div class="cert-card">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cisco/cisco-original.svg" class="cert-img">
 <h3>Cisco Networking Basics</h3>
-<p>Networking Fundamentals</p>
 </div>
 
-<div class="card cert-card">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" class="cert-img">
+<div class="cert-card">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" class="cert-img">
 <h3>AWS Cloud Practitioner</h3>
-<p>Amazon Web Services Essentials</p>
 </div>
 
 </div>
-
 </div>
 </section>
 
@@ -364,9 +361,18 @@ Skilled in automation, remote build execution, and container orchestration.
 <div class="container">
 <h2 class="section-title">Education</h2>
 <div class="timeline">
-<div class="timeline-item"><h3>1st Standard</h3><p>Shrine Nursery & Primary School – Madurai</p></div>
-<div class="timeline-item"><h3>2nd – 12th Standard</h3><p>Sairam Matric Higher Secondary School – Madurai</p></div>
-<div class="timeline-item"><h3>B.Tech – Aerospace Engineering</h3><p>SRM Institute of Science and Technology – Chennai</p></div>
+<div class="timeline-item">
+<h3>Shrine Nursery & Primary School</h3>
+<p>1st Standard – Madurai</p>
+</div>
+<div class="timeline-item">
+<h3>Sairam Matric Higher Secondary School</h3>
+<p>2nd – 12th Standard – Madurai</p>
+</div>
+<div class="timeline-item">
+<h3>SRM Institute of Science and Technology</h3>
+<p>B.Tech Aerospace Engineering – Chennai</p>
+</div>
 </div>
 </div>
 </section>
@@ -378,7 +384,7 @@ Skilled in automation, remote build execution, and container orchestration.
 <div class="contact-buttons">
 <a href="mailto:sabarikarthick.it@gmail.com" class="contact-btn"><i class="fas fa-envelope"></i>Email</a>
 <a href="https://github.com/sabarikarthick7" class="contact-btn"><i class="fab fa-github"></i>GitHub</a>
-<a href="#" class="contact-btn"><i class="fab fa-linkedin"></i>LinkedIn</a>
+<a href="https://linkedin.com/in/sabari-karthick-85326730a" class="contact-btn"><i class="fab fa-linkedin"></i>LinkedIn</a>
 </div>
 </div>
 </section>
