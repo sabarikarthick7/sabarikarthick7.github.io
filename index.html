@@ -28,7 +28,7 @@ top:50%;
 left:70%;
 width:700px;
 height:700px;
-background:radial-gradient(circle,rgba(37,99,235,0.18),transparent 70%);
+background:radial-gradient(circle,rgba(37,99,235,0.15),transparent 70%);
 transform:translate(-50%,-50%);
 z-index:-1;
 }
@@ -39,6 +39,7 @@ margin:auto;
 padding:0 40px;
 }
 
+/* Sections */
 section{
 padding:100px 0;
 opacity:0;
@@ -67,7 +68,7 @@ padding:140px 0 100px 0;
 }
 
 .hero-text{flex:1;}
-.hero-text h1{font-size:50px;margin-bottom:15px;}
+.hero-text h1{font-size:48px;margin-bottom:15px;}
 .hero-text span{color:#3b82f6;}
 
 .hero-text p{
@@ -94,8 +95,8 @@ box-shadow:0 10px 30px rgba(37,99,235,0.5);
 
 .hero-image{flex:1;text-align:right;}
 .profile-img{
-width:270px;
-height:270px;
+width:260px;
+height:260px;
 border-radius:18px;
 object-fit:cover;
 border:2px solid #3b82f6;
@@ -152,9 +153,7 @@ transition:0.3s;
 .cert-card:hover{transform:translateY(-6px);}
 .cert-img{
 height:45px;
-width:auto;
 margin-bottom:15px;
-object-fit:contain;
 }
 
 /* Timeline */
@@ -201,11 +200,13 @@ background:#1d4ed8;
 transform:translateY(-3px);
 }
 
+/* Footer */
 footer{
+background:#000000;
+color:#ffffff;
 text-align:center;
 padding:50px 0;
-color:#9ca3af;
-border-top:1px solid #1e293b;
+font-size:16px;
 margin-top:60px;
 }
 
@@ -217,7 +218,7 @@ margin-top:60px;
 }
 @media(max-width:600px){
 .container{padding:0 20px;}
-.hero-text h1{font-size:34px;}
+.hero-text h1{font-size:32px;}
 }
 </style>
 </head>
@@ -331,24 +332,19 @@ Strong foundation in Linux & Windows administration and networking fundamentals.
 <section>
 <div class="container">
 <h2 class="section-title">Certifications</h2>
-
 <div class="grid">
-
 <div class="cert-card">
 <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" class="cert-img">
 <h3>Google Gemini Certified</h3>
 </div>
-
 <div class="cert-card">
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Cisco_logo.svg" class="cert-img">
 <h3>Cisco Networking Basics</h3>
 </div>
-
 <div class="cert-card">
 <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" class="cert-img">
-<h3>AWS Cloud Practitioner Essentials</h3>
+<h3>AWS Cloud Practitioner</h3>
 </div>
-
 </div>
 </div>
 </section>
