@@ -14,29 +14,40 @@ html{scroll-behavior:smooth;}
 
 body{
 font-family:'Inter',sans-serif;
-background:linear-gradient(135deg,#000000,#0b1f3a,#041c12);
-background-attachment:fixed;
-color:#e5e7eb;
-line-height:1.6;
+background:linear-gradient(135deg,#0d1117,#0f172a,#111827);
+color:#e6edf3;
+overflow-x:hidden;
 }
 
-/* Layout */
+/* Subtle Glow */
+body::before{
+content:"";
+position:fixed;
+width:500px;
+height:500px;
+background:radial-gradient(circle,rgba(59,130,246,0.15),transparent 70%);
+top:-150px;
+right:-150px;
+z-index:-1;
+}
+
+/* Section Animation */
 section{
 padding:100px 12%;
+opacity:0;
+transform:translateY(40px);
+transition:all 0.8s ease;
+}
+section.show{
+opacity:1;
+transform:translateY(0);
 }
 
-.container{
-max-width:1200px;
-margin:auto;
-}
-
-/* Titles */
 .section-title{
 font-size:28px;
 margin-bottom:40px;
-color:#22c55e;
+color:#3b82f6;
 font-weight:600;
-letter-spacing:0.5px;
 }
 
 /* HERO */
@@ -52,6 +63,12 @@ padding:120px 12%;
 .hero-text{
 flex:1;
 min-width:280px;
+animation:fadeLeft 1s ease forwards;
+}
+
+@keyframes fadeLeft{
+from{opacity:0;transform:translateX(-40px);}
+to{opacity:1;transform:translateX(0);}
 }
 
 .hero-text h1{
@@ -62,13 +79,12 @@ color:#ffffff;
 }
 
 .hero-text h2{
-color:#22c55e;
+color:#3b82f6;
 margin-bottom:20px;
-font-weight:500;
 }
 
 .hero-text p{
-color:#cbd5e1;
+color:#9ca3af;
 margin-bottom:6px;
 }
 
@@ -77,44 +93,50 @@ display:inline-block;
 margin-top:25px;
 padding:14px 28px;
 border-radius:8px;
-background:#22c55e;
-color:#000;
+background:linear-gradient(90deg,#3b82f6,#06b6d4);
+color:white;
 font-weight:600;
 text-decoration:none;
 transition:0.3s;
 }
 
 .hero-btn:hover{
-background:#16a34a;
-transform:translateY(-3px);
+transform:translateY(-4px);
+box-shadow:0 10px 30px rgba(59,130,246,0.5);
 }
 
 .hero-image{
 flex:1;
 text-align:center;
-min-width:280px;
+animation:fadeRight 1s ease forwards;
+}
+
+@keyframes fadeRight{
+from{opacity:0;transform:translateX(40px);}
+to{opacity:1;transform:translateX(0);}
 }
 
 .profile-img{
-width:230px;
-height:230px;
+width:240px;
+height:240px;
 border-radius:16px;
 object-fit:cover;
-border:2px solid #22c55e;
+border:2px solid #3b82f6;
 }
 
 /* Cards */
 .card{
-background:#0f172a;
-padding:30px;
-border-radius:14px;
-border:1px solid #1e293b;
+background:#161b22;
+padding:28px;
+border-radius:12px;
+border:1px solid #1f2937;
 margin-bottom:25px;
 transition:0.3s;
 }
 
 .card:hover{
-border-color:#22c55e;
+border-color:#3b82f6;
+transform:translateY(-5px);
 }
 
 /* Projects */
@@ -125,7 +147,7 @@ color:#ffffff;
 }
 
 .project-desc{
-color:#cbd5e1;
+color:#9ca3af;
 margin-bottom:15px;
 }
 
@@ -133,17 +155,15 @@ margin-bottom:15px;
 display:inline-block;
 padding:8px 18px;
 border-radius:6px;
-background:#1e293b;
-color:#22c55e;
+border:1px solid #3b82f6;
+color:#3b82f6;
 text-decoration:none;
-font-weight:500;
-border:1px solid #22c55e;
 transition:0.3s;
 }
 
 .project-btn:hover{
-background:#22c55e;
-color:#000;
+background:#3b82f6;
+color:white;
 }
 
 /* Skills */
@@ -154,22 +174,23 @@ gap:18px;
 }
 
 .skill-item{
-background:#0b1220;
+background:#111827;
 padding:14px 18px;
 border-radius:8px;
 display:flex;
 align-items:center;
 gap:10px;
-border:1px solid #1e293b;
+border:1px solid #1f2937;
 transition:0.3s;
 }
 
 .skill-item i{
-color:#22c55e;
+color:#06b6d4;
 }
 
 .skill-item:hover{
-border-color:#22c55e;
+border-color:#06b6d4;
+transform:translateY(-3px);
 }
 
 /* Contact */
@@ -188,8 +209,8 @@ margin-top:20px;
 .contact-btn{
 padding:12px 22px;
 border-radius:6px;
-background:#22c55e;
-color:#000;
+background:#3b82f6;
+color:white;
 text-decoration:none;
 font-weight:600;
 display:flex;
@@ -199,15 +220,16 @@ transition:0.3s;
 }
 
 .contact-btn:hover{
-background:#16a34a;
+background:#2563eb;
+transform:translateY(-3px);
 }
 
 /* Footer */
 footer{
 text-align:center;
 padding:30px;
-background:#000;
-color:#94a3b8;
+background:#0d1117;
+color:#6b7280;
 margin-top:60px;
 }
 
@@ -250,31 +272,26 @@ height:190px;
 
 <!-- ABOUT -->
 <section>
-<div class="container">
 <div class="section-title">About Me</div>
 <div class="card">
-Transitioned from Aerospace Engineering into DevOps with strong interest in automation and cloud-native systems.
+Transitioned from Aerospace Engineering into DevOps with strong interest in automation and scalable cloud systems.
 Passionate about CI/CD pipelines, containerization, and distributed infrastructure.
-Focused on building scalable and production-ready DevOps solutions.
-</div>
+Focused on building production-ready DevOps solutions.
 </div>
 </section>
 
 <!-- PROFESSIONAL SUMMARY -->
 <section>
-<div class="container">
 <div class="section-title">Professional Summary</div>
 <div class="card">
 DevOps-focused engineering student specializing in CI/CD automation, Docker-based deployments, and cloud infrastructure.
 Hands-on experience with AWS, Jenkins, Kubernetes, GitHub, and Infrastructure as Code.
 Committed to building reliable and scalable deployment pipelines.
 </div>
-</div>
 </section>
 
 <!-- PROJECTS -->
 <section>
-<div class="container">
 <div class="section-title">Featured Projects</div>
 
 <div class="card">
@@ -285,7 +302,7 @@ Committed to building reliable and scalable deployment pipelines.
 
 <div class="card">
 <div class="project-title">Jenkins Remoting – Master Agent Architecture</div>
-<div class="project-desc">Distributed Jenkins build system using Docker-based agents and secure remoting.</div>
+<div class="project-desc">Distributed Jenkins build system using Docker-based agents.</div>
 <a href="https://github.com/sabarikarthick7/CodeAlpha_Jenkins_Remoting" target="_blank" class="project-btn">View Repository</a>
 </div>
 
@@ -295,15 +312,12 @@ Committed to building reliable and scalable deployment pipelines.
 <a href="https://github.com/sabarikarthick7/CodeAlpha_Docker_WebServer" target="_blank" class="project-btn">View Repository</a>
 </div>
 
-</div>
 </section>
 
 <!-- TECHNICAL SKILLS -->
 <section>
-<div class="container">
 <div class="section-title">Technical Skills</div>
 <div class="skills-grid">
-
 <div class="skill-item"><i class="fab fa-python"></i> Python</div>
 <div class="skill-item"><i class="fab fa-docker"></i> Docker</div>
 <div class="skill-item"><i class="fab fa-linux"></i> Linux Administration</div>
@@ -314,24 +328,19 @@ Committed to building reliable and scalable deployment pipelines.
 <div class="skill-item"><i class="fas fa-sync-alt"></i> CI/CD</div>
 <div class="skill-item"><i class="fab fa-git-alt"></i> Git & GitHub</div>
 <div class="skill-item"><i class="fas fa-network-wired"></i> Networking Fundamentals</div>
-
-</div>
 </div>
 </section>
 
 <!-- CERTIFICATIONS -->
 <section>
-<div class="container">
 <div class="section-title">Certifications</div>
 <div class="card">Google Gemini Certified University Student</div>
 <div class="card">Cisco Networking Basics</div>
 <div class="card">AWS Cloud Practitioner Essentials</div>
-</div>
 </section>
 
 <!-- SOFT SKILLS -->
 <section>
-<div class="container">
 <div class="section-title">Soft Skills</div>
 <div class="skills-grid">
 <div class="skill-item"><i class="fas fa-comments"></i> Communication</div>
@@ -340,32 +349,39 @@ Committed to building reliable and scalable deployment pipelines.
 <div class="skill-item"><i class="fas fa-lightbulb"></i> Problem Solving</div>
 <div class="skill-item"><i class="fas fa-bolt"></i> Quick Learner</div>
 </div>
-</div>
 </section>
 
 <!-- LANGUAGES -->
 <section>
-<div class="container">
 <div class="section-title">Languages</div>
 <div class="card">English – Full Professional Proficiency</div>
-</div>
 </section>
 
 <!-- CONTACT -->
 <section class="contact-section">
-<div class="container">
 <div class="section-title">Contact</div>
 <div class="contact-buttons">
 <a href="mailto:sabarikarthick.it@gmail.com" class="contact-btn"><i class="fas fa-envelope"></i>Email</a>
 <a href="https://linkedin.com/in/sabari-karthick-85326730a" target="_blank" class="contact-btn"><i class="fab fa-linkedin"></i>LinkedIn</a>
 <a href="https://github.com/sabarikarthick7" target="_blank" class="contact-btn"><i class="fab fa-github"></i>GitHub</a>
 </div>
-</div>
 </section>
 
 <footer>
 © 2026 M. Sabari Karthick | DevOps Engineer
 </footer>
+
+<script>
+const sections=document.querySelectorAll("section");
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+},{threshold:0.15});
+sections.forEach(section=>observer.observe(section));
+</script>
 
 </body>
 </html>
