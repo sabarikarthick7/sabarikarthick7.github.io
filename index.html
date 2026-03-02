@@ -460,84 +460,89 @@ text-shadow:0 0 5px rgba(59,130,246,0.4),
 opacity:0.7;
 }
 
-/* ===== Professional Hire Form ===== */
+/* ===== Hire Section Centered Modern ===== */
 
-.hire-form-section{
+.hire-wrapper{
 padding:140px 0;
+display:flex;
+justify-content:center;
+}
+
+.hire-container{
+width:100%;
+max-width:900px;
+text-align:center;
+}
+
+.hire-heading{
+font-size:48px;
+color:#3b82f6;
+margin-bottom:60px;
 }
 
 .hire-card{
-max-width:600px;
-margin:auto;
 background:linear-gradient(145deg,#0f172a,#111c36);
-padding:50px 40px;
-border-radius:20px;
+padding:60px 50px;
+border-radius:30px;
 border:1px solid #1e293b;
-box-shadow:0 20px 60px rgba(0,0,0,0.7);
+box-shadow:0 25px 80px rgba(0,0,0,0.7);
+max-width:650px;
+margin:auto;
 }
 
-.form-group{
+.hire-form{
 display:flex;
 flex-direction:column;
-margin-bottom:25px;
+gap:30px;
 }
 
-.form-group label{
-margin-bottom:8px;
-font-weight:500;
+.form-field{
+display:flex;
+flex-direction:column;
+text-align:left;
+}
+
+.form-field label{
+margin-bottom:10px;
 color:#cbd5e1;
+font-size:18px;
 }
 
-.form-group input,
-.form-group textarea{
+.form-field input,
+.form-field textarea{
 background:#0b1220;
 border:1px solid #1e293b;
-padding:14px 16px;
-border-radius:10px;
+padding:16px;
+border-radius:15px;
 color:#e5e7eb;
 font-size:16px;
-outline:none;
 transition:0.3s ease;
+outline:none;
 }
 
-.form-group input:focus,
-.form-group textarea:focus{
+.form-field input:focus,
+.form-field textarea:focus{
 border-color:#3b82f6;
-box-shadow:0 0 12px rgba(59,130,246,0.4);
+box-shadow:0 0 20px rgba(59,130,246,0.4);
 }
 
-.submit-btn{
-width:100%;
-padding:15px;
+.hire-btn{
+margin-top:10px;
+padding:18px;
 border:none;
-border-radius:12px;
+border-radius:20px;
 background:linear-gradient(90deg,#2563eb,#3b82f6);
 color:white;
-font-size:17px;
+font-size:20px;
 font-weight:600;
 cursor:pointer;
-display:flex;
-justify-content:center;
-align-items:center;
-gap:10px;
 transition:0.3s ease;
-position:relative;
-overflow:hidden;
 }
 
-.submit-btn:hover{
-transform:translateY(-3px);
-box-shadow:0 10px 30px rgba(37,99,235,0.5);
-}
-
-.submit-btn.loading{
-background:#1e40af;
-pointer-events:none;
-}
-
-.submit-btn.success{
-background:#16a34a;
-}    
+.hire-btn:hover{
+transform:translateY(-4px);
+box-shadow:0 15px 40px rgba(37,99,235,0.5);
+}   
 </style>
 </head>
 
@@ -857,34 +862,33 @@ supporting public outreach and grassroots engagement programs.
 </div>
 </section>
 
-<!-- HIRE ME FORM -->
-<section class="hire-form-section">
-<div class="container">
+<!-- HIRE ME SECTION -->
+<section class="hire-wrapper">
+<div class="hire-container">
 
-<h2 class="section-title">Hire Me</h2>
+<h2 class="hire-heading">Hire Me</h2>
 
 <div class="hire-card">
 
-<form class="modern-form">
+<form class="hire-form">
 
-<div class="form-group">
+<div class="form-field">
 <label>Name</label>
-<input type="text" name="name" required>
+<input type="text" required>
 </div>
 
-<div class="form-group">
+<div class="form-field">
 <label>Email</label>
-<input type="email" name="email" required>
+<input type="email" required>
 </div>
 
-<div class="form-group">
+<div class="form-field">
 <label>Message</label>
-<textarea name="message" rows="5" required></textarea>
+<textarea rows="5" required></textarea>
 </div>
 
-<button type="submit" class="submit-btn">
-<span class="btn-text">Send Message</span>
-<i class="fas fa-paper-plane"></i>
+<button type="submit" class="hire-btn">
+<span>Submit</span>
 </button>
 
 </form>
