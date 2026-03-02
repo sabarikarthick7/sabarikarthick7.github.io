@@ -466,159 +466,78 @@ opacity:0.7;
 padding:140px 0;
 }
 
-.hire-form-wrapper{
-max-width:650px;
+.hire-card{
+max-width:600px;
 margin:auto;
 background:linear-gradient(145deg,#0f172a,#111c36);
-padding:50px 45px;
+padding:50px 40px;
 border-radius:20px;
 border:1px solid #1e293b;
-box-shadow:0 25px 60px rgba(0,0,0,0.7);
-position:relative;
-overflow:hidden;
-transition:0.4s ease;
+box-shadow:0 20px 60px rgba(0,0,0,0.7);
 }
 
-.hire-form-wrapper:hover{
-border-color:#3b82f6;
-box-shadow:0 0 50px rgba(59,130,246,0.3);
+.form-group{
+display:flex;
+flex-direction:column;
+margin-bottom:25px;
 }
 
-.input-group{
-position:relative;
-margin-bottom:35px;
+.form-group label{
+margin-bottom:8px;
+font-weight:500;
+color:#cbd5e1;
 }
 
-.input-group input,
-.input-group textarea{
-width:100%;
-padding:16px;
+.form-group input,
+.form-group textarea{
 background:#0b1220;
 border:1px solid #1e293b;
-border-radius:12px;
+padding:14px 16px;
+border-radius:10px;
 color:#e5e7eb;
 font-size:16px;
 outline:none;
 transition:0.3s ease;
 }
 
-.input-group label{
-position:absolute;
-left:16px;
-top:16px;
-color:#64748b;
-pointer-events:none;
-transition:0.3s ease;
-background:#0f172a;
-padding:0 6px;
-}
-
-.input-group input:focus,
-.input-group textarea:focus{
+.form-group input:focus,
+.form-group textarea:focus{
 border-color:#3b82f6;
-box-shadow:0 0 15px rgba(59,130,246,0.4);
+box-shadow:0 0 12px rgba(59,130,246,0.4);
 }
 
-.input-group input:focus + label,
-.input-group input:valid + label,
-.input-group textarea:focus + label,
-.input-group textarea:valid + label{
-top:-10px;
-font-size:13px;
-color:#3b82f6;
-}
-
-.modern-btn{
+.submit-btn{
 width:100%;
-padding:16px;
+padding:15px;
 border:none;
-border-radius:14px;
+border-radius:12px;
 background:linear-gradient(90deg,#2563eb,#3b82f6);
 color:white;
-font-size:18px;
+font-size:17px;
 font-weight:600;
 cursor:pointer;
-transition:0.4s ease;
 display:flex;
 justify-content:center;
 align-items:center;
 gap:10px;
+transition:0.3s ease;
+position:relative;
+overflow:hidden;
 }
 
-.modern-btn:hover{
-transform:translateY(-4px);
-box-shadow:0 15px 40px rgba(37,99,235,0.5);
-}
-/* ===== Success Popup ===== */
-
-.success-modal{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.8);
-display:flex;
-justify-content:center;
-align-items:center;
-opacity:0;
-visibility:hidden;
-transition:0.4s ease;
-z-index:9999;
-}
-
-.success-modal.active{
-opacity:1;
-visibility:visible;
-}
-
-.success-content{
-background:linear-gradient(145deg,#0f172a,#111c36);
-padding:50px 40px;
-border-radius:20px;
-border:1px solid #1e293b;
-text-align:center;
-max-width:400px;
-width:90%;
-box-shadow:0 0 50px rgba(59,130,246,0.3);
-animation:popupScale 0.4s ease;
-}
-
-.success-content i{
-font-size:50px;
-color:#3b82f6;
-margin-bottom:20px;
-}
-
-.success-content h3{
-margin-bottom:15px;
-color:#e5e7eb;
-}
-
-.success-content p{
-color:#94a3b8;
-margin-bottom:25px;
-}
-
-.close-btn{
-padding:12px 30px;
-background:linear-gradient(90deg,#2563eb,#3b82f6);
-border:none;
-border-radius:10px;
-color:white;
-cursor:pointer;
-transition:0.3s;
-}
-
-.close-btn:hover{
+.submit-btn:hover{
 transform:translateY(-3px);
-box-shadow:0 10px 25px rgba(37,99,235,0.5);
+box-shadow:0 10px 30px rgba(37,99,235,0.5);
 }
 
-@keyframes popupScale{
-0%{transform:scale(0.7);opacity:0;}
-100%{transform:scale(1);opacity:1;}
-}     
+.submit-btn.loading{
+background:#1e40af;
+pointer-events:none;
+}
+
+.submit-btn.success{
+background:#16a34a;
+}    
 </style>
 </head>
 
@@ -944,29 +863,28 @@ supporting public outreach and grassroots engagement programs.
 
 <h2 class="section-title">Hire Me</h2>
 
-<div class="hire-form-wrapper">
+<div class="hire-card">
 
-<form action="https://formsubmit.co/sabarikarthick.it@gmail.com" method="POST" class="modern-form">
+<form class="modern-form">
 
-<input type="hidden" name="_captcha" value="false">
-
-<div class="input-group">
-<input type="text" name="name" required>
+<div class="form-group">
 <label>Name</label>
+<input type="text" name="name" required>
 </div>
 
-<div class="input-group">
-<input type="email" name="email" required>
+<div class="form-group">
 <label>Email</label>
+<input type="email" name="email" required>
 </div>
 
-<div class="input-group">
-<textarea name="message" rows="5" required></textarea>
+<div class="form-group">
 <label>Message</label>
+<textarea name="message" rows="5" required></textarea>
 </div>
 
-<button type="submit" class="modern-btn">
-Send Message <i class="fas fa-paper-plane"></i>
+<button type="submit" class="submit-btn">
+<span class="btn-text">Send Message</span>
+<i class="fas fa-paper-plane"></i>
 </button>
 
 </form>
@@ -981,27 +899,30 @@ Send Message <i class="fas fa-paper-plane"></i>
 <script>
 <script>
 const form = document.querySelector(".modern-form");
-const modal = document.getElementById("successModal");
+const submitBtn = document.querySelector(".submit-btn");
+const btnText = document.querySelector(".btn-text");
 
+if(form){
 form.addEventListener("submit", function(e){
 e.preventDefault();
 
-fetch(form.action,{
-method:"POST",
-body:new FormData(form),
-headers:{ 'Accept': 'application/json' }
-})
-.then(response=>{
-if(response.ok){
-modal.classList.add("active");
-form.reset();
-}
-})
-.catch(error=>alert("Something went wrong"));
-});
+submitBtn.classList.add("loading");
+btnText.innerText = "Sending...";
 
-function closeSuccess(){
-modal.classList.remove("active");
+setTimeout(() => {
+submitBtn.classList.remove("loading");
+submitBtn.classList.add("success");
+btnText.innerText = "Sent Successfully ✓";
+
+setTimeout(() => {
+submitBtn.classList.remove("success");
+btnText.innerText = "Send Message";
+submitBtn.disabled = false;
+}, 2500);
+
+}, 1500);
+
+});
 }
 /* Mobile toggle */
 function toggleMenu(){
