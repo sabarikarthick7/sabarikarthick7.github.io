@@ -421,44 +421,7 @@ font-size:20px;
 color:#9ca3af;
 font-size:15px;
 line-height:1.6;
-}   
-/* ===== Updating Soon Animation ===== */
-
-.updating-card{
-display:flex;
-justify-content:center;
-align-items:center;
-height:220px;
-position:relative;
-overflow:hidden;
-}
-
-.updating-text{
-font-size:28px;
-font-weight:600;
-color:#3b82f6;
-letter-spacing:2px;
-animation:glowPulse 2s infinite ease-in-out;
-}
-
-/* Glow animation */
-@keyframes glowPulse{
-0%{
-text-shadow:0 0 5px rgba(59,130,246,0.4),
-            0 0 10px rgba(59,130,246,0.4);
-opacity:0.7;
-}
-50%{
-text-shadow:0 0 15px rgba(59,130,246,0.9),
-            0 0 25px rgba(59,130,246,0.7),
-            0 0 40px rgba(59,130,246,0.6);
-opacity:1;
-}
-100%{
-text-shadow:0 0 5px rgba(59,130,246,0.4),
-            0 0 10px rgba(59,130,246,0.4);
-opacity:0.7;
-} 
+}     
 </style>
 </head>
 
@@ -561,8 +524,6 @@ Strong foundation in Linux & Windows administration and networking fundamentals.
 <a href="https://github.com/sabarikarthick7/CodeAlpha_Docker_WebServer.git" target="_blank" class="hero-btn">View Project</a>
 </div>
 
-<div class="card updating-card">
-<h3 class="updating-text">Updating Soon...</h3>     
 </div>
 </section>
 
@@ -777,38 +738,21 @@ supporting public outreach and grassroots engagement programs.
 </div>
 </div>
 </section>
+
 <footer>
 © 2026 M. Sabari Karthick | All Rights Reserved
 </footer>
 
 <script>
-<script>
-const form = document.querySelector(".modern-form");
-const submitBtn = document.querySelector(".submit-btn");
-const btnText = document.querySelector(".btn-text");
-
-if(form){
-form.addEventListener("submit", function(e){
-e.preventDefault();
-
-submitBtn.classList.add("loading");
-btnText.innerText = "Sending...";
-
-setTimeout(() => {
-submitBtn.classList.remove("loading");
-submitBtn.classList.add("success");
-btnText.innerText = "Sent Successfully ✓";
-
-setTimeout(() => {
-submitBtn.classList.remove("success");
-btnText.innerText = "Send Message";
-submitBtn.disabled = false;
-}, 2500);
-
-}, 1500);
-
-});
+const sections=document.querySelectorAll("section");
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
 }
+});
+},{threshold:0.2});
+sections.forEach(section=>observer.observe(section));
 /* Mobile toggle */
 function toggleMenu(){
 const menu=document.getElementById("mobileMenu");
@@ -848,6 +792,8 @@ navbar.classList.add("scrolled");
 }else{
 navbar.classList.remove("scrolled");
 }
+});  
 </script>
+
 </body>
 </html>
