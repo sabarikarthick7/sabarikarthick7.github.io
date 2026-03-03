@@ -460,6 +460,133 @@ text-shadow:0 0 5px rgba(59,130,246,0.4),
             0 0 10px rgba(59,130,246,0.4);
 opacity:0.7;
 }
+}    
+
+/* ===== Premium Bottom Contact ===== */
+
+.premium-contact{
+padding:120px 20px;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.premium-container{
+width:100%;
+max-width:600px;
+text-align:center;
+}
+
+.premium-card{
+background:linear-gradient(145deg, rgba(15,23,42,0.85), rgba(17,28,54,0.85));
+backdrop-filter: blur(15px);
+padding:40px;
+border-radius:16px;
+box-shadow:0 20px 60px rgba(0,0,0,0.6);
+border:1px solid rgba(255,255,255,0.05);
+max-width:500px;
+margin:auto;
+transition:0.6s ease;
+}
+
+.premium-form{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.field{
+display:flex;
+flex-direction:column;
+text-align:left;
+}
+
+.field label{
+margin-bottom:6px;
+font-size:14px;
+color:#cbd5e1;
+}
+
+.field input,
+.field textarea{
+background:transparent;
+border:1px solid rgba(255,255,255,0.2);
+padding:12px;
+border-radius:12px;
+color:#e5e7eb;
+font-size:14px;
+outline:none;
+transition:0.3s ease;
+}
+
+.field input:focus,
+.field textarea:focus{
+border-color:#3b82f6;
+box-shadow:0 0 12px rgba(59,130,246,0.5);
+}
+
+.premium-btn{
+margin-top:10px;
+padding:14px;
+border:none;
+border-radius:12px;
+background:linear-gradient(90deg,#2563eb,#3b82f6);
+color:white;
+font-weight:600;
+cursor:pointer;
+transition:0.3s ease;
+width:100%;
+}
+
+.premium-btn:hover{
+transform:scale(1.03);
+box-shadow:0 10px 30px rgba(37,99,235,0.4);
+}
+
+.success-message{
+display:none;
+margin-top:15px;
+color:#22c55e;
+font-weight:500;
+opacity:0;
+transition:0.5s ease;
+}
+
+.success-message i{
+margin-right:8px;
+}
+
+/* Fade animation */
+.fade-in{
+opacity:0;
+transform:translateY(30px);
+animation:fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+// Premium Form Submit
+const premiumForm = document.getElementById("premiumForm");
+const successMessage = document.getElementById("successMessage");
+
+if(premiumForm){
+premiumForm.addEventListener("submit", function(e){
+e.preventDefault();
+
+successMessage.style.display = "block";
+
+setTimeout(()=>{
+successMessage.style.opacity = "1";
+},50);
+
+premiumForm.reset();
+
+});
 }     
 </style>
 </head>
@@ -782,6 +909,45 @@ supporting public outreach and grassroots engagement programs.
 </div>
 </section>
 
+<!-- PREMIUM CONTACT FORM -->
+<section id="premium-contact" class="premium-contact">
+  <div class="premium-container">
+
+    <h2 class="section-title">Hire Me</h2>
+
+    <div class="premium-card fade-in">
+
+      <form id="premiumForm" class="premium-form">
+
+        <div class="field">
+          <label>Name</label>
+          <input type="text" required>
+        </div>
+
+        <div class="field">
+          <label>Email</label>
+          <input type="email" required>
+        </div>
+
+        <div class="field">
+          <label>Message</label>
+          <textarea rows="4" required></textarea>
+        </div>
+
+        <button type="submit" class="premium-btn">
+          Submit
+        </button>
+
+        <div id="successMessage" class="success-message">
+          <i class="fas fa-check-circle"></i>
+          Message Sent Successfully!
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</section>     
 <footer>
 © 2026 M. Sabari Karthick | All Rights Reserved
 </footer>
