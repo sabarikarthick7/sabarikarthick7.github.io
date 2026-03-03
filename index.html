@@ -589,6 +589,8 @@ premiumForm.reset();
 });
 }     
 </style>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>   
 </head>
 
 <body>
@@ -917,33 +919,33 @@ supporting public outreach and grassroots engagement programs.
 
     <div class="premium-card fade-in">
 
-      <form id="premiumForm" class="premium-form">
+<form id="premiumForm">
 
-        <div class="field">
-          <label>Name</label>
-          <input type="text" required>
-        </div>
+<div class="field">
+<label>Name</label>
+<input type="text" name="name" required>
+</div>
 
-        <div class="field">
-          <label>Email</label>
-          <input type="email" required>
-        </div>
+<div class="field">
+<label>Email</label>
+<input type="email" name="email" required>
+</div>
 
-        <div class="field">
-          <label>Message</label>
-          <textarea rows="4" required></textarea>
-        </div>
+<div class="field">
+<label>Message</label>
+<textarea name="message" rows="4" required></textarea>
+</div>
 
-        <button type="submit" class="premium-btn">
-          Submit
-        </button>
+<button type="submit" class="premium-btn">
+Submit
+</button>
 
-        <div id="successMessage" class="success-message">
-          <i class="fas fa-check-circle"></i>
-          Message Sent Successfully!
-        </div>
+<div id="successMessage" class="success-message">
+<i class="fas fa-check-circle"></i>
+Message Sent Successfully!
+</div>
 
-      </form>
+</form>
 
     </div>
   </div>
@@ -1001,7 +1003,41 @@ navbar.classList.add("scrolled");
 }else{
 navbar.classList.remove("scrolled");
 }
-});  
+}); 
+
+// Initialize EmailJS
+emailjs.init("GAMZvsTTOML7R1kKI");
+
+const premiumForm = document.getElementById("premiumForm");
+const successMessage = document.getElementById("successMessage");
+
+if(premiumForm){
+
+premiumForm.addEventListener("submit", function(e){
+e.preventDefault();
+
+emailjs.sendForm(
+"service_x3fc878",
+"template_rqfvk2f",
+this
+)
+.then(function(){
+
+successMessage.style.display = "block";
+setTimeout(()=>{
+successMessage.style.opacity = "1";
+},100);
+
+premiumForm.reset();
+
+}, function(error){
+alert("Failed to send message. Check console.");
+console.log(error);
+});
+
+});
+
+}     
 </script>
 
 </body>
